@@ -8,6 +8,9 @@ entries:
       - title: email
         url: mailto:dhdlqks55@gmail.com
 
+  - title: search
+    url: search
+
   - title: all posts
     post_list:
       limit: 3
