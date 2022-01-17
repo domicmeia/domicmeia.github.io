@@ -1,0 +1,42 @@
+
+entries:
+  - title: me
+    entries:
+      - title: 제주대 컴퓨터공학전공 학부생
+      - title: github
+        url: https://github.com/domicmeia
+      - title: email
+        url: mailto:dhdlqks55@gmail.com
+
+  - title: all posts
+    post_list:
+      limit: 3
+      show_more: true
+      show_more_text: See archive...
+      show_more_url: archive
+
+  - title: category
+    entries:
+      - title: Problem
+        post_list:
+          category: BOJ
+          limit: 3
+          show_more: true
+          show_more_text: See more posts...
+          show_more_url: archive-boj
+      - title: Algorithm
+        post_list:
+          category: Algo
+          limit: 3
+          show_more: true
+          show_more_text: See more posts...
+          show_more_url: archive-algo
+      - title: Programming
+        post_list:
+          category: Pro
+          limit: 3
+          show_more: true
+          show_more_text: See more posts...
+          show_more_url: archive-pro
+
+  
