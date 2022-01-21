@@ -8,7 +8,7 @@ category: Algo
 
 1. [Vector 클래스](#vector-클래스)
 2. [Typedefs](#typedefs)
-3. [Functions](#fuctions)
+3. [Functions](#functions)
 
 ---
 {: data-content="start!"}
@@ -80,7 +80,7 @@ reference at(size_type position);
 const_reference at(size_type position) const;
 ```
 `position`이 벡터 크기보다 크면 `at`에서 예외를 throw. `[]`에 의한 접근은 첨자의 범위를 체크하지 않기 때문에 범위를 벗어난 접근을 시도할 경우 예외를 발생하지 않고 에러를 발생한다. 반면에, `at`을 이용한 접근은 첨자의 범위를 체크하여 벗어난 접근을 시도할 경우 `std::out_of_range` 예외를 발생한다. 
-#### 범위 내의 접근을 보장할 경우 별도의 범위 체크가 필요 없으므로 []에 접근하고, 그렇지 않을 경우 at에 의한 접근으로 예외 처리 해준다.
+**범위 내의 접근을 보장할 경우 별도의 범위 체크가 필요 없으므로 []에 접근하고, 그렇지 않을 경우 at에 의한 접근으로 예외 처리 해준다.**
 
 ```c++
 for ( int n = 0; n < (int)vInt.size(); ++n )
