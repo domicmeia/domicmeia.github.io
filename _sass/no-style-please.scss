@@ -24,20 +24,20 @@ html, body { background: white; }
 html { height: 100%; }
 
 @font-face {
-    font-family: 'Cafe24Simplehae';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff');
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
   color: black;
-  font-family: 'Cafe24Simplehae';
+  font-family: 'Cafe24SsurroundAir';
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
   min-height: 100%;
-  overflow-wrap: break-word;
+  overflow-wrap: break-word;  
 }
 
 .post-meta { text-align: right; }
