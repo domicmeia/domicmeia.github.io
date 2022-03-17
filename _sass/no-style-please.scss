@@ -24,15 +24,15 @@ html, body { background: white; }
 html { height: 100%; }
 
 @font-face {
-    font-family: 'Cafe24SsurroundAir';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
   color: black;
-  font-family: 'Cafe24SsurroundAir';
+  font-family: 'MinSans-Medium';
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
