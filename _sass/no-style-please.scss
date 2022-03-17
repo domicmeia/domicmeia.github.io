@@ -24,15 +24,16 @@ html, body { background: white; }
 html { height: 100%; }
 
 @font-face {
-    font-family: 'GowunDodum-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 body {
   color: black;
-  font-family: 'GowunDodum-Regular';
-  font-size: 17px;
+  font-family: 'Cafe24SsurroundAir';
+  font-size: 16px;
   line-height: 1.6;
   margin: 0;
   min-height: 100%;
