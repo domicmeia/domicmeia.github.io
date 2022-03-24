@@ -41,5 +41,13 @@ entries:
           show_more: true
           show_more_text: See more posts...
           show_more_url: archive-pro
+      - title: No Title
+        post_list:
+          category: Note
+          limit: 3
+          show_more: true
+          show_more_text: See more posts...
+          show_more_url: archive-note
+      
 
   
