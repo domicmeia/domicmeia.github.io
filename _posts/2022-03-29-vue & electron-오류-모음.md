@@ -8,11 +8,11 @@ category: Note
 ![error3](./image/error3.png)
 
 Vuetify 설치는 됐는데, error가 발생했다.
-```r
+```js
 ERROR Error: You cannot call "get" on a collection with no paths. Instead, check the "length" property first to verify at least 1 path exists.
 ```
 
-[github issue][issue]에 쳐보니까 vue3이 beta버전이라 발생한 것 같다. vue2로 재설치하니까 해결되었다!
+[github issue][issue] 보니까 vue3이 beta버전이라 발생한 것 같다. vue2로 재설치하니까 해결되었다!
 
 ### Running 에러
 
@@ -20,13 +20,13 @@ ERROR Error: You cannot call "get" on a collection with no paths. Instead, check
 
 Vue Router사용하려면 multi word로 이름 바꾸라는 에러이다..error 문구는 다음과 같다.
 
-```R
+```js
 Component name should always be multi-word  vue/multi-word-component-names
 ```
 
 **vue.config.js** 파일을 열고 내용을 추가 하면 해결된다.
 
-```R
+```js
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
     transpileDependencies: true,
@@ -44,7 +44,7 @@ module.exports = defineConfig({
 
 **package.json** 파일을 열고 내용을 바꿔주면 해결된다.
 
-```R
+```js
 "main": "src/main.js"
 ```
 
