@@ -1,6 +1,6 @@
 ---
 layout: post
-category: Note
+category: Pro
 ---
 
 ### Vuetify 설치 에러
@@ -18,7 +18,7 @@ ERROR Error: You cannot call "get" on a collection with no paths. Instead, check
 
 ![error2](./image/error2.png)
 
-Vue Router사용하려면 multi word로 이름 바꾸라는 에러이다..error 문구는 다음과 같다.
+multi word로 이름 바꾸라는 에러이다..error 문구는 다음과 같다.
 
 ```js
 Component name should always be multi-word  vue/multi-word-component-names
