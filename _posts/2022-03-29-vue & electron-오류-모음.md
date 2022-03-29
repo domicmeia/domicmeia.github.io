@@ -2,9 +2,6 @@
 layout: post
 category: Note
 ---
-> `공부 목적`으로 작성한 포스팅입니다. 오타가 많고, 틀린 내용이 있을 수 있습니다.
----
-{: data-content="start!"}
 
 ### Vuetify 설치 에러
 
@@ -23,13 +20,13 @@ ERROR Error: You cannot call "get" on a collection with no paths. Instead, check
 
 Vue Router사용하려면 multi word로 이름 바꾸라는 에러이다..error 문구는 다음과 같다.
 
-```r
+```R
 Component name should always be multi-word  vue/multi-word-component-names
 ```
 
 **vue.config.js** 파일을 열고 내용을 추가 하면 해결된다.
 
-```r
+```R
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
     transpileDependencies: true,
@@ -47,7 +44,7 @@ module.exports = defineConfig({
 
 **package.json** 파일을 열고 내용을 바꿔주면 해결된다.
 
-```r
+```R
 "main": "src/main.js"
 ```
 
