@@ -50,6 +50,32 @@ module.exports = defineConfig({
 
 이래도 안되면 **npm start** 돌려보자
 
+## no-multiple-empty-lines
+
+마지막 줄에 엔터를 두 번 쳐서 생긴 오류이다..엔터를 한번만 치면 해결된다. 에러 코드는 다음과 같다.
+![error5](./image/error5.png)
+
+## webpack 에러
+
+electron에서 제공하는 doc을 참고하여 fs를 사용하려고 하는데, 오류가 떴다.
+![error6](./image/error6.png)
+
+대충 구글링 하니까 좀 오래된 issue인가 보다, 해결책은 간단하다. **vue.config.js**
+
+```js
+module.exports = {
+    resolve: {
+    fallback: {
+      "fs": false
+    }
+    }
+}
+```
+
+그런데 안된다. 파일 탐색기에서 **vue.config.js**를 검색했을 때 너무 많아서 조금 싸했는데..
+다른 해결책을 찾아야 한다........<결국 폴더를 삭제하고 다시 시작하기로 했다..>
+
+
 
 [issue]: https://github.com/vuetifyjs/vue-cli-plugins/issues/140
 
