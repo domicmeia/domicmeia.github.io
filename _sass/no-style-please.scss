@@ -30,10 +30,14 @@ html { height: 100%; }
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'D2Coding';
+  src: url('../D2Coding/D2Coding.ttf') format('truetype');
+}
 body {
   color: black;
   font-family: 'MinSans-Medium';
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 0;
   min-height: 100%;
@@ -91,6 +95,8 @@ table, th, td {
 code {
   color: white;
   background: black;
+  font-size: 14.6px;
+  font-family: 'D2Coding';
 }
 
 div.highlighter-rouge code {
