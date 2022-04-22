@@ -60,7 +60,7 @@ module.exports = defineConfig({
 electron에서 제공하는 doc을 참고하여 fs를 사용하려고 하는데, 오류가 떴다.
 ![error6](./image/error6.png)
 
-대충 구글링 하니까 좀 오래된 issue인가 보다, 해결책은 간단하다. **vue.config.js**
+대충 구글링 하니까 좀 오래된 issue인가 보다, **vue.config.js**을 바꿨다.
 
 ```js
 module.exports = {
@@ -73,7 +73,7 @@ module.exports = {
 ```
 
 그런데 안된다. 파일 탐색기에서 **vue.config.js**를 검색했을 때 너무 많아서 조금 싸했는데..
-다른 해결책을 찾아야 한다........<결국 폴더를 삭제하고 다시 시작하기로 했다..>
+다른 해결책을 찾아야 한다 -> webpack의 호환성 문제인 것 같다. 버리고 재설치했다.
 
 
 
