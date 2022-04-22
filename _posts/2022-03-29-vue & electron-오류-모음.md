@@ -8,7 +8,7 @@ category: Pro
 ![error3](./image/error3.png)
 
 Vuetify 설치는 됐는데, error가 발생했다.
-```js
+```yaml
 ERROR Error: You cannot call "get" on a collection with no paths. Instead, check the "length" property first to verify at least 1 path exists.
 ```
 
@@ -20,7 +20,7 @@ ERROR Error: You cannot call "get" on a collection with no paths. Instead, check
 
 multi word로 이름 바꾸라는 에러이다..error 문구는 다음과 같다.
 
-```js
+```yaml
 Component name should always be multi-word  vue/multi-word-component-names
 ```
 
@@ -44,7 +44,7 @@ module.exports = defineConfig({
 
 **package.json** 파일을 열고 내용을 바꿔주면 해결된다.
 
-```js
+```yaml
 "main": "src/main.js"
 ```
 
