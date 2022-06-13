@@ -17,5 +17,9 @@
         <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}.js"></script>
       {% endfor %}
     {% endif %}
+
+    {% if page.use_math %}
+       {% include Mathjax.html %}
+    {% endif %}
   </body>
 </html>
