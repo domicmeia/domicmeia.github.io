@@ -10,7 +10,7 @@ category: Algo
 {: data-content="start!"}
 
 ## 1-1
-```c++
+```js
 sizeof(Node)와 sizeof(Node*)의 결과는 어떻게 다를까요?
 void* malloc(size_t size)는 malloc()함수의 인터페이스로 void*를 리턴하기 때문에 반드시 타입캐스팅을 해줘야 한다.
 ```
