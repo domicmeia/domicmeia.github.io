@@ -10,8 +10,10 @@ category: Algo
 {: data-content="start!"}
 
 ## 1-1
+```c++
 sizeof(Node)와 sizeof(Node*)의 결과는 어떻게 다를까요?
 void* malloc(size_t size)는 malloc()함수의 인터페이스로 void*를 리턴하기 때문에 반드시 타입캐스팅을 해줘야 한다.
+```
 
 ## 1-2
 ...특정 노드 앞에 새로운 노드를 삽입하는 SLL_InsertBefore() 함수도 있곘군요. 지금부터 이 함수를 구현하세요. 원형은 다음과 같습니다.
