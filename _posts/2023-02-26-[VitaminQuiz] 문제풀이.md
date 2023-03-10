@@ -92,3 +92,62 @@ void PrintReverse(Node* Head)
 }
 ```
 
+## 2-2
+배열 기반 스택 예제 프로그램에 AS_IsFull(ArrayStack*Stack)함수를 추가해보세요. 스택을 생성했을 떄 설정한 용량이 가득 찼는지 체크하는 기능입니다.
+
+### 풀이
+
+기본 코드에 Capacity변수가 이미 존재하기 때문에, 가득찼을 때 push해주면 된다.
+**ArrayStack.h** 헤더 변경
+```c
+int As_IsFull(ArrayStack* Stack);
+```
+
+**ArrayStack.c** 새로운 변수 정의
+```c
+int As_IsFull(ArrayStack* Stack)
+{
+    return(Stack->Top == Stack->Capacity);
+}
+```
+
+**Test_ArrayStack.c**
+```c
+
+int main(void){
+    int i = 0;
+    ArrayStack* Stack = NULL;
+    AS_CreateStack(&Stack, 10);
+
+    /*추가*/
+    for (i = 0; i < 20;i++){
+        if(AS_IsFull(Stack))
+            break;
+
+        AS_Push(Stack, i);
+    }
+    /**/
+
+    AS_Push(Stack, 3);
+    AS_Push(Stack, 37);
+    AS_Push(Stack, 11);
+    AS_Push(Stack, 12);
+
+    printf(" Capaciy: %d, Size: %d, Top: %d\n\n, Stack->Capacity, AS_GetSize(Stack), AS_Top(Stack) ");
+
+    for (i = 0; i < 4; i++){
+        if(AS_IsEmpty(Stack))
+            break;
+
+        printf("Popped: %d", AS_Pop(Stack));
+
+        if(!AS_IsEmpty(Stack))
+            printf("Current Top: %d\n", AS_TOp(Stack));
+        else
+            printf("Stack Is Empty");
+    }
+
+    AS_DestroyStack(Stack);
+    return 0;
+}
+```
