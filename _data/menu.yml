@@ -48,6 +48,13 @@ entries:
           show_more: true
           show_more_text: See more posts...
           show_more_url: archive-job
+      - title: K8s
+        post_list:
+          category: K8s
+          limit: 3
+          show_more: true
+          show_more_text: See more posts...
+          show_more_url: archive-k8s
       - title: No Title
         post_list:
           category: Note
