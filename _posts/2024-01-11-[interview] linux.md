@@ -2,7 +2,21 @@
 layout: post
 category: Job
 ---
-> **<center> 직무 인터뷰 질문 대비</center>**
+> `공부 목적`으로 작성한 포스팅입니다. 오타가 많고, 틀린 내용이 있을 수 있습니다.
+
+## 목차
+* [Interview Questions](#interview-questions)
+---
+{: data-content="start!"}
+
+## Interview Questions
+
+## How to set a name and password to never expires?
+- chage 사용; 시스템에게 로그인한 사용자가 패스워드를 변경해야 하는지를 알려준다.
+```shell
+$ chage -m "날짜 수" "계정명"
+$ chage -M -1 domicmeia
+```
 
 
 ## Server를 어떻게 접속하나요? 특별히 사용하는 도구나 방법이 있을까요?
