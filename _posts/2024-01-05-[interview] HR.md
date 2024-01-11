@@ -7,7 +7,6 @@ category: Job
 ## Could you please introduce yourself and your background?
 
 - 약 1분정도
-- 지금까지 해왔던 업무 설명 (간결한 숫자와 함께 e.g.매출 15% 상승)
 - 가지고 있는 skill을 설명 (JD와 일치할 수 있도록)
 - Past, Present and Future 전개방식도 참고
 
