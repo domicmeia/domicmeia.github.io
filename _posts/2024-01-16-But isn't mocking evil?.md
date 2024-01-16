@@ -48,3 +48,5 @@ Mocking은 복잡하지 않아. 프레임워크를 사용하면 실제보다 더
 
 interface에 대해 test double할 때만, mock generator을 쓰도록 해! 테스트 작성 방법을 지나치게 
 지시하거나 너무 많은 'magic'을 사용하는 툴들은 버려
+
+[link]: https://quii.gitbook.io/learn-go-with-tests/go-fundamentals/mocking
