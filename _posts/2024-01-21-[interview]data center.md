@@ -10,6 +10,7 @@ category: Job
   + [2. 트러블 슈팅](#2-트러블-슈팅)
   + [3. (중요)하드웨어/네트워크](#3-하드웨어네트워크)
   + [4. (중요)리눅스/쉘스크립트](#4-리눅스-sheell-script)
+* [Dump](#dump)
 
 ---
 {: data-content="start!"}
@@ -410,3 +411,16 @@ This script uses nmap to perform a through vulnerability scan on the target host
 docker run -d --name my_container my_image
 ```
 This script deploys a container using a specified Docker image.
+
+---
+{: data-content="덤프"}
+
+## Dump
+아 이 이상 정리할 수 없어....귀찮아~
+
+- Do you know what racket stack means?
+- Have you used an Ethernet test?
+- 제발 질문 좀 해 
+- Can you tell me what a normal day is like
+- What is the difficulties the team is running into the moment?
+- How can i succeed in this job ?? 아니 진짜??.... 이해할 수 없는 외국계기업
