@@ -8,7 +8,7 @@ pygmentsUseClasses = true
 
 [params]
   author = "domicmeia"
-  description = "any description?"
+  description = "Any description?"
   github = "domicmeia"
   enableGithubFollowers = true 
   linkedin = ""
@@ -38,7 +38,7 @@ pygmentsUseClasses = true
     proxy = "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token" 
   [[params.links]]
     title = "Link"
-    href = "https://github.com/kurt-liao"
+    href = ""
 
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]
