@@ -39,10 +39,6 @@ pygmentsUseClasses = true
   [[params.links]]
     title = "Link"
     href = "https://github.com/kurt-liao"
-  [[params.links]]
-    title = "Link2"
-    href = "https://github.com/kurt-liao/github-style-plus"
-    icon = "https://blog.kurtstories.com/images/avatar.png"
 
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]

@@ -2,10 +2,9 @@
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Update post from til repository.
-git submodule update --remote
+# git submodule update --remote
 
 # Build the project.
-# hugo -t <your theme>
 hugo -t github-style-plus
 
 # Go to public folder, submodule commit

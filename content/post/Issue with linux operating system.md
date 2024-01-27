@@ -1,9 +1,9 @@
----
-title: "Sample"
-date: 2024-01-27T22:59:56+09:00
-draft: true
-tags: [Linux, Troubleshooting]
----
++++
+title = "Issue with linux operating system"
+date = 2024-01-27T23:52:09+09:00
+tags = ["Linux", "Troubleshooting"]
+summary = "Issue with linux operating system"
++++
 
 > `공부 목적`으로 작성한 포스팅입니다. 오타가 많고, 틀린 내용이 있을 수 있습니다.
 
@@ -19,7 +19,6 @@ tags: [Linux, Troubleshooting]
 * [References](#references)
 
 ---
-{: data-content="start!"}
 
 ## Issue with Linux Operating System
 
@@ -119,7 +118,6 @@ domicmeia@domicmeia:~$ ps -ef| grep 1796 | grep -v "grep"
 ```
 
 ---
-{: data-content="Tricks"}
 
 # Tricks to become better and faster at diagnosing and resolving the trouble of a Linux system
 
@@ -142,7 +140,6 @@ $ smem #checks memory allocated to per process
 ```
 
 ---
-{: data-content="references"}
 
 ## References
 
