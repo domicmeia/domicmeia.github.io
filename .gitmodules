@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/domicmeia/domicmeia.github.io.git
+	branch = gh-pages
