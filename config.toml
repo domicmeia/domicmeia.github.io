@@ -1,0 +1,50 @@
+baseURL = "https://domicmeia.github.io/"
+languageCode = "en-us"
+title = "Domicmeia"
+theme = "github-style-plus"
+googleAnalytics = "UA-123456-789"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  author = "domicmeia"
+  description = "any description?"
+  github = "domicmeia"
+  enableGithubFollowers = true 
+  twitter = ""
+  linkedin = ""
+  email = "dhdlqks55@gmail.com"
+  stackoverflow=""
+  lastmod = true
+  userStatusEmoji = "😉"
+  favicon = "/images/avatar.png"
+  avatar = "/images/avatar.png"
+  location = "Jeju"
+  enableGitalk = false
+  rss = true
+  enableLocalSearch = true
+  sponsorLink = "Your external sponsor link; For me, I use buymeacoffee link"
+  gtmId = "your gtm id"
+    
+  [params.gitalk]
+    accessToken = "Your Github access token" 
+    repo = "domicmeia.github.io"
+    owner = "domicmeia" 
+    admin = "domicmeia" 
+    id = "location.pathname" 
+    labels = "gitalk" 
+    perPage = 15 
+    pagerDirection = "last" 
+    createIssueManually = true 
+    distractionFreeMode = false 
+    proxy = "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token" 
+  [[params.links]]
+    title = "Link"
+    href = "https://github.com/kurt-liao"
+  [[params.links]]
+    title = "Link2"
+    href = "https://github.com/kurt-liao/github-style-plus"
+    icon = "https://blog.kurtstories.com/images/avatar.png"
+
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
