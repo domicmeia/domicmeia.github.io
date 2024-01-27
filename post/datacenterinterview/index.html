@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <script
+    type="application/javascript"
+    src='https://domicmeia.github.io/js/theme-mode.js'
+  ></script>
+  <link rel="stylesheet" href='https://domicmeia.github.io/css/frameworks.min.css' />
+  <link rel="stylesheet" href='https://domicmeia.github.io/css/github.min.css' />
+  <link rel="stylesheet" href='https://domicmeia.github.io/css/github-style.css' />
+  <link rel="stylesheet" href='https://domicmeia.github.io/css/light.css' />
+  <link rel="stylesheet" href='https://domicmeia.github.io/css/dark.css' />
+  <link rel="stylesheet" href='https://domicmeia.github.io/css/syntax.css' />
+  
+  <title>
+    [interview]data center | Domicmeia
+  </title>
+  
+  <link rel="icon" type="image/x-icon" href="/images/avatar.jpeg" />
+  
+  <meta name="theme-color" content="#1e2327" />
+
+  
+  <meta
+  name="description"
+  content="Interview questions of data center"
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://domicmeia.github.io/post/datacenterinterview/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta
+  name="twitter:title"
+  content="[interview]data center - Domicmeia"
+/>
+<meta
+  name="twitter:description"
+  content="Interview questions of data center"
+/>
+<meta name="twitter:site" content="https://domicmeia.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta
+  name="twitter:image"
+  content="https://domicmeia.github.io/"
+/>
+
+
+<meta
+  property="og:type"
+  content="article"
+/>
+<meta
+  property="og:title"
+  content="[interview]data center - Domicmeia"
+/>
+<meta
+  property="og:description"
+  content="Interview questions of data center"
+/>
+<meta property="og:url" content="https://domicmeia.github.io/post/datacenterinterview/" />
+<meta property="og:site_name" content="[interview]data center" />
+<meta
+  property="og:image"
+  content="https://domicmeia.github.io/"
+/>
+<meta property="og:image:width" content="2048" />
+<meta property="og:image:height" content="1024" />
+
+<meta property="article:published_time" content="2024-01-28 01:19:31 &#43;0900 KST" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+  
+
+<style>
+  .height-limitation {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+
+  .loader {
+    border: 4px solid #f3f3f3;
+    border-bottom: 4px solid var(--color-fg-muted);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
+<div style="position: relative">
+  <header
+    class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on"
+  >
+    <div
+      class="Header-item mobile-none"
+      style="margin-top: -4px; margin-bottom: -4px"
+    >
+      <a class="Header-link" href="https://domicmeia.github.io/" aria-label="Home">
+        <svg
+          class="octicon"
+          height="32"
+          viewBox="0 0 16 16"
+          version="1.1"
+          width="32"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button
+        class="Header-link btn-link js-details-target"
+        type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'"
+        aria-label="Search"
+      >
+        <svg
+          height="24"
+          class="octicon octicon-three-bars"
+          viewBox="0 0 16 16"
+          version="1.1"
+          width="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      style="display: none"
+      id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex"
+    >
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to"
+      >
+        <div class="position-relative">
+          <form
+            target="_blank"
+            action="https://www.google.com/search"
+            accept-charset="UTF-8"
+            method="get"
+            autocomplete="off"
+          >
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center"
+            >
+              <input
+                type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q"
+                value=""
+                placeholder="Search"
+                autocomplete="off"
+              />
+              <input type="hidden" name="q" value="site:https://domicmeia.github.io/" />
+              <div
+                class="js-jump-to-suggestions-container jump-to-suggestions overflow-hidden position-absolute"
+              >
+                <div
+                  id="search-progress"
+                  class="d-none color-bg-primary no-underline p-2"
+                  role="progress"
+                  aria-selected="false"
+                >
+                  <div class="loader"></div>
+                </div>
+
+                <ul
+                  id="jump-to-results"
+                  role="listbox"
+                  class="Box border-0 p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container js-active-navigation-container height-limitation"
+                ></ul>
+              </div>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="Header-item Header-item--full flex-justify-center d-md-none position-relative"
+    >
+      <a class="Header-link" href="https://domicmeia.github.io/" aria-label="Home">
+        <svg
+          class="octicon octicon-mark-github v-align-middle"
+          height="32"
+          viewBox="0 0 16 16"
+          version="1.1"
+          width="32"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+    <div class="Theme-switcher Header-item" style="margin-right: 0">
+      <span
+        role="button"
+        class="Header-link no-select"
+        onclick="switchTheme()"
+        style="cursor: pointer"
+        aria-label="Switch theme"
+      >
+        <svg
+          style="fill: var(--color-profile-color-modes-toggle-moon)"
+          class="no-select"
+          viewBox="0 0 16 16"
+          version="1.1"
+          width="16"
+          height="16"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z"
+          ></path>
+        </svg>
+      </span>
+    </div>
+  </header>
+</div>
+
+  
+<div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://domicmeia.github.io/">
+                  <img class=" avatar-user"
+                    src="/images/avatar.jpeg"
+                    width="32" height="32" alt="domicmeia"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://domicmeia.github.io/">domicmeia</a></span><span
+                    class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
+                      href="https://domicmeia.github.io/post/datacenterinterview/">[interview]data center</a></strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Sun, 28 Jan 2024 01:19:31 &#43;0900"
+                    class="no-wrap">
+                    Sun, 28 Jan 2024 01:19:31 &#43;0900</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Sun, 28 Jan 2024 01:24:46 &#43;0900"
+                    class="no-wrap">
+                    Sun, 28 Jan 2024 01:24:46 &#43;0900</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      2190 Words
+                    <span class="file-info-divider"></span>
+                                        10 min
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                    
+                    <a class="muted-link mr-3" href="/tags/interview">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      Interview
+                    </a>
+                    
+                    <a class="muted-link mr-3" href="/tags/linux">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      Linux
+                    </a>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><blockquote>
+<p><code>공부 목적</code>으로 작성한 포스팅입니다. 오타가 많고, 틀린 내용이 있을 수 있습니다.</p>
+</blockquote>
+<h2 id="목차">목차</h2>
+<ul>
+<li><a href="#interview-questions">Interview Questions</a>
+<ul>
+<li><a href="#1-%EC%A7%81%EB%AC%B4-%EC%9D%B4%ED%95%B4%EB%8F%84">1. 직무 이해도</a></li>
+<li><a href="#2-%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85">2. 트러블 슈팅</a></li>
+<li><a href="#3-%ED%95%98%EB%93%9C%EC%9B%A8%EC%96%B4%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC">3. (중요)하드웨어/네트워크</a></li>
+<li><a href="#4-%EB%A6%AC%EB%88%85%EC%8A%A4-sheell-script">4. (중요)리눅스/쉘스크립트</a></li>
+</ul>
+</li>
+<li><a href="#dump">Dump</a></li>
+</ul>
+<hr>
+<h2 id="interview-questions">Interview Questions</h2>
+<hr>
+<h2 id="1-직무-이해도">1. 직무 이해도</h2>
+<h3 id="what-is-the-role-of-data-center-technician">What is the Role of Data Center Technician?</h3>
+<p>Data Center Technician is responsible for the maintenace, troubleshooting, and repair of hardware and infrastructure in a data center. They ensure the uninterrupted operation of servers and associated equipment.</p>
+<h3 id="can-you-provide-an-example-of-a-preventive-maintenacne-task-in-a-deta-center">Can you provide an example of a preventive maintenacne task in a deta center?</h3>
+<p>Regularly cleaning server components to prevent dust buildup and checking for loose cables are essential preventive maintenance tasks. They help in preventing potential hardware issues.</p>
+<hr>
+<h2 id="2-트러블-슈팅">2. 트러블 슈팅</h2>
+<h3 id="how-do-you-handle-hardware-failures-in-a-data-center">How do you handle hardware failures in a data center?</h3>
+<p>I follow these steps:</p>
+<ol>
+<li>Identify the failed componet using monitoring tools.</li>
+<li>Replace the faulty hardware with a spare.</li>
+<li>Perform necessary tests to ensure proper functioning.</li>
+<li>Update records and documentation.</li>
+</ol>
+<h3 id="what-is-the-purpose-of-a-remote-hands-service-in-a-data-center">What is the purpose of a remote hands service in a data center?</h3>
+<p>Remote hands service allows for troubleshooting, maintenace, and physical tasks to be performed by off-site technicians. This is crucial for efficiency and quick response to issues.</p>
+<h3 id="how-do-you-conduct-a-risk-assessment-in-a-data-center-environment">How do you conduct a risk assessment in a data center environment?</h3>
+<p>I identify potential risk such as power failures, network issues, and hardware failures. Then, I evaluate their impact and likelihood, and implement measures to mitigate or minimize them.</p>
+<h3 id="how-do-you-handle-a-situation-where-a-critical-server-fails-to-boot">How do you handle a situation where a critical server fails to boot?</h3>
+<p>I first check for loose connections of faulty components. If needed, I would boot from a recovery disk or perform troubleshooting steps specific to the server&rsquo;s hardware.</p>
+<h3 id="how-do-you-handle-a-situation-where-a-data-center-is-at-risk-of-flooding">How do you handle a situation where a data center is at risk of flooding?</h3>
+<p>I ensure critical equipment is elevated, implement waterproofing measures, and establish protocols for shutting down non-essential systems. Additionally, I monior weater alerts an have a disaster recovery plan in place.</p>
+<h3 id="how-do-you-prioritize-tasks-when-multiple-critical-issues-aires-simultaneously">How do you prioritize tasks when multiple critical issues aires simultaneously?</h3>
+<p>I assess the impact and urgency of each issue. Critical systems with the highest impact and urgency are addressed first, followed by less critical tasks.</p>
+<hr>
+<h2 id="3-하드웨어네트워크">3. 하드웨어/네트워크</h2>
+<h3 id="explain-the-importance-of-redundancy-in-a-data-center">Explain the importance of redundancy in a data center.</h3>
+<p>Redundancy ensures that critical systems have backups in case of failures. This includes redundant power supplies, network connections, and cooling systems, minimizing downtime and ensuring continuos operation.</p>
+<h3 id="explain-the-purpose-of-a-dcadata-center-interconnect-in-a-multi-data-center-environment">Explain the purpose of a DCA(Data Center Interconnect) in a multi-data center environment.</h3>
+<p>A DCI links multiple data centers, allowing them to operate as a single unit. It enables seamless data replication, load balancing, and disaster recovery across geographically distributed facilities.</p>
+<h3 id="explain-the-role-of-a-upsuninterruptible-power-supply-in-a-data-center">Explain the role of a UPS(Uninterruptible Power Supply) in a data center.</h3>
+<p>A UPS provides temporary power during electrical outages. It ensures a smooth transition to backup generators, preventing any interruption to critical systems.</p>
+<h3 id="explain-the-purpose-of-a-rpsredundant-power-supply-in-a-data-center">Explain the purpose of a RPS(Redundant Power Supply) in a data center.</h3>
+<p>A RPS ensures uninterrupted power to critical equipment in case of a primary power source failure. It adds an extra layer of reliability and minimizes downtime.</p>
+<h3 id="expalin-the-concept-of-hot-and-cold-aisles-in-a-data-center">Expalin the concept of Hot and Cold Aisles in a data center.</h3>
+<p>In a hot aisle/cold aisle layout, servers are arranged so that cold air is directed into the front of the servers(cold aisle) and hot air is expelled out the back(hot aisle). This improves cooling efficiency.</p>
+<h3 id="explain-the-role-of-raidredundant-array-of-independent-disks">Explain the role of RAID(Redundant Array of Independent Disks)</h3>
+<p>RAID combines multiple hard drives to improve performance, reliability, and redundancy. Different RAID levels offer varying degrees of data protection and speed.</p>
+<h3 id="explain-the-purpose-of-pdupower-distribution-unit-in-a-data-center">Explain the purpose of PDU(Power Distribution Unit) in a data center.</h3>
+<p>A PDU distributes electrical power to servers and networking equipment within a rack. It provides multiple outlets, allowing for efficient power management and load balancing.</p>
+<h3 id="explain-the-role-of-a-kvm-switch-in-a-data-center">Explain the role of a KVM Switch in a data center.</h3>
+<p>A KVM(Keyboard, Video, Mouse) switch allows technicians to manage multiple servers from a single console. It simplifies troubleshooting and maintenance tasks.</p>
+<h3 id="explain-the-pupose-of-a-rack-unitu-measurement-in-a-data-center">Explain the pupose of A Rack Unit(U) measurement in a data center.</h3>
+<p>A Rack unit is a standard measure of vertical space in a rack. It is used to determine the height of equipment, allowing for efficient utilization of rack space.</p>
+<h3 id="explain-the-role-of-vlanvirtual-local-area-network-in-a-data-center">Explain the role of VLAN(Virtual Local Area Network) in a data center.</h3>
+<p>A VLAN logically divides the physical network into seperate virtual networks. It enchances security, improves performance, and simplifies network management in a data center environment.</p>
+<h3 id="explain-the-purpose-of-a-cdncontent-delivery-network-in-a-data-center">Explain the purpose of a CDN(Content Delivery Network) in a data center.</h3>
+<p>A CDN distributes content across multiple servers geographically closer to end-users. This reduces latency and improves the delivery speed of web content, enhancing user experience.</p>
+<h3 id="explain-the-role-of-a-load-balancer-in-a-data-center">Explain the role of a Load Balancer in a data center.</h3>
+<p>A Load Balancer distributes incoming network traffic across multiple servers, ensuring no single server becomes overloaded. This enchances the performance, availability, and reliability of applications.</p>
+<h3 id="explain-the-purpose-of-a-sanstorage-area-network-in-a-data-center">Explain the purpose of a SAN(Storage Area Network) in a data center.</h3>
+<p>A SAN provides high-speed, block-level access to storage resources, allowing servers to access shared storage devices. It is used for critical applications and data requiring high availavility.</p>
+<h3 id="explain-the-purpose-of-a-network-switch-in-a-data-center">Explain the purpose of a Network Switch in a data center.</h3>
+<p>A Network switch connects multiple devices within a network, allowing them to communicate efficiently. It operates at the data link layer of the OSI model, improving network performance.</p>
+<h3 id="explain-the-purpose-of-an-ilointegrated-lights-out-in-a-data-center">Explain the purpose of an ILO(Integrated Lights-Out) in a data center.</h3>
+<p>ILO is a remote management interface that allows administrators to monitor and manage servers even if the operating system is not running. It provides out-of-band management capabilities.</p>
+<h3 id="explain-the-purpose-of-a-blade-server-in-a-data-center">Explain the purpose of a Blade Server in a data center.</h3>
+<p>A blade server is a compact, modular server that shares resources with other blade servers. It reduces the physical footprint, simplifies management, and enhances scalabiltiy in a data center.</p>
+<h3 id="explain-the-purpose-of-a-console-server-in-a-data-center">Explain the purpose of a console server in a data center.</h3>
+<p>A console server provides out-of-band access to network devices and servers. It allows administartors to manage and troubleshoot equipment even if the network is down.</p>
+<h3 id="explain-the-purpose-of-a-storage-array-in-data-center">Explain the purpose of a storage array in data center.</h3>
+<p>A storage array is a centralized storage system that provides high-capacity storage for servers. It allows for scalable and shared storage resources, enhancing data management capabilties.</p>
+<h3 id="explain-the-purpose-of-a-nicnetwork-interface-card-in-a-data-center">Explain the purpose of a NIC(Network Interface Card) in a data center.</h3>
+<p>A NIC is a hardware component that connects a server to a network. It enables communication between the server and other devices, allowing data transfer over the network.</p>
+<h3 id="explain-the-purpose-of-a-firewall-in-a-data-center">Explain the purpose of a firewall in a data center.</h3>
+<p>A firewall is a security device that filters incoming and outgoing network traffic based on an applied rule set. It acts as a barrier between a trusted network and untrusted networks(like the internet), preventing unauthorized access and potential threats.</p>
+<hr>
+<h2 id="4-리눅스-sheell-script">4. 리눅스 Sheell script</h2>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-server-monitoring">Provide an Example of a code snippet for automating server monitoring.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">server</span><span class="o">=</span><span class="s2">&#34;example.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">status</span><span class="o">=</span><span class="k">$(</span>ping -c <span class="m">1</span> <span class="nv">$server</span> <span class="p">|</span> grep <span class="s2">&#34;1 packets transmitted, 1 received&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$status</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Server </span><span class="nv">$server</span><span class="s2"> is down.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Server </span><span class="nv">$server</span><span class="s2"> is up.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>This script checks if a sever is reachable.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-server-backups">Provide an Example of a code snippet for automating server Backups.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">source_dir</span><span class="o">=</span><span class="s2">&#34;/var/www&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">backup_dir</span><span class="o">=</span><span class="s2">&#34;/backup&#34;</span>
+</span></span><span class="line"><span class="cl">tar -czvf <span class="nv">$backup_dir</span>/backup_<span class="k">$(</span>date +<span class="se">\%</span>Y<span class="se">\%</span>m<span class="se">\%</span>d<span class="k">)</span>.tar.gz <span class="nv">$source_dir</span>
+</span></span></code></pre></div><p>This script creates a compressed backup of a directory.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-server-backup-scheduling">Provide an Example of a code snippet for automating server backup scheduling.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">backup_dir</span><span class="o">=</span><span class="s2">&#34;/backup&#34;</span>
+</span></span><span class="line"><span class="cl">rsync -av --delete /data <span class="nv">$backup_dir</span>
+</span></span></code></pre></div><h3 id="provide-an-example-of-a-code-snippet-for-automating-server-database-backups">Provide an Example of a code snippet for automating server database backups.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">database</span><span class="o">=</span><span class="s2">&#34;mydatabase&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">backup_directory</span><span class="o">=</span><span class="s2">&#34;/backup&#34;</span>
+</span></span><span class="line"><span class="cl">mysqldump -u username -p password <span class="nv">$database</span> &gt; <span class="s2">&#34;</span><span class="nv">$backup_directory</span><span class="s2">/</span><span class="nv">$database</span><span class="s2">-</span><span class="k">$(</span>date +%Y%m%d<span class="k">)</span><span class="s2">.sql&#34;</span>
+</span></span></code></pre></div><p>This script creates a backup of a MySQL database.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-monitoring-server-disk-space">Provide an Example of a code snippet for monitoring server disk space.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">threshold</span><span class="o">=</span><span class="m">90</span>
+</span></span><span class="line"><span class="cl"><span class="nv">current_usage</span><span class="o">=</span><span class="k">$(</span>df -h / <span class="p">|</span> awk <span class="s1">&#39;NR==2{print $(NF-1)}&#39;</span> <span class="p">|</span> tr -d <span class="s1">&#39;%&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$current_usage</span><span class="s2">&#34;</span> -ge <span class="s2">&#34;</span><span class="nv">$threshold</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Disk space is running low.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Disk space is within acceptable limits.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>This script checks if disk space usage is above a specific threshold.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-server-log-monitoring">Provide an Example of a code snippet for automating server log monitoring.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">log_file</span><span class="o">=</span><span class="s2">&#34;/var/log/syslog&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">error_pattern</span><span class="o">=</span><span class="s2">&#34;ERROR&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> grep -q <span class="s2">&#34;</span><span class="nv">$error_pattern</span><span class="s2">&#34;</span> <span class="nv">$log_file</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Errors found in the log file.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;No errors found.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>This script checks for errors in a log file.</p>
+<h3 id="provide-an-example-of-a-code-sinppet-for-automating-server-performance-monitoring">Provide an Example of a code sinppet for automating server performance monitoring.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">cpu_threshold</span><span class="o">=</span><span class="m">90</span>
+</span></span><span class="line"><span class="cl"><span class="nv">cpu_usage</span><span class="o">=</span><span class="k">$(</span>top -bn1 <span class="p">|</span> grep <span class="s2">&#34;Cpu(s)&#34;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span> <span class="p">|</span> awk -F. <span class="s1">&#39;{print $1}&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$cpu_usage</span><span class="s2">&#34;</span> -ge <span class="s2">&#34;</span><span class="nv">$cpu_threshold</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;High CPU usage detected.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;CPU usage within acceptable limits.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>The script checks if CPU usage exceeds a specified threshold.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-server-security-check">Provide an Example of a code snippet for automating server security check.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">open_ports</span><span class="o">=</span><span class="k">$(</span>netstat -tuln <span class="p">|</span> grep LISTEN <span class="p">|</span> awk <span class="s1">&#39;{print $4}&#39;</span> <span class="p">|</span> awk -F: <span class="s1">&#39;{print $NF}&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$open_ports</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;No open ports found.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Open ports: </span><span class="nv">$open_ports</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>The script checks for open ports on a server.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-server-backup-verification">Provide an Example of a code snippet for automating server backup verification.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">backup_dir</span><span class="o">=</span><span class="s2">&#34;/backup&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -d <span class="s2">&#34;</span><span class="nv">$backup_dir</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="k">$(</span>ls -A <span class="nv">$backup_dir</span><span class="k">)</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Backup directory is not empty.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Backup directory is empty or does not exist.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>This script checks if a backup directory is populated.</p>
+<h3 id="provide-an-example-fo-a-code-snippet-for-automating-server-log-rotation">Provide an Example fo a code snippet for automating server log rotation.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">log_file</span><span class="o">=</span><span class="s2">&#34;/var/log/application.log&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">max_size</span><span class="o">=</span>10M
+</span></span><span class="line"><span class="cl"><span class="nv">backup_count</span><span class="o">=</span><span class="m">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -f <span class="s2">&#34;</span><span class="nv">$log_file</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">log_size</span><span class="o">=</span><span class="k">$(</span>du -m <span class="s2">&#34;</span><span class="nv">$log_file</span><span class="s2">&#34;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $1}&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$log_size</span><span class="s2">&#34;</span> -ge <span class="s2">&#34;</span><span class="nv">$max_size</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    mv <span class="s2">&#34;</span><span class="nv">$log_file</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$log_file</span><span class="s2">.1&#34;</span>
+</span></span><span class="line"><span class="cl">    touch <span class="s2">&#34;</span><span class="nv">$log_file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    gzip <span class="s2">&#34;</span><span class="nv">$log_file</span><span class="s2">.1&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>This script rotates logs based on size.</p>
+<h3 id="provides-an-example-of-a-code-snippet-for-automating-server-certificate-expiration-checks">Provides an Example of a code snippet for automating server certificate expiration checks.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">cert_file</span><span class="o">=</span><span class="s2">&#34;/etc/ssl/cert.pem&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">expiry_date</span><span class="o">=</span><span class="k">$(</span>date -d <span class="s2">&#34;</span><span class="k">$(</span>openssl x509 -noout -in <span class="nv">$cert_file</span> -dates <span class="p">|</span> grep notAfter <span class="p">|</span> cut -d<span class="o">=</span> -f2<span class="k">)</span><span class="s2">&#34;</span> +%s<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">current_date</span><span class="o">=</span><span class="k">$(</span>date +%s<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">days_until_expiry</span><span class="o">=</span><span class="k">$((</span> <span class="o">(</span><span class="nv">$expiry_date</span> <span class="o">-</span> <span class="nv">$current_date</span><span class="o">)</span> <span class="o">/</span> <span class="o">(</span><span class="m">60</span><span class="o">*</span><span class="m">60</span><span class="o">*</span><span class="m">24</span><span class="o">)</span> <span class="k">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$days_until_expiry</span><span class="s2">&#34;</span> -lt <span class="m">30</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Certificate expires in less than 30 days.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Certificate expiration is within acceptable limits.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><h3 id="provide-an-example-of-a-code-snippet-for-automating-server-user-account-management">Provide an Example of a code snippet for automating server user account management.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">username</span><span class="o">=</span><span class="s2">&#34;newuser&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">password</span><span class="o">=</span><span class="s2">&#34;password123&#34;</span>
+</span></span><span class="line"><span class="cl">useradd -m -p <span class="k">$(</span>openssl passwd -1 <span class="nv">$password</span><span class="k">)</span> <span class="nv">$username</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># or</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="nv">$password</span><span class="s2">\n</span><span class="nv">$password</span><span class="s2">&#34;</span> <span class="p">|</span> passwd <span class="nv">$username</span>
+</span></span></code></pre></div><p>This script creates a new user account with a specified password.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-server-service-monitoring">Provide an Example of a code snippet for automating server service monitoring.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">service</span><span class="o">=</span><span class="s2">&#34;apache2&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> systemctl is-active --quiet <span class="nv">$service</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$service</span><span class="s2"> is running.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$service</span><span class="s2"> is not running.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>This script checks if a service is running.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-server-software-updates">Provide an Example of a code snippet for automating server software updates.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>apt update
+</span></span><span class="line"><span class="cl">apt upgrade -y
+</span></span></code></pre></div><p>This script updates the software packages on a Debian-based system.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-server-resource-utilization-monitoring">Provide an Example of a code snippet for automating server resource utilization monitoring.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">memory_threshold</span><span class="o">=</span><span class="m">90</span>
+</span></span><span class="line"><span class="cl"><span class="nv">memory_usage</span><span class="o">=</span><span class="k">$(</span>free <span class="p">|</span> grep Mem <span class="p">|</span> awk <span class="s1">&#39;{print $3/$2 * 100}&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$memory_usage</span><span class="s2">&#34;</span> -ge <span class="s2">&#34;</span><span class="nv">$memory_threshold</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;High memory usage detected.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Memory usage within acceptable limits.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>This script checks if memory usage exceeds a specified threshold.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-server-log-monitoring-for-specific-keywords">Provide an Example of a code snippet for automating server log monitoring for specific keywords.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">log_file</span><span class="o">=</span><span class="s2">&#34;/var/log/application.log&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">keyword</span><span class="o">=</span><span class="s2">&#34;ERROR&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> grep -q <span class="s2">&#34;</span><span class="nv">$keyword</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$log_file</span><span class="s2">&#34;</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Error found in </span><span class="nv">$log_file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;No errors found.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>This script checks for a specifc keyword in a log file.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-ssl-certificate-renewal">Provide an Example of a code snippet for automating SSL certificate renewal.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">cert_file</span><span class="o">=</span><span class="s2">&#34;/etc/ssl/cert.pem&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">days_until_expiry</span><span class="o">=</span><span class="k">$(</span>openssl x509 -noout -in <span class="nv">$cert_file</span> -dates <span class="p">|</span> grep notAfter <span class="p">|</span> cut -d<span class="o">=</span> -f2<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> ! openssl x509 -checkend <span class="k">$((</span><span class="m">60</span><span class="o">*</span><span class="m">60</span><span class="o">*</span><span class="m">24</span><span class="o">*</span><span class="m">30</span><span class="k">))</span> -noout -in <span class="nv">$cert_file</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Certificate needs to be renewed.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Certificate is valid.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#!/bin/bash</span>
+</span></span><span class="line"><span class="cl">certbot renew
+</span></span></code></pre></div><p>This script checks if an SSL certifiacte needs renewal.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-server-ssl-certificate-installation">Provide an Example of a code snippet for automating server SSL certificate installation.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">cert_file</span><span class="o">=</span><span class="s2">&#34;server.crt&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">key_file</span><span class="o">=</span><span class="s2">&#34;server.key&#34;</span>
+</span></span><span class="line"><span class="cl">cp <span class="nv">$cert_file</span> /etc/ssl/certs/
+</span></span><span class="line"><span class="cl">cp <span class="nv">$key_file</span> /etc/ssl/private/
+</span></span></code></pre></div><p>This script copeis SSL certificate and key files to their respective directories.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-server-firewall-rule-management">Provide an Example of a code snippet for automating server firewall rule management.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">port</span><span class="o">=</span><span class="m">80</span>
+</span></span><span class="line"><span class="cl">iptables -A INPUT -p tcp --dport <span class="nv">$port</span> -j ACCEPT
+</span></span></code></pre></div><h3 id="provide-an-example-of-a-code-snippet-for-automating-server-vulnerability-scanning">Provide an Example of a code snippet for automating server vulnerability scanning.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>nmap -p 1-65535 -T4 -A -v target_host
+</span></span></code></pre></div><p>This script uses nmap to perform a through vulnerability scan on the target host.</p>
+<h3 id="provide-an-example-of-a-code-snippet-for-automating-server-container-deployment">Provide an Example of a code snippet for automating server container deployment.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>docker run -d --name my_container my_image
+</span></span></code></pre></div><p>This script deploys a container using a specified Docker image.</p>
+<hr>
+<h2 id="dump">Dump</h2>
+<p>아 이 이상 정리할 수 없어&hellip;.귀찮아~</p>
+<ul>
+<li>Do you know what racket stack means?</li>
+<li>Have you used an Ethernet test?</li>
+<li>제발 질문 좀 해</li>
+<li>Can you tell me what a normal day is like</li>
+<li>What is the difficulties the team is running into the moment?</li>
+<li>How can i succeed in this job ?? 아니 진짜??&hellip;. 이해할 수 없는 외국계기업</li>
+</ul>
+</article>
+              </div>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination-nav">
+        <div class="pagination-button next-post">
+          
+          <div>«&nbsp;</div><a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/linuxinterview/"> [interview]linux</a>
+          
+        </div>
+        
+        <div class="pagination-button previous-post">
+          
+          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/issue-with-linux-operating-system/">Issue with linux operating system&nbsp;</a><div> »</div>
+          
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='https://domicmeia.github.io/js/toc.js'></script>
+<link rel="stylesheet" href='https://domicmeia.github.io/css/toc.css' />
+
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light"
+  >
+    <ul
+      class="list-style-none d-flex flex-wrap col-12 flex-justify-center mb-2 mb-lg-0"
+    >
+      
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+</body>
+
+<script type="application/javascript" src="https://domicmeia.github.io/js/github-style.js"></script>
+
+<script src="https://domicmeia.github.io/js/mark.es6.min.js"></script>
+
+
+<script type="text/javascript">
+
+  const host = window.location.host;
+  const keyword = localStorage.getItem('keyword');
+  localStorage.removeItem('keyword');
+
+  if (keyword) {
+    const markInstance = new Mark(document.body);
+    markInstance.unmark({
+      done: function() {
+        markInstance.mark(keyword);
+      }
+    });
+  }
+
+  const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--color-bg-primary');
+  const mutedColor = getComputedStyle(document.documentElement).getPropertyValue('--color-fg-muted');
+  const hoverColor = '#216EEB';
+
+  let originalStyle;
+  let svgOriginalStyle;
+  let titleOriginalStyle;
+
+  const onMouseOver = (node) => {
+    originalStyle = Object.assign({}, node.style);
+    node.style.backgroundColor = hoverColor;
+
+    const child = node.querySelector('.js-jump');
+    child.classList.remove('d-on-nav-focus');
+
+    const title = node.querySelector('.title');
+    if (title && primaryColor === ' #fff') {
+      titleOriginalStyle = title.style;
+      title.style.color = '#fff';
+    }
+
+    const svg = node.querySelector('.octicon');
+    if (svg) {
+      svgOriginalStyle = svg.style;
+      svg.style.color = '#fff';
+    }
+  }
+
+  const onMouseLeave = (node) => {
+    node.style = originalStyle;
+    const child = node.querySelector('.js-jump');
+    child.classList.add('d-on-nav-focus');
+
+    const title = node.querySelector('.title');
+    title.style = titleOriginalStyle;
+
+    const svg = node.querySelector('.octicon');
+    svg.style = svgOriginalStyle;
+  }
+
+  const createSearchItem = (title, link, index) => {
+    return `
+    <li class="color-bg-primary search-item d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search"
+        role="option" aria-selected="false" tabindex="${index}">
+        <a onmouseover="onMouseOver(this)" onmouseleave="onMouseLeave(this)"
+          class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2"
+          href="${link}" data-item-type="scoped_search">
+          <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center ">
+            <svg title="Repository" aria-label="Repository" role="img" height="16" viewBox="0 0 16 16"
+              version="1.1" width="16" data-view-component="true"
+              class="octicon octicon-repo js-jump-to-octicon-repo  flex-shrink-0">
+              <path fill-rule="evenodd"
+                d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+              </path>
+            </svg>
+          </div>    
+
+          <div
+            class="title jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+            ${title}
+          </div>
+
+          <div aria-hidden="true" style="color: var(--color-fg-muted);"
+            class="color-bg-primary js-jump border rounded-2 flex-shrink-0 color-bg-subtle px-1 ml-1 f6 d-on-nav-focus js-jump-to-badge-jump">
+            Jump to
+            <span class="d-inline-block ml-1 v-align-middle">↵</span>
+          </div>
+        </a>
+      </li>
+    `
+  }
+
+  const createGoogleSearchItem = (keyword) => {
+    return `
+    <li class="color-bg-primary search-item d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search"
+        role="option" aria-selected="false" tabindex="0">
+        <a onmouseover="onMouseOver(this)" onmouseleave="onMouseLeave(this)"
+          class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2"
+          href="https://www.google.com/search?q=${keyword}" target="_blank" data-item-type="scoped_search">
+          <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center ">
+            <svg title="Search" aria-label="Search" role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-search js-jump-to-octicon-search flex-shrink-0">
+                <path fill-rule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"></path>
+            </svg>
+          </div>    
+
+          <div
+            class="title jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+            ${keyword}
+          </div>
+
+          <div aria-hidden="true" style="color: var(--color-fg-muted);"
+            class="color-bg-primary js-jump border rounded-2 flex-shrink-0 color-bg-subtle px-1 ml-1 f6 d-on-nav-focus js-jump-to-badge-jump">
+            Google search
+            <span class="d-inline-block ml-1 v-align-middle">↵</span>
+          </div>
+        </a>
+      </li>
+    `
+  }
+
+  const stripHtml = (html) => {
+    let tmp = document.createElement('div');
+    tmp.innerHTML = html;
+
+    
+    const styles = tmp.getElementsByTagName('style');
+    while(styles[0]) {
+      styles[0].parentNode.removeChild(styles[0]);
+    }
+
+    
+    const scripts = tmp.getElementsByTagName('script');
+    while(scripts[0]) {
+      scripts[0].parentNode.removeChild(scripts[0]);
+    }
+    
+    return tmp.textContent || tmp.innerText || "";
+  }
+
+  const inputDom = document.querySelector(".Header-search-input");
+  const resultDom = document.getElementById('jump-to-results');
+  let debounceTimer;
+  let parser;
+  let xmlDoc;
+
+  const search = (_keyword) => {
+
+    resultDom.innerHTML = '';
+
+    const keyword = _keyword;
+
+    if (!keyword) return;
+
+    const progressDom = document.getElementById('search-progress');
+    if (progressDom && progressDom.classList.contains('d-none')) {
+      progressDom.classList.remove('d-none');
+    }
+
+    localStorage.setItem('keyword', keyword);
+    fetch(`${host.indexOf('localhost') > -1 ? 'http://' : 'https://'}${host}/index.xml`).then(resp => resp.text()).then(async (res) => {
+      parser = new DOMParser();
+      xmlDoc = parser.parseFromString(res, 'text/xml');
+      const linkResult = xmlDoc.getElementsByTagName('link');
+      const titleResult = xmlDoc.getElementsByTagName('title');
+      const arr = [];
+
+      const matched = [];
+      await (async function searchLink() {
+        for (let i = 0; i < linkResult.length; i++) {
+          await fetch(linkResult[i].textContent).then(resp => resp.text().then(res => {
+            const pureText = stripHtml(res);
+            if (pureText.indexOf(keyword) >= 0) {
+              matched.push(i);
+            }
+          }))
+        }
+      })();
+
+      const googleSearchItem = createGoogleSearchItem(keyword);
+      const node= document.createRange().createContextualFragment(googleSearchItem);
+      resultDom.appendChild(node);
+
+      matched.map((itemIndex, index) => {
+        const r = createSearchItem(titleResult[itemIndex].textContent, linkResult[itemIndex].textContent, index + 1);
+        const node = document.createRange().createContextualFragment(r);
+        resultDom.appendChild(node);
+      });
+
+      if (progressDom && !progressDom.classList.contains('d-none')) {
+        progressDom.classList.add('d-none');
+      }
+    });
+  }
+
+  const debounce = (callback, time) => {
+    window.clearTimeout(debounceTimer);
+    debounceTimer = window.setTimeout(callback, time);
+  };
+
+  ['focus', 'input'].forEach(event => {
+    inputDom.addEventListener(event, (e) => {
+      debounce(() => search(e.target.value), 500);
+    }, false);
+  });
+
+  inputDom.addEventListener('blur', () => {
+    setTimeout(() => {
+      resultDom.innerHTML = '';
+    }, 100);
+  });
+
+</script>
+
+
+
+
+
+
+</html>

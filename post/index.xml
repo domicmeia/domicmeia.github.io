@@ -6,8 +6,29 @@
     <description>Recent content in Posts on Domicmeia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jan 2024 01:10:41 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jan 2024 01:27:10 +0900</lastBuildDate>
     <atom:link href="https://domicmeia.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to change the font-size of ubuntu with UTM?</title>
+      <link>https://domicmeia.github.io/post/howtochangethefontsize/</link>
+      <pubDate>Sun, 28 Jan 2024 01:25:44 +0900</pubDate>
+      <guid>https://domicmeia.github.io/post/howtochangethefontsize/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>[interview]linux</title>
+      <link>https://domicmeia.github.io/post/linuxinterview/</link>
+      <pubDate>Sun, 28 Jan 2024 01:24:19 +0900</pubDate>
+      <guid>https://domicmeia.github.io/post/linuxinterview/</guid>
+      <description>Interview questions about Linux</description>
+    </item>
+    <item>
+      <title>[interview]data center</title>
+      <link>https://domicmeia.github.io/post/datacenterinterview/</link>
+      <pubDate>Sun, 28 Jan 2024 01:19:31 +0900</pubDate>
+      <guid>https://domicmeia.github.io/post/datacenterinterview/</guid>
+      <description>Interview questions of data center</description>
+    </item>
     <item>
       <title>Issue with linux operating system</title>
       <link>https://domicmeia.github.io/post/issue-with-linux-operating-system/</link>
