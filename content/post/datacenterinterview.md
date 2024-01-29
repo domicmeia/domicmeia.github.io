@@ -4,7 +4,7 @@ date = 2024-01-28T01:19:31+09:00
 tags = ["Interview", "Linux"]
 summary = "Interview questions of data center"
 +++
-> `공부 목적`으로 작성한 포스팅입니다. 오타가 많고, 틀린 내용이 있을 수 있습니다.
+> This post was written for `studying`. There maybe a lot wrong going on.
 
 ## 목차
 * [Interview Questions](#interview-questions)

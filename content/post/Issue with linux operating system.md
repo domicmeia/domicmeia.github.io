@@ -4,8 +4,7 @@ date = 2024-01-27T23:52:09+09:00
 tags = ["Linux", "Troubleshooting"]
 summary = "Issue with linux operating system"
 +++
-
-> `공부 목적`으로 작성한 포스팅입니다. 오타가 많고, 틀린 내용이 있을 수 있습니다.
+> This post was written for `studying`. There maybe a lot wrong going on.
 
 ## 목차
 * [Issue with Linux Operating System](#issue-with-linux-operating-system)

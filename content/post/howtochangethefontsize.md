@@ -1,7 +1,7 @@
 +++
 title = "How to change the font-size of ubuntu with UTM?"
 date = 2024-01-28T01:25:44+09:00
-tags = ["linux", "command"]
+tags = ["Linux", "Command"]
 summary = " "
 +++
 ## How to change the font-size in Ubuntu Server 20.04 LTS
