@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>command on Domicmeia</title>
+    <title>Command on Domicmeia</title>
     <link>https://domicmeia.github.io/tags/command/</link>
-    <description>Recent content in command on Domicmeia</description>
+    <description>Recent content in Command on Domicmeia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jan 2024 01:27:10 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jan 2024 23:22:23 +0900</lastBuildDate>
     <atom:link href="https://domicmeia.github.io/tags/command/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to change the font-size of ubuntu with UTM?</title>
