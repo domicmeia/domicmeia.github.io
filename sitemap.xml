@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://domicmeia.github.io/</loc>
+    <lastmod>2024-01-30T20:38:08+09:00</lastmod>
+  </url><url>
+    <loc>https://domicmeia.github.io/tags/go/</loc>
+    <lastmod>2024-01-30T20:38:08+09:00</lastmod>
+  </url><url>
+    <loc>https://domicmeia.github.io/post/golangerror/</loc>
+    <lastmod>2024-01-30T20:38:08+09:00</lastmod>
+  </url><url>
+    <loc>https://domicmeia.github.io/post/</loc>
+    <lastmod>2024-01-30T20:38:08+09:00</lastmod>
+  </url><url>
+    <loc>https://domicmeia.github.io/tags/</loc>
+    <lastmod>2024-01-30T20:38:08+09:00</lastmod>
+  </url><url>
+    <loc>https://domicmeia.github.io/tags/warning/</loc>
+    <lastmod>2024-01-30T20:38:08+09:00</lastmod>
+  </url><url>
     <loc>https://domicmeia.github.io/tags/aws/</loc>
     <lastmod>2024-01-29T23:39:39+09:00</lastmod>
   </url><url>
@@ -9,15 +27,6 @@
     <lastmod>2024-01-29T23:39:39+09:00</lastmod>
   </url><url>
     <loc>https://domicmeia.github.io/tags/cloudcomputing/</loc>
-    <lastmod>2024-01-29T23:39:39+09:00</lastmod>
-  </url><url>
-    <loc>https://domicmeia.github.io/</loc>
-    <lastmod>2024-01-29T23:39:39+09:00</lastmod>
-  </url><url>
-    <loc>https://domicmeia.github.io/post/</loc>
-    <lastmod>2024-01-29T23:39:39+09:00</lastmod>
-  </url><url>
-    <loc>https://domicmeia.github.io/tags/</loc>
     <lastmod>2024-01-29T23:39:39+09:00</lastmod>
   </url><url>
     <loc>https://domicmeia.github.io/tags/command/</loc>

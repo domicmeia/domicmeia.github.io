@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Warning on Domicmeia</title>
+    <link>https://domicmeia.github.io/tags/warning/</link>
+    <description>Recent content in Warning on Domicmeia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Jan 2024 20:38:08 +0900</lastBuildDate>
+    <atom:link href="https://domicmeia.github.io/tags/warning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to fix the warning: composite literal uses unkeyed fields</title>
+      <link>https://domicmeia.github.io/post/golangerror/</link>
+      <pubDate>Tue, 30 Jan 2024 20:29:24 +0900</pubDate>
+      <guid>https://domicmeia.github.io/post/golangerror/</guid>
+      <description>warning: composite literal uses unkeyed fields</description>
+    </item>
+  </channel>
+</rss>
