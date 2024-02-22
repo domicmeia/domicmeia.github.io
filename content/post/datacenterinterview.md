@@ -171,7 +171,7 @@ This script checks if a sever is reachable.
 #!/bin/bash
 source_dir="/var/www"
 backup_dir="/backup"
-tar -czvf $backup_dir/backup_$(date +\%Y\%m\%d).tar.gz $source_dir
+tar -zcvf $backup_dir/backup_$(date +\%Y\%m\%d).tar.gz $source_dir
 ```
 This script creates a compressed backup of a directory.
 
