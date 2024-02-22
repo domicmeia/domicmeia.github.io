@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 29 Jan 2024 23:21:30 &#43;0900"
+                  Modified <relative-time datetime="Thu, 22 Feb 2024 16:02:32 &#43;0900"
                     class="no-wrap">
-                    Mon, 29 Jan 2024 23:21:30 &#43;0900</relative-time>
+                    Thu, 22 Feb 2024 16:02:32 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -452,7 +452,7 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">source_dir</span><span class="o">=</span><span class="s2">&#34;/var/www&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">backup_dir</span><span class="o">=</span><span class="s2">&#34;/backup&#34;</span>
-</span></span><span class="line"><span class="cl">tar -czvf <span class="nv">$backup_dir</span>/backup_<span class="k">$(</span>date +<span class="se">\%</span>Y<span class="se">\%</span>m<span class="se">\%</span>d<span class="k">)</span>.tar.gz <span class="nv">$source_dir</span>
+</span></span><span class="line"><span class="cl">tar -zcvf <span class="nv">$backup_dir</span>/backup_<span class="k">$(</span>date +<span class="se">\%</span>Y<span class="se">\%</span>m<span class="se">\%</span>d<span class="k">)</span>.tar.gz <span class="nv">$source_dir</span>
 </span></span></code></pre></div><p>This script creates a compressed backup of a directory.</p>
 <h3 id="provide-an-example-of-a-code-snippet-for-automating-server-backup-scheduling">Provide an Example of a code snippet for automating server backup scheduling.</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
