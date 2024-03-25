@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OS on Domicmeia</title>
+    <link>https://domicmeia.github.io/tags/os/</link>
+    <description>Recent content in OS on Domicmeia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Mar 2024 19:04:31 +0900</lastBuildDate>
+    <atom:link href="https://domicmeia.github.io/tags/os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[OS Concepts]Chapter 11: Mass Storage EX 11-23</title>
+      <link>https://domicmeia.github.io/post/opcon1/</link>
+      <pubDate>Mon, 25 Mar 2024 18:51:25 +0900</pubDate>
+      <guid>https://domicmeia.github.io/post/opcon1/</guid>
+      <description>EX-45 11.23</description>
+    </item>
+  </channel>
+</rss>
