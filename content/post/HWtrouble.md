@@ -7,7 +7,7 @@ summary = "OS troubleshooting for No Power, No POST,and No Video issues"
 > This post was written for `studying`. There maybe a lot wrong going on.
 
 ## 목차
-* [Concepts] (#concepts)
+* [Concepts](#concepts)
 * [Troubleshooting](#troubleshooting)
   + [No Power](#no-power-1)
   + [No Boot](#no-boot-1)
@@ -57,11 +57,18 @@ Log in to the iDRAC to view the log.
 
 ## No power
 
-1. First remove both power cables and hold the power button in for ten seconds to drain any residual power.
-2. Connect power cables to power supplies bypassing any UPS temporarily if being used. The LED should illuminate on the power supply unit(PSU). Press the PSU BIST.
-3. If no PSU BIST LED's illuminate, check using knwon working power cables and wall outlets.
++ First remove both power cables and hold the power button in for ten seconds to drain any residual power.
++ Connect power cables to power supplies bypassing any UPS temporarily if being used. The LED should illuminate on the power supply unit(PSU). Press the PSU BIST.
++ If no PSU BIST LED's illuminate, check using knwon working power cables and wall outlets.
 
 ## No Post
+
+> Minimum to POST configuration is the config that has the minimum components required to complete POST. Typically, the minimum to POST configuration for **rack servers** is **PSU1, CPU1, memory module in A1 slot, and the default riser without expansion cards**. For **tower servers**, the minimum to POST configuration is **PSU1, CPU1, and memory module in A1 slot**. For modular servers, the minimum to POST configuration is CPU1 and memory module in A1 slot.
+
++ Bring the server to minimum configuration for the POST.
++ Reconnect the power and video cable only.
++ Attemp to POST the server
+ + plug the components one at a tiime until the defective part is found.
 
 ...
 
@@ -72,16 +79,16 @@ A few actions can be performed to check what is not working properly.
 
 The first thing to check is which device is selected as the primary boot. To do a quick check, use F11 to launch the manual boot selection.
 
-1. **Restart the system.**
-2. Press F11 during POST to enter the **Boot Manager.**
-3. Select the correct Hard Disk drive (Virtual Drive), where the operating system is installed.
-4. Boot from this device.
++ **Restart the system.**
++ Press F11 during POST to enter the **Boot Manager.**
++ Select the correct Hard Disk drive (Virtual Drive), where the operating system is installed.
++ Boot from this device.
 
 If the system now boots into the operating system, the hardware is fine, and there is a boot order conflict in the BIOS settings. The most likely cause for this is that the system is set to boot from CD, DVD, or USB before the drives, which is a logical setting. To resolve this, ensure you do not have a USB or CD or DVD inserted when powering on the system.
 
 You can change the boot order setting permanently in the System Setup to boot from the drive first. To change this:
 
-1. **Restart the system.**
-2. Press F2 during system start to enter the System Settings.
-3. Change the **Boot Sequence** in the **Boot Settings**.
-4. Leave the menu using Exit in the upper right corner of the screen.
++ **Restart the system.**
++ Press F2 during system start to enter the System Settings.
++ Change the **Boot Sequence** in the **Boot Settings**.
++ Leave the menu using Exit in the upper right corner of the screen
