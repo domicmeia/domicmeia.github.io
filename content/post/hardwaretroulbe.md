@@ -7,7 +7,7 @@ summary = "OS boot process and troubleshooting"
 > This post was written for `studying`. There maybe a lot wrong going on.
 
 ## 목차
-* [Concepts] 
+* Concepts
   + [Boot Process](#boot-process)
   + [Questions](#questions)
 * [Troubleshooting](#troubleshooting)

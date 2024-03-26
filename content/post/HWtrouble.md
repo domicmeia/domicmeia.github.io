@@ -1,7 +1,7 @@
 +++
 title = "[OS]Server Troubleshooting"
 date = 2024-03-26T17:14:42+09:00
-tags = ["Troubleshooting", "OS"]
+tags = ["OS", "Troubleshooting"]
 summary = "OS troubleshooting for No Power, No POST,and No Video issues"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.
@@ -10,6 +10,7 @@ summary = "OS troubleshooting for No Power, No POST,and No Video issues"
 * [Concepts](#concepts)
 * [Troubleshooting](#troubleshooting)
   + [No Power](#no-power-1)
+  + [No POST](#no-post)
   + [No Boot](#no-boot-1)
 
 ---
@@ -49,7 +50,8 @@ Overall, SMART provides valuable insight into the health and performance of stor
 # Troubleshooting
 ---
 
-**UPDATE THE BIOS AND IDRAC FIRMWARE TO THE LATEST VERSION**
+**UPDATE THE BIOS AND IDRAC FIRMWARE TO THE LATEST VERSION**  
+
 Before starting troubleshooting, you should check the iDRAC logs for additional that can help with troubleshooting.
 
 Log in to the iDRAC to view the log.
@@ -69,8 +71,6 @@ Log in to the iDRAC to view the log.
 + Reconnect the power and video cable only.
 + Attemp to POST the server
  + plug the components one at a tiime until the defective part is found.
-
-...
 
 ## No Boot
 
