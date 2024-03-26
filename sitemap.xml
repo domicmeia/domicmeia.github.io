@@ -2,26 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://domicmeia.github.io/post/hwtrouble/</loc>
-    <lastmod>2024-03-26T18:38:29+09:00</lastmod>
-  </url><url>
     <loc>https://domicmeia.github.io/</loc>
-    <lastmod>2024-03-26T18:38:29+09:00</lastmod>
+    <lastmod>2024-03-26T19:49:13+09:00</lastmod>
   </url><url>
-    <loc>https://domicmeia.github.io/tags/os/</loc>
-    <lastmod>2024-03-26T18:38:29+09:00</lastmod>
+    <loc>https://domicmeia.github.io/tags/networking/</loc>
+    <lastmod>2024-03-26T19:49:13+09:00</lastmod>
+  </url><url>
+    <loc>https://domicmeia.github.io/post/google/</loc>
+    <lastmod>2024-03-26T19:49:13+09:00</lastmod>
   </url><url>
     <loc>https://domicmeia.github.io/post/</loc>
-    <lastmod>2024-03-26T18:38:29+09:00</lastmod>
+    <lastmod>2024-03-26T19:49:13+09:00</lastmod>
   </url><url>
     <loc>https://domicmeia.github.io/tags/</loc>
-    <lastmod>2024-03-26T18:38:29+09:00</lastmod>
+    <lastmod>2024-03-26T19:49:13+09:00</lastmod>
   </url><url>
     <loc>https://domicmeia.github.io/tags/troubleshooting/</loc>
-    <lastmod>2024-03-26T18:38:29+09:00</lastmod>
+    <lastmod>2024-03-26T19:49:13+09:00</lastmod>
+  </url><url>
+    <loc>https://domicmeia.github.io/post/hwtrouble/</loc>
+    <lastmod>2024-03-26T19:08:10+09:00</lastmod>
+  </url><url>
+    <loc>https://domicmeia.github.io/tags/os/</loc>
+    <lastmod>2024-03-26T19:08:10+09:00</lastmod>
   </url><url>
     <loc>https://domicmeia.github.io/post/hardwaretroulbe/</loc>
-    <lastmod>2024-03-26T18:22:39+09:00</lastmod>
+    <lastmod>2024-03-26T18:51:58+09:00</lastmod>
   </url><url>
     <loc>https://domicmeia.github.io/post/opcon1/</loc>
     <lastmod>2024-03-25T19:04:31+09:00</lastmod>
