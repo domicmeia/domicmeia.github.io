@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Tue, 26 Mar 2024 18:20:13 &#43;0900"
+                  Modified <relative-time datetime="Tue, 26 Mar 2024 18:38:29 &#43;0900"
                     class="no-wrap">
-                    Tue, 26 Mar 2024 18:20:13 &#43;0900</relative-time>
+                    Tue, 26 Mar 2024 18:38:29 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      904 Words
+                      1010 Words
                     <span class="file-info-divider"></span>
-                                        4 min
+                                        5 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -356,7 +356,7 @@
 </blockquote>
 <h2 id="목차">목차</h2>
 <ul>
-<li>[Concepts] (#concepts)</li>
+<li><a href="#concepts">Concepts</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a>
 <ul>
 <li><a href="#no-power-1">No Power</a></li>
@@ -388,31 +388,40 @@
 Before starting troubleshooting, you should check the iDRAC logs for additional that can help with troubleshooting.</p>
 <p>Log in to the iDRAC to view the log.</p>
 <h2 id="no-power-1">No power</h2>
-<ol>
+<ul>
 <li>First remove both power cables and hold the power button in for ten seconds to drain any residual power.</li>
 <li>Connect power cables to power supplies bypassing any UPS temporarily if being used. The LED should illuminate on the power supply unit(PSU). Press the PSU BIST.</li>
 <li>If no PSU BIST LED&rsquo;s illuminate, check using knwon working power cables and wall outlets.</li>
-</ol>
+</ul>
 <h2 id="no-post">No Post</h2>
+<blockquote>
+<p>Minimum to POST configuration is the config that has the minimum components required to complete POST. Typically, the minimum to POST configuration for <strong>rack servers</strong> is <strong>PSU1, CPU1, memory module in A1 slot, and the default riser without expansion cards</strong>. For <strong>tower servers</strong>, the minimum to POST configuration is <strong>PSU1, CPU1, and memory module in A1 slot</strong>. For modular servers, the minimum to POST configuration is CPU1 and memory module in A1 slot.</p>
+</blockquote>
+<ul>
+<li>Bring the server to minimum configuration for the POST.</li>
+<li>Reconnect the power and video cable only.</li>
+<li>Attemp to POST the server</li>
+<li>plug the components one at a tiime until the defective part is found.</li>
+</ul>
 <p>&hellip;</p>
 <h2 id="no-boot-1">No Boot</h2>
 <p>After the server completes the power-on self-test (POST) phase, it tries to boot a bootable device. A bootable device is any piece of hardware that can either read the files or contains the files that are required for a system to start. A default bootable media can be selected in the BIOS. By default, the raid controller card (PERC) is selected first. Files available in a bootable device (RAID, USB drive, DVD, ISO file) contain instructions to start the operating system. When these files cannot be found, the error &ldquo;No Boot Device Available&rdquo; is displayed.
 A few actions can be performed to check what is not working properly.</p>
 <p>The first thing to check is which device is selected as the primary boot. To do a quick check, use F11 to launch the manual boot selection.</p>
-<ol>
+<ul>
 <li><strong>Restart the system.</strong></li>
 <li>Press F11 during POST to enter the <strong>Boot Manager.</strong></li>
 <li>Select the correct Hard Disk drive (Virtual Drive), where the operating system is installed.</li>
 <li>Boot from this device.</li>
-</ol>
+</ul>
 <p>If the system now boots into the operating system, the hardware is fine, and there is a boot order conflict in the BIOS settings. The most likely cause for this is that the system is set to boot from CD, DVD, or USB before the drives, which is a logical setting. To resolve this, ensure you do not have a USB or CD or DVD inserted when powering on the system.</p>
 <p>You can change the boot order setting permanently in the System Setup to boot from the drive first. To change this:</p>
-<ol>
+<ul>
 <li><strong>Restart the system.</strong></li>
 <li>Press F2 during system start to enter the System Settings.</li>
 <li>Change the <strong>Boot Sequence</strong> in the <strong>Boot Settings</strong>.</li>
-<li>Leave the menu using Exit in the upper right corner of the screen.</li>
-</ol>
+<li>Leave the menu using Exit in the upper right corner of the screen</li>
+</ul>
 </article>
               </div>
 
