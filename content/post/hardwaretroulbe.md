@@ -1,7 +1,7 @@
 +++
 title = "[OS]Issue with linux operating system"
 date = 2024-03-25T21:26:07+09:00
-tags = ["Linux", "Troubleshooting"]
+tags = ["OS", "Troubleshooting"]
 summary = "OS boot process and troubleshooting"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.
@@ -10,7 +10,7 @@ summary = "OS boot process and troubleshooting"
 * [Concepts] 
   + [Boot Process](#boot-process)
   + [Questions](#questions)
-* [Troubleshooting](#dump)
+* [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -79,7 +79,7 @@ Check the health of individual drives in the RAID array. Look for SMART data pro
 
 ---
 
-## Troubleshooting
+# Troubleshooting
 ---
 
 ## How would you provision an operating system with and without physical access to a server?
@@ -129,3 +129,7 @@ In both scenarios, ensure that you have proper access credentials, network conne
 ## What would you do if a server doesn't make it past POST?
 
 ## What would you do if a server never reaches POST?
+
+--> [Check the article][article]
+
+[article]:https://domicmeia.github.io/post/hwtrouble/
