@@ -8,13 +8,14 @@ summary = "OS boot process and troubleshooting"
 
 ## 목차
 * Concepts
-  + [Boot Process](#boot-process)
-  + [Questions](#questions)
+  + [Boot Process](#general-boot-process)
+  + [Linux Boot Process](#linux-boot-process)
+* [Questions](#questions)
 * [Troubleshooting](#troubleshooting)
 
 ---
 
-# Boot Process
+# General Boot Process
 ---
 
 The boot process, also known a bootstrapping or booting, is the sequence of operations that a computer system perform when it is turned on or restarted. It is the process by which the operating system is loaded into the RAM and becomes available for user interaction.
@@ -46,6 +47,46 @@ Once the bootloader has loaded the operating system kernel into memory, control 
 The kernel initializes essential system services, device drivers, and hardware interfaces required for the OS to function.
 
 Depending on the OS, initialization processes such as mounting file system, starting system daemons, and establishing network connection may also occur during this stage.
+
+---
+
+# Linux Boot Process
+---
+
+1. **BIOS/UEFI**:
+   - When you power on your computer, the BIOS or UEFI firmware is the first code that runs.
+   - BIOS has been a standard firmware interface for PCs for many years. UEFI (Unified Extensible Firmware Interface) is a more modern replacement for BIOS, offering advanced features and capabilities.
+   - The BIOS/UEFI conducts POST to check the hardware components, including the CPU, memory, storage devices, and peripherals, to ensure they are functioning correctly.
+   - It locates and loads the bootloader from a bootable device such as a hard drive, SSD, USB drive, or network interface card (via PXE boot).
+
+2. **Bootloader (GRUB)**:
+   - The bootloader, commonly GRUB (Grand Unified Bootloader), is loaded by the BIOS/UEFI from the designated boot device.
+   - GRUB presents a menu (if configured) allowing the user to choose which operating system or kernel to boot if multiple options are available.
+   - It locates the Linux kernel and its initial RAM disk (initramfs/initrd), which contains essential drivers and utilities needed to mount the root filesystem.
+   - GRUB then hands over control to the Linux kernel.
+
+3. **Linux Kernel**:
+   - The Linux kernel is loaded into memory by the bootloader.
+   - It initializes the hardware components such as CPU, memory, storage devices, and peripherals.
+   - The kernel mounts the initial RAM disk (initramfs/initrd) into memory, which contains essential modules and utilities required to mount the root filesystem.
+   - It sets up the memory management, scheduler, process management, and other core subsystems of the operating system.
+   - Once initialization is complete, the kernel launches the init process.
+
+4. **Init Process**:
+   - Traditionally, the init process was responsible for initializing the system and starting system services. However, many modern Linux distributions have replaced the traditional init system with systemd or other alternatives.
+   - systemd is a system and service manager that handles the initialization, management, and control of system services and processes.
+   - systemd reads configuration files, known as unit files, which define how services, sockets, devices, and other system resources are managed.
+   - It starts system services concurrently, improving boot time and system responsiveness.
+
+5. **User Space Initialization**:
+   - After the init process or systemd has completed its tasks, the user space is initialized.
+   - System daemons, such as networking services, syslog, and time synchronization services, are started.
+   - Depending on the configuration, a graphical login manager may be launched to provide a graphical login interface, or a text-based login prompt is presented on the console.
+
+6. **Login**:
+   - Once the system is fully initialized, it presents the user with a login prompt.
+   - Users can log in with their credentials (username and password) to access the system.
+   - After successful authentication, the user is presented with a shell or a graphical desktop environment, depending on the system configuration and user preferences.
 
 ---
 
