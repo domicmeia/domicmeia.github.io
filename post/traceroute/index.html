@@ -25,7 +25,7 @@
   
   <meta
   name="description"
-  content="traceroute"
+  content="All about traceroute"
 />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://domicmeia.github.io/post/traceroute/" />
@@ -38,7 +38,7 @@
 />
 <meta
   name="twitter:description"
-  content="traceroute"
+  content="All about traceroute"
 />
 <meta name="twitter:site" content="https://domicmeia.github.io/" />
 <meta name="twitter:creator" content="" />
@@ -58,7 +58,7 @@
 />
 <meta
   property="og:description"
-  content="traceroute"
+  content="All about traceroute"
 />
 <meta property="og:url" content="https://domicmeia.github.io/post/traceroute/" />
 <meta property="og:site_name" content="[Network]traceroute" />
@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Fri, 29 Mar 2024 22:28:17 &#43;0900"
+                  Modified <relative-time datetime="Fri, 29 Mar 2024 23:13:10 &#43;0900"
                     class="no-wrap">
-                    Fri, 29 Mar 2024 22:28:17 &#43;0900</relative-time>
+                    Fri, 29 Mar 2024 23:13:10 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,7 +318,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      339 Words
+                      487 Words
                     <span class="file-info-divider"></span>
                                         2 min
 
@@ -357,6 +357,7 @@
 <h2 id="목차">목차</h2>
 <ul>
 <li><a href="#how-does-the-traceroute-work">How does the traceroute work?</a></li>
+<li><a href="#it-doesnt-work">It doesn&rsquo;t work..</a></li>
 </ul>
 <hr>
 <h1 id="how-does-the-traceroute-work">How does the traceroute work?</h1>
@@ -385,6 +386,16 @@
 <p><strong>Displaying Results</strong>: Traceroute presents the recorded information to the user, showing the IP addresses of the routers traversed, along with the RTT for each hop.</p>
 </li>
 </ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">domicmeia@domicmeia:~$ traceroute google.com
+</span></span><span class="line"><span class="cl">traceroute to google.com <span class="o">(</span>142.250.66.142<span class="o">)</span>, <span class="m">30</span> hops max, <span class="m">60</span> byte packet
+</span></span></code></pre></div><hr>
+<h1 id="it-doesnt-work">It doesn&rsquo;t work..</h1>
+<hr>
+<p>Windows tracert sends <strong>only ICMP packets</strong>, while UNIX/Linux traceroute sends <strong>UDP datagrams</strong> by default, but can also send TCP segments.
+Because many routers block ICMP packets, if traceroute fails from a Windows system, running it on a Linux or UNIX system may return more complete results. The reverse is true as well. <strong>Routers could be blocking UDP</strong> (many in fact do block UDP-based trace-routes), and then the ICMP version becomes the more informative one.</p>
+<h3 id="reference">Reference</h3>
+<p><a href="https://cafe.naver.com/neteg">traceroute 땜시 서버~네떡 담당자 맞짱(?) 뜰뻔한 이야기..-_-;;</a>
+<a href="https://cafe.naver.com/neteg/7211">traceroute가 과연 icmp만은 이용할까..</a></p>
 </article>
               </div>
 
