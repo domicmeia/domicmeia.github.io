@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Domicmeia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Mar 2024 21:59:45 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 29 Mar 2024 22:25:20 +0900</lastBuildDate>
     <atom:link href="https://domicmeia.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Network]traceroute</title>
+      <link>https://domicmeia.github.io/post/traceroute/</link>
+      <pubDate>Fri, 29 Mar 2024 22:18:35 +0900</pubDate>
+      <guid>https://domicmeia.github.io/post/traceroute/</guid>
+      <description>This post was written for studying. There maybe a lot wrong going on.&#xA;목차 How does the traceroute work? How does the traceroute work? Traceroute is a network diagnostic tool used to trace the route that packets take from one host to another across a network. It works by sending a series of packets, each with an increasing Time to Live (TTL) value, towards the destination host. Here&amp;rsquo;s how traceroute works step by step:</description>
+    </item>
     <item>
       <title>[Network]LAN Synopsis</title>
       <link>https://domicmeia.github.io/post/lan1/</link>
