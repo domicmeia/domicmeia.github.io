@@ -1,5 +1,5 @@
 +++
-title = "ping www.google.com"
+title = "[Network]ping www.google.com"
 date = 2024-03-26T19:15:49+09:00
 tags = ["Networking", "Troubleshooting"]
 summary = "All about the ping"
