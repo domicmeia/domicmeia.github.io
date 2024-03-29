@@ -2,7 +2,7 @@
 title = "[Network]traceroute"
 date = 2024-03-29T22:18:35+09:00
 tags = ["Network", "Troubleshooting"]
-summary = ""
+summary = "traceroute"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.
 
