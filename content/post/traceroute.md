@@ -46,8 +46,8 @@ Because many routers block ICMP packets, if traceroute fails from a Windows syst
 
 ### Reference
 
-[traceroute 땜시 서버~네떡 담당자 맞짱(?) 뜰뻔한 이야기..-_-;;][link]
-[traceroute가 과연 icmp만은 이용할까..][link1]
+- [traceroute 땜시 서버~네떡 담당자 맞짱(?) 뜰뻔한 이야기..-_-;;][link]
+- [traceroute가 과연 icmp만은 이용할까..][link1]
 
 [link]:https://cafe.naver.com/neteg
 [link1]:https://cafe.naver.com/neteg/7211
