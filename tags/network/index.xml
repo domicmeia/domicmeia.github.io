@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hardware on Domicmeia</title>
-    <link>https://domicmeia.github.io/tags/hardware/</link>
-    <description>Recent content in Hardware on Domicmeia</description>
+    <title>Network on Domicmeia</title>
+    <link>https://domicmeia.github.io/tags/network/</link>
+    <description>Recent content in Network on Domicmeia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 29 Mar 2024 21:52:33 +0900</lastBuildDate>
-    <atom:link href="https://domicmeia.github.io/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://domicmeia.github.io/tags/network/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Network]LAN Synopsis</title>
       <link>https://domicmeia.github.io/post/lan1/</link>
       <pubDate>Fri, 29 Mar 2024 20:00:00 +0900</pubDate>
       <guid>https://domicmeia.github.io/post/lan1/</guid>
       <description>This post was written for studying. There maybe a lot wrong going on.&#xA;목차 All about LAN Major Equipment in LAN Topology Cabling and Connectors Ethernet Standards All about LAN Reference: 오리뎅이의 LAN통신이야기 -1, 삼테이블을 정복하면 LAN통신은 끝!!&#xA;If you know the three tables (Routing Table, ARP Table, Mac Table), LAN communication becomes easy. LAN refers to a network within the range of ARP Request (Broadcast) packets. A Switch broadcasts Broadcast Frames to all ports except the receiving port.</description>
-    </item>
-    <item>
-      <title>[OS Concepts]Chapter 11: Mass Storage EX 11-23</title>
-      <link>https://domicmeia.github.io/post/opcon1/</link>
-      <pubDate>Mon, 25 Mar 2024 18:51:25 +0900</pubDate>
-      <guid>https://domicmeia.github.io/post/opcon1/</guid>
-      <description>EX-45 11.23</description>
     </item>
   </channel>
 </rss>
