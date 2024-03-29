@@ -2,7 +2,7 @@
 title = "[Network]LAN Synopsis"
 date = 2024-03-29T20:00:00+09:00
 tags = ["Network", "Hardware"]
-summary = ""
+summary = "LAN Synopsis"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.
 
