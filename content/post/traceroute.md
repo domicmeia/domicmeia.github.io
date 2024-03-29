@@ -2,12 +2,13 @@
 title = "[Network]traceroute"
 date = 2024-03-29T22:18:35+09:00
 tags = ["Network", "Troubleshooting"]
-summary = "traceroute"
+summary = "All about traceroute"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.
 
 ## 목차
 * [How does the traceroute work?](#how-does-the-traceroute-work)
+* [It doesn't work..](#it-doesnt-work)
 
 ---
 
@@ -29,3 +30,24 @@ Traceroute is a network diagnostic tool used to trace the route that packets tak
 6. **Completing the Trace**: Traceroute continues sending packets with increasing TTL values until it reaches the destination host. Once the destination host receives the packet, it sends back an ICMP Echo Reply message to the sender, indicating that the destination has been reached.
 
 7. **Displaying Results**: Traceroute presents the recorded information to the user, showing the IP addresses of the routers traversed, along with the RTT for each hop.
+
+```shell
+domicmeia@domicmeia:~$ traceroute google.com
+traceroute to google.com (142.250.66.142), 30 hops max, 60 byte packet
+```
+
+---
+
+# It doesn't work..
+---
+
+Windows tracert sends **only ICMP packets**, while UNIX/Linux traceroute sends **UDP datagrams** by default, but can also send TCP segments.
+Because many routers block ICMP packets, if traceroute fails from a Windows system, running it on a Linux or UNIX system may return more complete results. The reverse is true as well. **Routers could be blocking UDP** (many in fact do block UDP-based trace-routes), and then the ICMP version becomes the more informative one.
+
+### Reference
+
+[traceroute 땜시 서버~네떡 담당자 맞짱(?) 뜰뻔한 이야기..-_-;;][link]
+[traceroute가 과연 icmp만은 이용할까..][link1]
+
+[link]:https://cafe.naver.com/neteg
+[link1]:https://cafe.naver.com/neteg/7211
