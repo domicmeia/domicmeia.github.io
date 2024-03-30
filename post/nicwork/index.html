@@ -15,7 +15,7 @@
   <link rel="stylesheet" href='https://domicmeia.github.io/css/syntax.css' />
   
   <title>
-    [Network]ping www.google.com | Domicmeia
+    [Networking]OSI 1&amp;2 layer: NIC | Domicmeia
   </title>
   
   <link rel="icon" type="image/x-icon" href="/images/avatar.jpeg" />
@@ -25,20 +25,20 @@
   
   <meta
   name="description"
-  content="All about the ping"
+  content="How NICs work"
 />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://domicmeia.github.io/post/google/" />
+<link rel="canonical" href="https://domicmeia.github.io/post/nicwork/" />
 
 
 <meta name="twitter:card" content="summary" />
 <meta
   name="twitter:title"
-  content="[Network]ping www.google.com - Domicmeia"
+  content="[Networking]OSI 1&amp;2 layer: NIC - Domicmeia"
 />
 <meta
   name="twitter:description"
-  content="All about the ping"
+  content="How NICs work"
 />
 <meta name="twitter:site" content="https://domicmeia.github.io/" />
 <meta name="twitter:creator" content="" />
@@ -54,14 +54,14 @@
 />
 <meta
   property="og:title"
-  content="[Network]ping www.google.com - Domicmeia"
+  content="[Networking]OSI 1&amp;2 layer: NIC - Domicmeia"
 />
 <meta
   property="og:description"
-  content="All about the ping"
+  content="How NICs work"
 />
-<meta property="og:url" content="https://domicmeia.github.io/post/google/" />
-<meta property="og:site_name" content="[Network]ping www.google.com" />
+<meta property="og:url" content="https://domicmeia.github.io/post/nicwork/" />
+<meta property="og:site_name" content="[Networking]OSI 1&amp;2 layer: NIC" />
 <meta
   property="og:image"
   content="https://domicmeia.github.io/"
@@ -69,7 +69,7 @@
 <meta property="og:image:width" content="2048" />
 <meta property="og:image:height" content="1024" />
 
-<meta property="article:published_time" content="2024-03-26 19:15:49 &#43;0900 KST" />
+<meta property="article:published_time" content="2024-03-30 20:03:54 &#43;0900 KST" />
 
 
 
@@ -277,18 +277,18 @@
                   <span class="author">
                     <a href="https://domicmeia.github.io/">domicmeia</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://domicmeia.github.io/post/google/">[Network]ping www.google.com</a></strong>
+                      href="https://domicmeia.github.io/post/nicwork/">[Networking]OSI 1&amp;2 layer: NIC</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Tue, 26 Mar 2024 19:15:49 &#43;0900"
+                  Created <relative-time datetime="Sat, 30 Mar 2024 20:03:54 &#43;0900"
                     class="no-wrap">
-                    Tue, 26 Mar 2024 19:15:49 &#43;0900</relative-time>
+                    Sat, 30 Mar 2024 20:03:54 &#43;0900</relative-time>
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Fri, 29 Mar 2024 20:00:54 &#43;0900"
+                  Modified <relative-time datetime="Sat, 30 Mar 2024 20:55:56 &#43;0900"
                     class="no-wrap">
-                    Fri, 29 Mar 2024 20:00:54 &#43;0900</relative-time>
+                    Sat, 30 Mar 2024 20:55:56 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      1475 Words
+                      855 Words
                     <span class="file-info-divider"></span>
-                                        7 min
+                                        4 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -335,13 +335,13 @@
                       Networking
                     </a>
                     
-                    <a class="muted-link mr-3" href="/tags/troubleshooting">
+                    <a class="muted-link mr-3" href="/tags/hardware">
                       <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd"
                           d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
                         </path>
                       </svg>
-                      Troubleshooting
+                      Hardware
                     </a>
                     
                     
@@ -356,62 +356,44 @@
 </blockquote>
 <h2 id="목차">목차</h2>
 <ul>
-<li>Concepts
-<ul>
-<li><a href="#what-happend-when-you-enter-googlecom">What happend when you enter google.com</a></li>
-</ul>
-</li>
-<li><a href="#troubleshooting">Troubleshooting</a></li>
-<li><a href="#references">Reference</a></li>
+<li><a href="#how-nics-work">How NICs work?</a></li>
+<li><a href="#switch-and-router-whats-different">Switch and Router, What&rsquo;s different?</a></li>
+<li><a href="#l2-switch-vs-l3-switch">L2 Switch vs L3 Switch</a></li>
 </ul>
 <hr>
-<h1 id="what-happend-when-you-enter-googlecom">What happend when you enter google.com?</h1>
+<h1 id="how-nics-work">How NICs work?</h1>
+<p>You may interest: <a href="https://domicmeia.github.io/post/lan1/">Network - LAN Synopsis</a></p>
 <hr>
-<pre><code>1. 브라우저는 캐싱된 DNS 기록이 있는지 체크하고, 만약 캐시가 있다면 캐시의 정보를 이용하고 없다면 DNS 서버에 정보를 요청해야 한다.
-2. 클라이언트는 DHCP Request를 UDP 패킷에 담고, UDP 패킷을 IP 데이터크램에 담고, IP 데이터그램을 프레임에 담는다. 이 프레임은 LAN에서 브로드캐스트 되어 DHCP Server에 도달한다. 
-3. DHCP Server는 DHCP Request를 받고 DHCP ACK를 보낸다. DHCP ACK는 클라이언트의 IP주소, 1st-hop 라우터(가장 가까운 라우터)의 IP 주소, DNS server의 IP주소를 포함한다. 따라서 클라이언트는 가장 가까운 라우터의 IP주소 및 DNS 서버의 IP주소를 알게되었다. 
-4. 하지만 클라이언트는 아직 1st-hop라우터의 MAC주소를 알지 못한다. 클라이언트는 ARP query를 브로드캐스트하고 1st-hop라우터는 ARP reply를 통해 자신의 MAC주소를 전달한다. 
-5. 드디어 클라이언트는 DNS 서버에 DNS query를 보낼 수 있게 되었다. 클라이언트는 DNS query를 ip 데이터그램에 담아 1st-hop 라우터에 보낸다. 1st-hop 라우터는 RIP, OSPF, IS-IS, BGP 등의 프로콜로 생성된 Routing Table과 Forwarding Table을 참고하여 DNS query를 DNS 서버에 전송한다. DNS query를 받은 DNS 서버는 www.google.com의 IP 주소를 클라이언트로 전송한다. 드디어 클라이언트는 구글의 IP 주소를 알게 되었다! 
-6. 클라이언트는 TCP 소켓을 열고 구글 서버와 3-way handshake를 통해 TCP connection을 설립한다. 이후 TCP 소켓을 통해 HTTP Request를 구글 서버에 보내고, 구글 서버는 HTTP Reply를 클라이언트에 보낸다.
-7. 드디어 사용자는 구글의 첫 화면을 모니터에서 보게된다! 
-</code></pre>
+<p>NIC stands for Network Interface Card. It&rsquo;s a hardware component that <strong>enables a computer to connect to a network</strong>, such as a local area network (LAN) or the Internet.</p>
+<p>Inside every NIC, burned onto some type of ROM chip, is special firmware containing a unique identifier with a 48-bit value called the media access control address, or MAC address.</p>
+<h2 id="data-transmission-and-reception">Data Transmission and Reception</h2>
+<p>When the computer needs to send data over the network, the NIC receives the data from the computer&rsquo;s CPU/RAM and converts it into a <strong>format suitable for transmission</strong> over the network medium. This process involves packetizing the data according to the appropriate network protocol (e.g., TCP/IP for Ethernet networks). The NIC then transmits these packets onto the network medium.</p>
+<h2 id="mac-address-handling">MAC Address Handling</h2>
+<p>Each NIC has a unique Media Access Control (MAC) address burned into its hardware. When sending data, the NIC encapsulates it with the MAC addresses of both the source (the computer&rsquo;s NIC) and the destination (the intended recipient&rsquo;s NIC). This addressing ensures that the data reaches the correct destination on the network.</p>
+<h2 id="protocol-processing">Protocol Processing</h2>
+<p>NICs handle various networking protocols according to the communication standards supported by the network. For example, Ethernet NICs handle the Ethernet protocol, while Wi-Fi NICs handle Wi-Fi protocols like IEEE 802.11. The NIC interprets and processes these protocols to ensure that data is transmitted and received correctly.</p>
+<p>Overall, <strong>NICs serve as the gateway between a computer and the network</strong>, facilitating the exchange of data and enabling communication with other devices on the network. Their efficient operation is essential for reliable network connectivity and optimal performance of networked applications and services.</p>
+<hr>
+<h1 id="switch-and-router-whats-different">Switch and Router, What&rsquo;s different?</h1>
+<hr>
+<p>Switch has a MAC address on its NIC but is set to Promiscuous mode, allowing it to receive <strong>all frames</strong> regardless of MAC address.</p>
+<p>A <strong>Router</strong>, unlike a switch, has a MAC address on its NIC and is configured with an IP address as well. Each interface of the router belongs to a different LAN. The Router&rsquo;s NICs function similarly to those of typical IP devices and handle Ethernet frames in the following cases, forwarding them to the upper layers:</p>
 <ol>
-<li>The browser checks for cached DNS records, and if there is a cache, it uses that information. If not, it needs to request information from the DNS server.</li>
-<li>The client encapsulates the DHCP Request in a UDP packet, then encapsulates the UDP packet in an IP datagram, and finally encapsulates the IP datagram in a frame. This frame is broadcasted on the LAN and reaches the DHCP Server.</li>
-<li>The DHCP Server receives the DHCP Request and sends a DHCP ACK. The DHCP ACK includes the client&rsquo;s IP address, the IP address of the 1st-hop router (closest router), and the IP address of the DNS server. Thus, the client learns the IP address of the closest router and the DNS server.</li>
-<li>However, the client still doesn&rsquo;t know the MAC address of the 1st-hop router. The client broadcasts an ARP query, and the 1st-hop router responds with an ARP reply, providing its MAC address.</li>
-<li>Finally, the client can send a DNS query to the DNS server. The client encapsulates the DNS query in an IP datagram and sends it to the 1st-hop router. The 1st-hop router, based on Routing Table and Forwarding Table generated by protocols like RIP, OSPF, IS-IS, BGP, forwards the DNS query to the DNS server. Upon receiving the DNS query, the DNS server sends back the IP address of <a href="https://www.google.com">www.google.com</a> to the client. Now, the client finally knows the IP address of Google!</li>
-<li>The client opens a TCP socket and establishes a TCP connection with the Google server via a 3-way handshake. Subsequently, the client sends an HTTP Request to the Google server through the TCP socket, and the Google server responds with an HTTP Reply to the client.</li>
-<li>Finally, the user sees Google&rsquo;s homepage on the monitor!</li>
+<li>When the Destination MAC address matches the MAC address of its own interface.</li>
+<li>When the Destination MAC address is a Broadcast MAC address.</li>
+<li>When the Destination MAC address is a Multicast MAC address.</li>
 </ol>
+<p>There is a Receive mode called <strong>Promiscuous Mode</strong> in the MAC controller. For Window PCs or Linux/Unix Servers, the NIC&rsquo;s Promiscuous Mode is usually <strong>disabled by default.</strong> When using tools like Wireshark or tcpdump to receive packet dumps, <strong>enabling</strong> the tool initiates Promiscuous Mode, allowing the NIC to accept <strong>all incoming frames without filtering</strong> based on MAC address. In L2 Switches, Promiscuous Mode is enabled on all ports. Therefore, the MAC controller accepts and forwards all Ethernet frames without filtering based on MAC addresses. This is why the MAC addresses of switching ports on L2 Switches are rarely used in actual communication, leading some people to occasionally wonder if L2 Switches lack MAC controllers.</p>
+<p>Although L2 Switches accept all frames in Promiscuous mode, filtering occurs at the MAC controller level when VLAN Tag filtering is applied. <strong>Untagged ports reject VLAN Tagged frames, and Tagged ports filter frames with unauthorized VLAN tags.</strong></p>
 <hr>
-<h1 id="troubleshooting">Troubleshooting</h1>
+<h1 id="l2-switch-vs-l3-switch">L2 Switch vs L3 Switch</h1>
+<p>reference: <a href="https://www.cables-solutions.com/layer-2-layer-3-layer-4-switch-whats-the-difference.html">Layer 2, Layer 3 &amp; Layer 4 Switch: What’s the Difference?</a></p>
 <hr>
-<h2 id="why-cant-i-ping-google">Why can&rsquo;t i ping Google?</h2>
-<p>If we can reach something by IP but not by name, then something&rsquo;s wrong with DNS lookup:</p>
-<p>Things that could cause this:</p>
-<ul>
-<li>DNS server down</li>
-<li>Misconfigured of <code>/etc/resolv.conf</code></li>
-<li>Misconfigured of <code>/etc/nsswitch.conf</code></li>
-</ul>
-<p>And probably others, but the first two are the most typical.</p>
-<ul>
-<li>What&rsquo;s the nameserver in your network? Find out its name and IP address.</li>
-<li>Can you ping it by IP address? If you cannot then it&rsquo;s down.</li>
-<li>Is the nameserver correct in <code>/etc/resolv.conf</code>? If not then you need to add a line for it, for example: <code>nameserver THE_IP</code></li>
-<li>Is the nameserver dynamically set by DHCP in your network? If yes then you shouldn&rsquo;t mess with <code>/etc/resolv.conf</code>, it should be all automatic, and it looks like something&rsquo;s wrong at your provider&rsquo;s end.</li>
-</ul>
-<p>Not being able to ping a certain host, does not mean, in any way, that it’s not abailable. It‘s perfectly normal for many websites to be unpingable. It has nothing to do with IPv4, IPv6, DNS or anything like that. The simple answer is that many (but not all) webservers are behind firewalls that drop ICMP ECHO (that‘s what a ping is actually called in professional jargon), while letting HTTP, HTTPS etc. through. You do that to ensure that only the services you want to offer are reachable, but it is more complicated to verify there is a server running or use ICMP for attacks.</p>
-<p>Let me try to explain it in a (quite simplified) way:
-ICMP (Internet Control Message Protocol) is a low level part of TCP/IP, but is generally handled like a stand alone protocol. It is not used to actually tranfer any data, like the transport protocols TCP and UDP do, instead it is used for low level connection relevant stuff inside networks, like advertise routers, echo/ping hosts, initiate DNS requests, traceroute etc.. As it works on a relativly low layer, it can also be used for quite a range of attacks like for example DDOS or even the simple ping of death, which was a quite easy way to down a web server in the early 2000. For that reason ICMP is often completely blocked by firewalls on the service providers side, and that‘s why you can not ping many webservers over the internet, while you can still use their offered services (http(s), ssh, smtp etc.), which are handled by the transport protocols TCP &amp; UDP.</p>
-<p>IPv6 uses a similar protocol for that stuff, called ICMPv6. As it is possible to block one in a firewall, while letting the other one pass, it can happen that a distinct server may be pingable via IPv6 but not via IPv4 ICMP echo. The only reason for that happening is an indecisive firewall administrator or a simple oversight.</p>
-<hr>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="%5Bhttps://blog.naver.com/goduck2/220138802591%5D">오리뎅이의 LAN 통신 이야기 - 2 ARP는 이더넷 통신의 꽃이다.</a></li>
-<li><a href="https://unix.stackexchange.com/questions/109404/why-cant-i-ping-google">Why can&rsquo;t i ping Google?</a></li>
-</ul>
+<p>Before explicitly configuring it to operate as an L3 Switch, a <strong>Layer 3 (L3) Switch operates as an L2 Switch.</strong> To function as an L2 Switch, the MAC controller&rsquo;s Promiscuous Mode is enabled by default. Cisco L3 Switches can activate Inter-VLAN routing functionality by entering the command &ldquo;ip routing&rdquo;. By creating Switch Virtual Interfaces (SVIs) for each VLAN, IP routing becomes possible between different VLANs.</p>
+<p><strong>In an L3 Switch, ports belonging to the same VLAN operate as an L2 Switch, while nodes belonging to different VLANs function as routers.</strong> Even when operating as an L3 Switch by entering the &ldquo;ip routing&rdquo; command, ports belonging to the same VLAN can still operate as an L2 Switch. Thus, the MAC controller of the L3 Switch, like that of an L2 Switch, can utilize Promiscuous Mode to pass all Ethernet frames to the Network Processor (NP) and perform MAC filtering at the NP.</p>
+<p>However, depending on the vendor&rsquo;s implementation, Promiscuous Mode may be disabled when a specific port is explicitly configured as a routed port (similar to a router&rsquo;s port, belonging to a single subnet with its own assigned IP address).</p>
+<p><img src="/images/posts/switch23.png" alt="switch23"></p>
+<p>결론! L3 Swtich는 VLAN이 같은 port간에는 L2 Switch로 동작하고, 서로 다른 VLAN에 속하는 node들에게는 router로 동작함!</p>
 </article>
               </div>
 
@@ -424,13 +406,11 @@ ICMP (Internet Control Message Protocol) is a low level part of TCP/IP, but is g
       <div class="pagination-nav">
         <div class="pagination-button next-post">
           
-          <div>«&nbsp;</div><a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/lan1/"> [Networking]LAN Synopsis</a>
-          
         </div>
         
         <div class="pagination-button previous-post">
           
-          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/hwtrouble/">[OS]Server Troubleshooting&nbsp;</a><div> »</div>
+          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/storage1/">[OS]Data Storage System&nbsp;</a><div> »</div>
           
         </div>
       </div>
