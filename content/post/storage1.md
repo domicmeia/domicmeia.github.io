@@ -60,6 +60,8 @@ U.2 and M.2 combines the benfits of **both SATA and NVMe** interfaces, offering 
 # Storage Systems 
 ---
 
+![storage](/images/posts/storage.jpg)
+
 ## DAS(Direct Attached Storage)
 DAS system are **attached directly** to a server and provide local storage.
 
