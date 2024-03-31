@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 31 Mar 2024 15:56:50 &#43;0900"
+                  Modified <relative-time datetime="Sun, 31 Mar 2024 18:32:21 &#43;0900"
                     class="no-wrap">
-                    Sun, 31 Mar 2024 15:56:50 &#43;0900</relative-time>
+                    Sun, 31 Mar 2024 18:32:21 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,7 +318,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      932 Words
+                      936 Words
                     <span class="file-info-divider"></span>
                                         4 min
 
@@ -387,7 +387,7 @@
 <p>Although L2 Switches accept all frames in Promiscuous mode, filtering occurs at the MAC controller level when VLAN Tag filtering is applied. <strong>Untagged ports reject VLAN Tagged frames, and Tagged ports filter frames with unauthorized VLAN tags.</strong></p>
 <hr>
 <h1 id="l2-switch-vs-l3-switch">L2 Switch vs L3 Switch</h1>
-<p>reference: <a href="https://www.cables-solutions.com/layer-2-layer-3-layer-4-switch-whats-the-difference.html">Layer 2, Layer 3 &amp; Layer 4 Switch: What’s the Difference?</a></p>
+<p>Reference: <a href="https://www.cables-solutions.com/layer-2-layer-3-layer-4-switch-whats-the-difference.html">Layer 2, Layer 3 &amp; Layer 4 Switch: What’s the Difference?</a></p>
 <hr>
 <p>Before explicitly configuring it to operate as an L3 Switch, a <strong>Layer 3 (L3) Switch operates as an L2 Switch.</strong> To function as an L2 Switch, the MAC controller&rsquo;s Promiscuous Mode is enabled by default. Cisco L3 Switches can activate Inter-VLAN routing functionality by entering the command &ldquo;ip routing&rdquo;. By creating Switch Virtual Interfaces (SVIs) for each VLAN, IP routing becomes possible between different VLANs.</p>
 <p><strong>In an L3 Switch, ports belonging to the same VLAN operate as an L2 Switch, while nodes belonging to different VLANs function as routers.</strong> Even when operating as an L3 Switch by entering the &ldquo;ip routing&rdquo; command, ports belonging to the same VLAN can still operate as an L2 Switch. Thus, the MAC controller of the L3 Switch, like that of an L2 Switch, can utilize Promiscuous Mode to pass all Ethernet frames to the Network Processor (NP) and perform MAC filtering at the NP.</p>
@@ -396,6 +396,7 @@
 <p>결론! L3 Swtich는 VLAN이 같은 port간에는 L2 Switch로 동작하고, 서로 다른 VLAN에 속하는 node들에게는 router로 동작함!</p>
 <hr>
 <h1 id="subnet">Subnet</h1>
+<p>Reference:<a href="https://domicmeia.github.io/post/osi3/">Networking: OSI 3 layer</a></p>
 <hr>
 <p>Mac adresses work for small network, but what happens when the network gets big, like the size of the entire internet? When networks get large, you can&rsquo;t use the MAC addresses anymore. Large networks need a logical addressing method that ignores the hardware and enables you to break up the entire large network into smaller networks called <strong>subnets</strong></p>
 <p><img src="/images/posts/subnet.png" alt="switch23"></p>

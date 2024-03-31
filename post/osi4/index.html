@@ -15,7 +15,7 @@
   <link rel="stylesheet" href='https://domicmeia.github.io/css/syntax.css' />
   
   <title>
-    [Networking]OSI 3 layer | Domicmeia
+    [Networking]OSI 4 layer | Domicmeia
   </title>
   
   <link rel="icon" type="image/x-icon" href="/images/avatar.jpeg" />
@@ -25,20 +25,22 @@
   
   <meta
   name="description"
-  content="What is IP?"
+  content="This post was written for studying. There maybe a lot wrong going on.
+목차 IP vs TCP/IP Segmentation TCP and UDP Why is there a UDP IP vs TCP/IP Since IP is strictly a data send/recieve protocol, there is no built-in checking that verifies whether the data packet sent were actually recieved. In contrast to IP, TCP/IP is a higher level smart communications protocol that can do more things. It creates a virtual network when more than one computer is connected to the network and uses the 3 ways handshake model to establish the connection which makes it more reliable."
 />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://domicmeia.github.io/post/osi3/" />
+<link rel="canonical" href="https://domicmeia.github.io/post/osi4/" />
 
 
 <meta name="twitter:card" content="summary" />
 <meta
   name="twitter:title"
-  content="[Networking]OSI 3 layer - Domicmeia"
+  content="[Networking]OSI 4 layer - Domicmeia"
 />
 <meta
   name="twitter:description"
-  content="What is IP?"
+  content="This post was written for studying. There maybe a lot wrong going on.
+목차 IP vs TCP/IP Segmentation TCP and UDP Why is there a UDP IP vs TCP/IP Since IP is strictly a data send/recieve protocol, there is no built-in checking that verifies whether the data packet sent were actually recieved. In contrast to IP, TCP/IP is a higher level smart communications protocol that can do more things. It creates a virtual network when more than one computer is connected to the network and uses the 3 ways handshake model to establish the connection which makes it more reliable."
 />
 <meta name="twitter:site" content="https://domicmeia.github.io/" />
 <meta name="twitter:creator" content="" />
@@ -54,14 +56,15 @@
 />
 <meta
   property="og:title"
-  content="[Networking]OSI 3 layer - Domicmeia"
+  content="[Networking]OSI 4 layer - Domicmeia"
 />
 <meta
   property="og:description"
-  content="What is IP?"
+  content="This post was written for studying. There maybe a lot wrong going on.
+목차 IP vs TCP/IP Segmentation TCP and UDP Why is there a UDP IP vs TCP/IP Since IP is strictly a data send/recieve protocol, there is no built-in checking that verifies whether the data packet sent were actually recieved. In contrast to IP, TCP/IP is a higher level smart communications protocol that can do more things. It creates a virtual network when more than one computer is connected to the network and uses the 3 ways handshake model to establish the connection which makes it more reliable."
 />
-<meta property="og:url" content="https://domicmeia.github.io/post/osi3/" />
-<meta property="og:site_name" content="[Networking]OSI 3 layer" />
+<meta property="og:url" content="https://domicmeia.github.io/post/osi4/" />
+<meta property="og:site_name" content="[Networking]OSI 4 layer" />
 <meta
   property="og:image"
   content="https://domicmeia.github.io/"
@@ -69,7 +72,7 @@
 <meta property="og:image:width" content="2048" />
 <meta property="og:image:height" content="1024" />
 
-<meta property="article:published_time" content="2024-03-31 15:21:44 &#43;0900 KST" />
+<meta property="article:published_time" content="2024-03-31 16:26:38 &#43;0900 KST" />
 
 
 
@@ -277,18 +280,18 @@
                   <span class="author">
                     <a href="https://domicmeia.github.io/">domicmeia</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://domicmeia.github.io/post/osi3/">[Networking]OSI 3 layer</a></strong>
+                      href="https://domicmeia.github.io/post/osi4/">[Networking]OSI 4 layer</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Sun, 31 Mar 2024 15:21:44 &#43;0900"
+                  Created <relative-time datetime="Sun, 31 Mar 2024 16:26:38 &#43;0900"
                     class="no-wrap">
-                    Sun, 31 Mar 2024 15:21:44 &#43;0900</relative-time>
+                    Sun, 31 Mar 2024 16:26:38 &#43;0900</relative-time>
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 31 Mar 2024 20:32:41 &#43;0900"
+                  Modified <relative-time datetime="Sun, 31 Mar 2024 18:29:17 &#43;0900"
                     class="no-wrap">
-                    Sun, 31 Mar 2024 20:32:41 &#43;0900</relative-time>
+                    Sun, 31 Mar 2024 18:29:17 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +321,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      1101 Words
+                      569 Words
                     <span class="file-info-divider"></span>
-                                        5 min
+                                        3 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -356,95 +359,38 @@
 </blockquote>
 <h2 id="목차">목차</h2>
 <ul>
-<li><a href="#ip-address">IP address</a></li>
-<li><a href="#routing-table">Routing Table</a>
-<ul>
-<li><a href="#how-does-the-routing-table-looks-like">How does the Routing table looks like?</a></li>
-<li><a href="#subnet-mask">Subnet Mask</a></li>
-<li><a href="#but-if-we-set-the-subnet-larger-than-lan-size">But, if we set the subnet larger than LAN size..</a></li>
-</ul>
-</li>
+<li><a href="#ip-vs-tcpip">IP vs TCP/IP</a></li>
+<li><a href="#segementation">Segmentation</a></li>
+<li><a href="#tcp-and-udp">TCP and UDP</a></li>
+<li><a href="#why-is-there-a-udp">Why is there a UDP</a></li>
 </ul>
 <hr>
-<h1 id="ip-address">IP address</h1>
+<h1 id="ip-vs-tcpip">IP vs TCP/IP</h1>
 <hr>
-<p>At the Network layer, L3, contiainers called <strong>packets</strong> get created and addressed so they can go form one network to another.</p>
-<h2 id="mac-address-vs-ip-address">MAC address vs IP address</h2>
-<p>MAC addresses are known as <strong>Physical addresses</strong>
-IP addresses are known as <strong>Logical addresses</strong> to distinguish if from the pyhsical address, the MAC address of the NIC.</p>
-<p>If need more info, you may interest:<br>
-<a href="https://domicmeia.github.io/post/nicwork/">Networking: OSI 1&amp;2 Layer: NIC</a></p>
-<p>Each rotuer srips off the incoming frame, determines where to send the data according to the IP address in the packet, creates a new frame, and then sends the packet within a frame on its merry way. The next frame type will be the appropriate technology for whatever connection technology connects to the next rotuer.</p>
-<p><img src="/images/posts/router.png" alt="router"></p>
-<p>The IP packet, on the other hand, remains <strong>unchanged.</strong>
-Once the packet reaches the destination subnet’s router, that router strips off the incoming frame—<strong>no matter what type</strong>—looks at the <strong>destination IP address</strong>, and then adds a frame with the appropriate <strong>destination MAC address</strong> that <strong>matches</strong> the destination IP address.</p>
-<hr>
-<h1 id="subnetting">Subnetting</h1>
-<hr>
-<p>The Network Layer (Layer 3) is responsible for logical addressing, routing, and forwarding of packets between different networks. Subnetting involves defining a subnet mask, which is a bitmask used to <strong>partition an IP address</strong> into network and host portions. This process enables the creation of subnetworks within a larger network, allowing for more efficient use of IP addresses and better network management.</p>
-<p>Subnetting is closely related to IP addressing and routing, which are core functions of the Network Layer. By dividing a network into smaller subnets, network administrators can improve network performance, security, and scalability.</p>
-<h3 id="note">Note</h3>
-<blockquote>
-<p>Other layers of the OSI model, such as the Data Link Layer (Layer 2) and Transport Layer (Layer 4), do not directly handle subnetting. However, they play important roles in data transmission and communication within and between subnets.</p>
-</blockquote>
-<p>Therefore, the relevant layer for subnetting according to the OSI model is the Network Layer (Layer 3).</p>
-<hr>
-<h1 id="routing-table">Routing table</h1>
-<hr>
-<h2 id="if-there-is-no-route-in-the-routing-table-for-the-destination">If there is no route in the Routing Table for the destination:</h2>
-<p><strong>If information regarding the final destination host network is not registered in the Routing Table, the packet will be dropped.</strong> When a router receives a packet, if the destination belongs to its Interface LAN, it can directly forward the packet. However, if the destination does not belong to its Interface LAN, routing can only occur if there is a route path registered in the Routing Table that leads to the corresponding LAN or if a default route is set. Otherwise, the packet will be discarded.</p>
-<h2 id="one-of-these-conditions-must-be-met">One of these conditions must be met.</h2>
-<p>For a packet to be routed to its destination without being discarded, when each Routing Table is searched, either <strong>1) there must be an entry matching the destination IP</strong>, or if there is no matching entry, <strong>2) there must be a default route set.</strong> If neither condition is met, meaning there is no matching entry for the destination network and no default route set, the packet will be discarded.</p>
-<h3 id="note-1">NOTE</h3>
-<blockquote>
-<p><strong>Direct delivery</strong> refers to communication within the same LAN. Any IP
-device, whether it&rsquo;s a PC, server, router, or L3 switch, can <strong>directly
-send an ARP request</strong> to peers on its interface-connected LAN (subnet,
-network) to obtain their MAC addresses and send messages directly.
-Direct delivery is indicated in the Routing Table as <strong>&ldquo;Connected&rdquo;</strong> (in
-Windows) or <strong>&ldquo;Directly connected&rdquo;</strong> (in Cisco Router). <strong>When an IP
-address and subnet are configured on an interface, they are
-automatically added to the Routing Table</strong>, so there is no need for the
-administrator to manually add or delete entries from the Routing Table.</p>
-</blockquote>
-<blockquote>
-<p><strong>Indirect delivery</strong>, on the other hand, refers to communication with peers
-on different LANs. Since direct delivery is not possible, the message
-must be sent to another router for delivery. Therefore, there must be a
-route path in the router&rsquo;s Routing Table to reach the destination
-network, and as mentioned earlier, routing is only possible if
-conditions <strong>1) or 2) are satisfied.</strong> Hence, when packets need to be
-delivered to different LANs, the router must have route paths
-configured. There are two methods for configuring route paths: the
-administrator can manually add routes using static configurations, or
-routes can be added dynamically through routing protocols such as RIP,
-OSPF, IS-IS, or BGP.</p>
-</blockquote>
-<h1 id="how-does-the-routing-table-looks-like">How does the Routing table looks like?</h1>
+<p>Since IP is strictly a data send/recieve protocol, there is no built-in checking that verifies whether the data packet sent were actually recieved. In contrast to IP, TCP/IP is a higher level smart communications protocol that can do more things. It creates a virtual network when more than one computer is connected to the network and uses the 3 ways handshake model to establish the connection which makes it more reliable.</p>
+<h2 id="tcp-3-way-handshake">TCP 3-Way Handshake</h2>
+<p><img src="/images/posts/3way.png" alt="3wayhandshake"></p>
 <ol>
-<li>
-<p>A target (destination) present on a directly connected LAN (network) - a target reachable via direct ARP request.</p>
-</li>
-<li>
-<p>A target (destination) present on a LAN (network) not directly connected - a target that can only be reached through a router.</p>
-</li>
-<li>
-<p>Default Gateway: A router to which packets are sent when there is no matching entry in the routing table, ensuring connectivity to external networks without exception.</p>
-</li>
+<li>The client sends a SYN(synchronize sequence number) packet to the server, which has a random sequence number.</li>
+<li>The server sends back a SYN-ACK(SYN+1) packet.</li>
+<li>The client sends an ACK number to the server, acknowledging the server&rsquo;s sequence number.</li>
+<li>The sequence number on both ends are synchronized. Both can now send and recieve data independently.</li>
 </ol>
-<h2 id="subnet-mask">Subnet Mask</h2>
-<blockquote>
-<p><a href="https://domicmeia.github.io/post/lan1/">As i mensioned before,</a></p>
-<ul>
-<li><strong>A Subnet specifies the size of the same LAN</strong>, and communication with peers belonging to the same Subnet is via direct transmission.</li>
-<li>When an IP and Subnet are configured on an interface, a directly connected (connected) route entry is created for the directly reachable LAN.</li>
-<li>Routers receive and process broadcast packets, but do not forward them to other interfaces, so broadcast packets do not pass through routers.</li>
-</ul>
-</blockquote>
-<p><strong>A Subnet Mask determines the size of a LAN capable of direct transmission, where MAC addresses can be obtained by sending ARP Requests directly!</strong></p>
-<h2 id="but-if-we-set-the-subnet-larger-than-lan-size">But, if we set the subnet larger than LAN size..</h2>
-<p>I stated that the Subnet Mask specifies the size of the directly connected LAN, allowing devices to send ARP requests and receive ARP replies directly within that LAN. However, if a PC is configured with a subnet mask <strong>larger than the actual size</strong> of its LAN, it will believe it can directly send ARP requests and receive ARP replies not only within its own subnet but also to hosts with IPs belonging to other subnets such as 192.168.10.128/26 and 192.168.10.192/26. In this case, what happens? Yes, as previously mentioned, <strong>since Proxy ARP functionality is enabled on the router, the router responds to ARP requests on behalf of those hosts, enabling seamless communication.</strong></p>
-<p>결론! 그럼에도 불구하고..! 서브넷 마스크 설정할 때, 크기에 맞춰서 잘~~설정하자</p>
+<hr>
+<h1 id="segementation">Segementation</h1>
+<hr>
+<p>TCP breaks down the data stream from the Application Layer into smaller units called segments. These segments are then transmitted individually across the network and reassembled by the receiver into the original data stream. <strong>Segmentation allows TCP to efficiently manage the transmission of data, handle flow control, and recover from network errors.</strong></p>
+<p>While segmentation is a prominent feature of TCP, other transport layer protocols may not necessarily utilize segmentation in the same way. For example, the User Datagram Protocol (UDP), also at the Transport Layer, does not employ segmentation. UDP simply takes the data from the Application Layer and encapsulates it into datagrams, which are then transmitted as is without segmentation or reassembly at the transport layer.</p>
+<p>So, while segmentation is a core mechanism in TCP, it&rsquo;s not universally present in all transport layer protocols.</p>
+<hr>
+<h1 id="tcp-and-udp">TCP and UDP</h1>
+<hr>
+<p>TCP is not a protocol but is a member of the IP protocol suite. The TCP refers to Trasmission Control Protocol and is a massively used protocol. One of the benefits of TCP is that it establishes the connection <strong>on both ends</strong> before any data start to flow. It is also used to <strong>sync up the data flow</strong> as if a case arrives when the packets arrive out of order, so the receiving system should be able to f<strong>igure out what the puzzle of packets is supposed to look like.</strong></p>
+<p>We can call the UDP the twin of the TCP. The UDP stands for User Datgram Protocol. The UDP doesn&rsquo;t care if somebody is listening on the other end or not, and it is called the connection protocol. Whereas, when we talk about the TCP, it makes everybody stay on the same page. The transmission speed on a <strong>UDP is faster than the transmission speed fo TCP.</strong> The TCP always needs confirmation from the other side that the message is received or not. On the other side, the UDP is like a tv broadcast in which the transmitter doesn&rsquo;t care or know about the person on the other hand.</p>
+<hr>
+<h1 id="why-is-there-a-udp">Why is there a UDP?</h1>
+<hr>
+<p>UDP exists because it eliminates the need for connection establishment, keeping it simple with <strong>no connection state</strong> at the sender or receiver and boasting a small header size. Without congestion control, UDP can blast away as <strong>fast</strong> as desired, functioning <strong>even in the face of congestion.</strong> It&rsquo;s particularly suited for streaming multimedia applications that are <strong>loss-tolerant and rate-sensitive</strong>, as well as for protocols like DNS, SNMP, and HTTP/3.</p>
 </article>
               </div>
 
@@ -457,13 +403,11 @@ OSPF, IS-IS, or BGP.</p>
       <div class="pagination-nav">
         <div class="pagination-button next-post">
           
-          <div>«&nbsp;</div><a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/osi4/"> [Networking]OSI 4 layer</a>
-          
         </div>
         
         <div class="pagination-button previous-post">
           
-          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/nicwork/">[Networking]OSI 1&amp;2 layer: NIC&nbsp;</a><div> »</div>
+          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/osi3/">[Networking]OSI 3 layer&nbsp;</a><div> »</div>
           
         </div>
       </div>
