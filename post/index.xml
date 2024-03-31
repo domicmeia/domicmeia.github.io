@@ -6,14 +6,14 @@
     <description>Recent content in Posts on Domicmeia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Mar 2024 20:32:41 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 31 Mar 2024 20:34:25 +0900</lastBuildDate>
     <atom:link href="https://domicmeia.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Networking]OSI 4 layer</title>
       <link>https://domicmeia.github.io/post/osi4/</link>
       <pubDate>Sun, 31 Mar 2024 16:26:38 +0900</pubDate>
       <guid>https://domicmeia.github.io/post/osi4/</guid>
-      <description>This post was written for studying. There maybe a lot wrong going on.&#xA;목차 IP vs TCP/IP Segmentation TCP and UDP Why is there a UDP IP vs TCP/IP Since IP is strictly a data send/recieve protocol, there is no built-in checking that verifies whether the data packet sent were actually recieved. In contrast to IP, TCP/IP is a higher level smart communications protocol that can do more things. It creates a virtual network when more than one computer is connected to the network and uses the 3 ways handshake model to establish the connection which makes it more reliable.</description>
+      <description>focus on TCP</description>
     </item>
     <item>
       <title>[Networking]OSI 3 layer</title>
