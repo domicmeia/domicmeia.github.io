@@ -52,7 +52,7 @@ Although L2 Switches accept all frames in Promiscuous mode, filtering occurs at 
 ---
 
 # L2 Switch vs L3 Switch
-reference: [Layer 2, Layer 3 & Layer 4 Switch: What’s the Difference?][link2]
+Reference: [Layer 2, Layer 3 & Layer 4 Switch: What’s the Difference?][link2]
 
 ---
 
@@ -69,6 +69,8 @@ However, depending on the vendor's implementation, Promiscuous Mode may be disab
 ---
 
 # Subnet
+Reference:[Networking: OSI 3 layer][link3]
+
 ---
 
 Mac adresses work for small network, but what happens when the network gets big, like the size of the entire internet? When networks get large, you can't use the MAC addresses anymore. Large networks need a logical addressing method that ignores the hardware and enables you to break up the entire large network into smaller networks called **subnets**
@@ -79,3 +81,4 @@ Detach each interface form its host or router, creating "**islands**" of isolate
 
 [link1]:https://domicmeia.github.io/post/lan1/
 [link2]:https://www.cables-solutions.com/layer-2-layer-3-layer-4-switch-whats-the-difference.html
+[link3]:https://domicmeia.github.io/post/osi3/
