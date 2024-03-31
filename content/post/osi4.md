@@ -2,7 +2,7 @@
 title = "[Networking]OSI 4 layer"
 date = 2024-03-31T16:26:38+09:00
 tags = ["Networking", "Hardware"]
-summary = ""
+summary = "focus on TCP"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.
 
