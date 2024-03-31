@@ -2,7 +2,7 @@
 title = "[Networking]OSI 3 layer"
 date = 2024-03-31T15:21:44+09:00
 tags = ["Networking", "Hardware"]
-summary = ""
+summary = "What is IP?"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.
 
