@@ -15,7 +15,7 @@
   <link rel="stylesheet" href='https://domicmeia.github.io/css/syntax.css' />
   
   <title>
-    [Networking]OSI 1&amp;2 layer: NIC | Domicmeia
+    [Networking]OSI 3 layer | Domicmeia
   </title>
   
   <link rel="icon" type="image/x-icon" href="/images/avatar.jpeg" />
@@ -25,20 +25,24 @@
   
   <meta
   name="description"
-  content="How NICs work"
+  content="This post was written for studying. There maybe a lot wrong going on.
+목차 IP address IP address At the Network layer, L3, contiainers called packets get created and addressed so they can go form one network to another.
+MAC address vs IP address MAC addresses are known as Physical addresses IP addresses are known as Logical addresses to distinguish if from the pyhsical address, the MAC address of the NIC."
 />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://domicmeia.github.io/post/nicwork/" />
+<link rel="canonical" href="https://domicmeia.github.io/post/osi3/" />
 
 
 <meta name="twitter:card" content="summary" />
 <meta
   name="twitter:title"
-  content="[Networking]OSI 1&amp;2 layer: NIC - Domicmeia"
+  content="[Networking]OSI 3 layer - Domicmeia"
 />
 <meta
   name="twitter:description"
-  content="How NICs work"
+  content="This post was written for studying. There maybe a lot wrong going on.
+목차 IP address IP address At the Network layer, L3, contiainers called packets get created and addressed so they can go form one network to another.
+MAC address vs IP address MAC addresses are known as Physical addresses IP addresses are known as Logical addresses to distinguish if from the pyhsical address, the MAC address of the NIC."
 />
 <meta name="twitter:site" content="https://domicmeia.github.io/" />
 <meta name="twitter:creator" content="" />
@@ -54,14 +58,16 @@
 />
 <meta
   property="og:title"
-  content="[Networking]OSI 1&amp;2 layer: NIC - Domicmeia"
+  content="[Networking]OSI 3 layer - Domicmeia"
 />
 <meta
   property="og:description"
-  content="How NICs work"
+  content="This post was written for studying. There maybe a lot wrong going on.
+목차 IP address IP address At the Network layer, L3, contiainers called packets get created and addressed so they can go form one network to another.
+MAC address vs IP address MAC addresses are known as Physical addresses IP addresses are known as Logical addresses to distinguish if from the pyhsical address, the MAC address of the NIC."
 />
-<meta property="og:url" content="https://domicmeia.github.io/post/nicwork/" />
-<meta property="og:site_name" content="[Networking]OSI 1&amp;2 layer: NIC" />
+<meta property="og:url" content="https://domicmeia.github.io/post/osi3/" />
+<meta property="og:site_name" content="[Networking]OSI 3 layer" />
 <meta
   property="og:image"
   content="https://domicmeia.github.io/"
@@ -69,7 +75,7 @@
 <meta property="og:image:width" content="2048" />
 <meta property="og:image:height" content="1024" />
 
-<meta property="article:published_time" content="2024-03-30 20:03:54 &#43;0900 KST" />
+<meta property="article:published_time" content="2024-03-31 15:21:44 &#43;0900 KST" />
 
 
 
@@ -277,18 +283,18 @@
                   <span class="author">
                     <a href="https://domicmeia.github.io/">domicmeia</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://domicmeia.github.io/post/nicwork/">[Networking]OSI 1&amp;2 layer: NIC</a></strong>
+                      href="https://domicmeia.github.io/post/osi3/">[Networking]OSI 3 layer</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Sat, 30 Mar 2024 20:03:54 &#43;0900"
+                  Created <relative-time datetime="Sun, 31 Mar 2024 15:21:44 &#43;0900"
                     class="no-wrap">
-                    Sat, 30 Mar 2024 20:03:54 &#43;0900</relative-time>
+                    Sun, 31 Mar 2024 15:21:44 &#43;0900</relative-time>
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 31 Mar 2024 15:56:50 &#43;0900"
+                  Modified <relative-time datetime="Sun, 31 Mar 2024 16:01:39 &#43;0900"
                     class="no-wrap">
-                    Sun, 31 Mar 2024 15:56:50 &#43;0900</relative-time>
+                    Sun, 31 Mar 2024 16:01:39 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +324,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      932 Words
+                      211 Words
                     <span class="file-info-divider"></span>
-                                        4 min
+                                        1 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -356,50 +362,21 @@
 </blockquote>
 <h2 id="목차">목차</h2>
 <ul>
-<li><a href="#how-nics-work">How NICs work?</a></li>
-<li><a href="#switch-and-router-whats-different">Switch and Router, What&rsquo;s different?</a></li>
-<li><a href="#l2-switch-vs-l3-switch">L2 Switch vs L3 Switch</a></li>
+<li><a href="#ip-address">IP address</a></li>
 </ul>
 <hr>
-<h1 id="how-nics-work">How NICs work?</h1>
-<p>You may interest: <a href="https://domicmeia.github.io/post/lan1/">Network - LAN Synopsis</a></p>
+<h1 id="ip-address">IP address</h1>
 <hr>
-<p>NIC stands for Network Interface Card. It&rsquo;s a hardware component that <strong>enables a computer to connect to a network</strong>, such as a local area network (LAN) or the Internet.</p>
-<p>Inside every NIC, burned onto some type of ROM chip, is special firmware containing a unique identifier with a 48-bit value called the media access control address, or MAC address.</p>
-<h2 id="data-transmission-and-reception">Data Transmission and Reception</h2>
-<p>When the computer needs to send data over the network, the NIC receives the data from the computer&rsquo;s CPU/RAM and converts it into a <strong>format suitable for transmission</strong> over the network medium. This process involves packetizing the data according to the appropriate network protocol (e.g., TCP/IP for Ethernet networks). The NIC then transmits these packets onto the network medium.</p>
-<h2 id="mac-address-handling">MAC Address Handling</h2>
-<p>Each NIC has a unique Media Access Control (MAC) address burned into its hardware. When sending data, the NIC encapsulates it with the MAC addresses of both the source (the computer&rsquo;s NIC) and the destination (the intended recipient&rsquo;s NIC). This addressing ensures that the data reaches the correct destination on the network.</p>
-<h2 id="protocol-processing">Protocol Processing</h2>
-<p>NICs handle various networking protocols according to the communication standards supported by the network. For example, Ethernet NICs handle the Ethernet protocol, while Wi-Fi NICs handle Wi-Fi protocols like IEEE 802.11. The NIC interprets and processes these protocols to ensure that data is transmitted and received correctly.</p>
-<p>Overall, <strong>NICs serve as the gateway between a computer and the network</strong>, facilitating the exchange of data and enabling communication with other devices on the network. Their efficient operation is essential for reliable network connectivity and optimal performance of networked applications and services.</p>
-<hr>
-<h1 id="switch-and-router-whats-different">Switch and Router, What&rsquo;s different?</h1>
-<hr>
-<p>Switch has a MAC address on its NIC but is set to Promiscuous mode, allowing it to receive <strong>all frames</strong> regardless of MAC address.</p>
-<p>A <strong>Router</strong>, unlike a switch, has a MAC address on its NIC and is configured with an IP address as well. Each interface of the router belongs to a different LAN. The Router&rsquo;s NICs function similarly to those of typical IP devices and handle Ethernet frames in the following cases, forwarding them to the upper layers:</p>
-<ol>
-<li>When the Destination MAC address matches the MAC address of its own interface.</li>
-<li>When the Destination MAC address is a Broadcast MAC address.</li>
-<li>When the Destination MAC address is a Multicast MAC address.</li>
-</ol>
-<p>There is a Receive mode called <strong>Promiscuous Mode</strong> in the MAC controller. For Window PCs or Linux/Unix Servers, the NIC&rsquo;s Promiscuous Mode is usually <strong>disabled by default.</strong> When using tools like Wireshark or tcpdump to receive packet dumps, <strong>enabling</strong> the tool initiates Promiscuous Mode, allowing the NIC to accept <strong>all incoming frames without filtering</strong> based on MAC address. In L2 Switches, Promiscuous Mode is enabled on all ports. Therefore, the MAC controller accepts and forwards all Ethernet frames without filtering based on MAC addresses. This is why the MAC addresses of switching ports on L2 Switches are rarely used in actual communication, leading some people to occasionally wonder if L2 Switches lack MAC controllers.</p>
-<p>Although L2 Switches accept all frames in Promiscuous mode, filtering occurs at the MAC controller level when VLAN Tag filtering is applied. <strong>Untagged ports reject VLAN Tagged frames, and Tagged ports filter frames with unauthorized VLAN tags.</strong></p>
-<hr>
-<h1 id="l2-switch-vs-l3-switch">L2 Switch vs L3 Switch</h1>
-<p>reference: <a href="https://www.cables-solutions.com/layer-2-layer-3-layer-4-switch-whats-the-difference.html">Layer 2, Layer 3 &amp; Layer 4 Switch: What’s the Difference?</a></p>
-<hr>
-<p>Before explicitly configuring it to operate as an L3 Switch, a <strong>Layer 3 (L3) Switch operates as an L2 Switch.</strong> To function as an L2 Switch, the MAC controller&rsquo;s Promiscuous Mode is enabled by default. Cisco L3 Switches can activate Inter-VLAN routing functionality by entering the command &ldquo;ip routing&rdquo;. By creating Switch Virtual Interfaces (SVIs) for each VLAN, IP routing becomes possible between different VLANs.</p>
-<p><strong>In an L3 Switch, ports belonging to the same VLAN operate as an L2 Switch, while nodes belonging to different VLANs function as routers.</strong> Even when operating as an L3 Switch by entering the &ldquo;ip routing&rdquo; command, ports belonging to the same VLAN can still operate as an L2 Switch. Thus, the MAC controller of the L3 Switch, like that of an L2 Switch, can utilize Promiscuous Mode to pass all Ethernet frames to the Network Processor (NP) and perform MAC filtering at the NP.</p>
-<p>However, depending on the vendor&rsquo;s implementation, Promiscuous Mode may be disabled when a specific port is explicitly configured as a routed port (similar to a router&rsquo;s port, belonging to a single subnet with its own assigned IP address).</p>
-<p><img src="/images/posts/switch23.png" alt="switch23"></p>
-<p>결론! L3 Swtich는 VLAN이 같은 port간에는 L2 Switch로 동작하고, 서로 다른 VLAN에 속하는 node들에게는 router로 동작함!</p>
-<hr>
-<h1 id="subnet">Subnet</h1>
-<hr>
-<p>Mac adresses work for small network, but what happens when the network gets big, like the size of the entire internet? When networks get large, you can&rsquo;t use the MAC addresses anymore. Large networks need a logical addressing method that ignores the hardware and enables you to break up the entire large network into smaller networks called <strong>subnets</strong></p>
-<p><img src="/images/posts/subnet.png" alt="switch23"></p>
-<p>Detach each interface form its host or router, creating &ldquo;<strong>islands</strong>&rdquo; of isolated networks each isolated network is <strong>Subnet</strong></p>
+<p>At the Network layer, L3, contiainers called <strong>packets</strong> get created and addressed so they can go form one network to another.</p>
+<h2 id="mac-address-vs-ip-address">MAC address vs IP address</h2>
+<p>MAC addresses are known as <strong>Physical addresses</strong>
+IP addresses are known as <strong>Logical addresses</strong> to distinguish if from the pyhsical address, the MAC address of the NIC.</p>
+<p>If need more info, you may interest:<br>
+<a href="https://domicmeia.github.io/post/nicwork/">Networking: OSI 1&amp;2 Layer: NIC</a></p>
+<p>Each rotuer srips off the incoming frame, determines where to send the data according to the IP address in the packet, creates a new frame, and then sends the packet within a frame on its merry way. The next frame type will be the appropriate technology for whatever connection technology connects to the next rotuer.</p>
+<p><img src="/images/posts/router.png" alt="router"></p>
+<p>The IP packet, on the other hand, remains <strong>unchanged.</strong>
+Once the packet reaches the destination subnet’s router, that router strips off the incoming frame—<strong>no matter what type</strong>—looks at the <strong>destination IP address</strong>, and then adds a frame with the appropriate <strong>destination MAC address</strong> that <strong>matches</strong> the destination IP address.</p>
 </article>
               </div>
 
@@ -412,13 +389,11 @@
       <div class="pagination-nav">
         <div class="pagination-button next-post">
           
-          <div>«&nbsp;</div><a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/osi3/"> [Networking]OSI 3 layer</a>
-          
         </div>
         
         <div class="pagination-button previous-post">
           
-          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/storage1/">[OS]Data Storage System&nbsp;</a><div> »</div>
+          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/nicwork/">[Networking]OSI 1&amp;2 layer: NIC&nbsp;</a><div> »</div>
           
         </div>
       </div>
