@@ -22,4 +22,8 @@ summary = "EX-45 11.23"
  # Based on these consideration:
 
  - Critical system files, frequently accessed application binaries, and important database file should be sotred on RAID 1 disks to ensure high read performance and redundancy.
- - User files, documents, media files, and less critical application data can be stored on RAID 5 disks to make efficient use of storage capacity while still providing redundancy and acceptable performance. 
+ - User files, documents, media files, and less critical application data can be stored on RAID 5 disks to make efficient use of storage capacity while still providing redundancy and acceptable performance.
+
+ # RAID Overview
+
+ ![RAID](/images/posts/raid.jpeg)

@@ -36,6 +36,8 @@ domicmeia@domicmeia:~$ traceroute google.com
 traceroute to google.com (142.250.66.142), 30 hops max, 60 byte packet
 ```
 
+![tracework](/images/posts/tracework.jpeg)
+
 ---
 
 # It doesn't work..
