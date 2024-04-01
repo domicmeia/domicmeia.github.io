@@ -11,6 +11,7 @@ summary = "focus on TCP"
 * [Segmentation](#segementation)
 * [TCP and UDP](#tcp-and-udp)
 * [Why is there a UDP](#why-is-there-a-udp)
+_ [Diagonosing TCP/IP Network Issue](#diagonosing-tcpip-network-issue)
 
 ---
 
@@ -54,3 +55,22 @@ We can call the UDP the twin of the TCP. The UDP stands for User Datgram Protoco
 ---
 
 UDP exists because it eliminates the need for connection establishment, keeping it simple with **no connection state** at the sender or receiver and boasting a small header size. Without congestion control, UDP can blast away as **fast** as desired, functioning **even in the face of congestion.** It's particularly suited for streaming multimedia applications that are **loss-tolerant and rate-sensitive**, as well as for protocols like DNS, SNMP, and HTTP/3.
+
+---
+
+# Diagonosing TCP/IP Network Issue 
+---
+
+1. **Diagnose the NIC.** Use the diagnostic tool to see if the NIC is working.
+2. **Check your NIC's driver.** Replace it if necessary.
+3. **Diagnose locally.** If the NIC's okay, diagnose locally by pinging a few neighboring systems, by both IP address and DNS name. If you can't ping by DNS, check your DNS settings.
+    * Reference: [Networking: ping google.com][link1]
+4. **Check IP address and subnet mask.** If you're having a problem pinging locally, make sure you have the right IP address and subnet mask. If you're on DHCP, try renewing the lease.
+5. **Run `netstat`.** Running `netsatat` with no options shows you all the current connections to your system. 
+6. **Run `netstat -s`.** Running with -s option displays several statistics that can help you diagnose problem. For example, if the display shows you are sending but not receiving, you almost certainly have a bad cable with a broken receive wire. 
+7. **Diagnose to the gateway.** If you can't get on the Internet, check to see if you can ping the router. If you can't ping the router, either it's down or you're not connected to if. IF you can only ping the near side, something in the router itself is messed up, like the routing table. 
+8. If you can ping the router, try to ping something on the internet. If you still can't get through, you can try to locate the problem **using the `traceroute` to identify packet loss.** 
+    * Reference: [Networking: traceroute][link]
+
+[link1]:https://domicmeia.github.io/post/google/
+[link]:https://domicmeia.github.io/post/traceroute/
