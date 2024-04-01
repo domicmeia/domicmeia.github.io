@@ -6,24 +6,24 @@
     <description>Recent content in Networking on Domicmeia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Apr 2024 15:40:59 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2024 15:57:59 +0900</lastBuildDate>
     <atom:link href="https://domicmeia.github.io/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Networking]OSI 4 layer</title>
+      <title>[Networking]OSI layer 4</title>
       <link>https://domicmeia.github.io/post/osi4/</link>
       <pubDate>Sun, 31 Mar 2024 16:26:38 +0900</pubDate>
       <guid>https://domicmeia.github.io/post/osi4/</guid>
       <description>focus on TCP</description>
     </item>
     <item>
-      <title>[Networking]OSI 3 layer</title>
+      <title>[Networking]OSI layer 3</title>
       <link>https://domicmeia.github.io/post/osi3/</link>
       <pubDate>Sun, 31 Mar 2024 15:21:44 +0900</pubDate>
       <guid>https://domicmeia.github.io/post/osi3/</guid>
       <description>What is IP?</description>
     </item>
     <item>
-      <title>[Networking]OSI 1&amp;2 layer: NIC</title>
+      <title>[Networking]OSI layer 1&amp;2: NIC</title>
       <link>https://domicmeia.github.io/post/nicwork/</link>
       <pubDate>Sat, 30 Mar 2024 20:03:54 +0900</pubDate>
       <guid>https://domicmeia.github.io/post/nicwork/</guid>
