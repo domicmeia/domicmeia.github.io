@@ -132,6 +132,8 @@ A bridge operates in the **Data Link Layer(L2)** of the OSI 7 Layer model, parti
 
 A router operates in the **Network Layer(L3)** of the OSI 7 Layer model. When **dividing** one LAN into multiple networks or connecting LANs through WAN, routers are utilized. Routers also include repeater and bridge functions. They find the fastest data transmission path between source and destination among multiple networks and separate traffic between each network. **Traffic within the same network does not affect other networks**; traffic passes through the router only when the source and destination are in different networks. **Unlike bridges, routers can block broadcast traffic and use network addresses** (e.g., IP addresses) to send data to the destination.
 
+## Summary
+
 ![hardware](/images/posts/hardware.png)
 
 ---
