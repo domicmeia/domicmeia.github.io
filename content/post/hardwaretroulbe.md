@@ -10,7 +10,7 @@ summary = "OS boot process and troubleshooting"
 * Concepts
   + [Boot Process](#general-boot-process)
   + [Linux Boot Process](#linux-boot-process)
-* [Questions](#questions)
+     + [GRUB/LILO](#grublilo)
 * [Troubleshooting](#troubleshooting)
 
 ---
@@ -87,6 +87,19 @@ Depending on the OS, initialization processes such as mounting file system, star
    - Once the system is fully initialized, it presents the user with a login prompt.
    - Users can log in with their credentials (username and password) to access the system.
    - After successful authentication, the user is presented with a shell or a graphical desktop environment, depending on the system configuration and user preferences.
+
+## GRUB/LILO
+GRUB (GRand Unified Bootloader) and LILO (LInux LOader) are both boot loaders commonly used in Linux-based operating systems to initiate the boot process. They play a crucial role in loading the operating system kernel into memory and transferring control to it during system startup. 
+
+**GRUB (GRand Unified Bootloader)**:
+   - GRUB is one of the most widely used boot loaders in the Linux ecosystem.
+   - It is flexible and powerful, offering features such as multi-boot support, menu-driven interface, and the ability to load kernels from various file systems including ext4, Btrfs, and others.
+   - GRUB supports both BIOS (Legacy) and UEFI firmware interfaces, making it compatible with a wide range of hardware platforms.
+   - Configuration for GRUB is typically stored in a file called `grub.cfg` or `menu.lst`, where users can specify boot options, kernel parameters, and boot menu configurations.
+   - GRUB can be installed to the Master Boot Record (MBR) or the EFI System Partition (ESP) depending on the system's firmware type.
+   - GRUB is actively maintained and regularly updated, making it a reliable choice for managing the boot process in Linux systems.
+
+In summary, while both GRUB and LILO serve the purpose of boot loading in Linux systems, GRUB is the more flexible and feature-rich option, offering support for a wide range of configurations and hardware platforms. LILO, on the other hand, is a simpler boot loader that was popular in the past but has largely been superseded by GRUB in modern Linux distributions.
 
 ---
 
