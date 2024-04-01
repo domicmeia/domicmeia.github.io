@@ -7,6 +7,9 @@ summary = "All about Data Storage and Server"
 > This post was written for `studying`. There maybe a lot wrong going on.
 
 ## 목차
+* [Servers](#servers)
+  * [Server Hardware Architecture](#server-hardware-architecture)
+    + [CPU vs GPU](#cpu-vs-gpu)
 * [Data Storage System](#data-storage-system)
   * [HDD and SSD](#hdd-and-ssd)
     + [HDD vs SSD](#hdd-vs-ssd)
@@ -16,10 +19,60 @@ summary = "All about Data Storage and Server"
     + [U.2 and M.2](#u2-and-m2)
   * [Storage Systems](#storage-systems)
   * [(*)File servers](#file-servers)
-* [Servers](#servers)
-  * [Server Hardware Architecture](#server-hardware-architecture)
-    + [CPU vs GPU](#cpu-vs-gpu)
+* [Power System](#power-system)
 * [Questions](#questions)
+
+---
+
+# Servers
+---
+
+Servers are the workhorses of a data center. They are typically connected to the network through a series of switches, routers, and firewalls, which provide network connectivity and security.
+
+In a data center, servers are organized into racks, which can contain anywhere from a few servers to hundreds or even thousands of servers, depending on the size of the data center. Servers are also available in different from factors, including blade servers, which are designed for high-density computing environments, and rack-mount servers, which are more traditional server designs.
+
+## Rack Server
+
+**A Server designed without an external enclosure**  
+Good for limitied space and general-purpose applications. Self-contained, efficient, and cost-effective. Can be easily expanded an hot-swapped. High power usage and maintenace.
+
+## Blade Server
+
+**A circuit board with minimum server components**  
+fits into a server enclosure with multiple blades. Good for high-density and intensive computing environments. Space-saving, hot-swappable, and easy to manage. High heat generation and cooling needs.
+
+## Tower Server
+
+**A Server integrated into a desktop computer**  
+Good for small and medium-sized businesses or office areas. Highly customizable and optimized for specific needs. More CPU power, memory and expansion options. Space-Consuming and hard to manage.
+
+## Rack Server vs Blade Server 
+
+An organization seeking to run a heterogenous data center might choose rack servers because various makes and models can exist together in a common physical deployment approach. Rack server also offer a range of power connections and network cabling choices. Large rack server also offer extensibility, accommodating additional processors, memory and local storage disks. Blade server, meanwhile, are geared toward single-vendor IT settings that seek to unite compute, storage and networking within a single system. The blade server approach offers the benefits of faster deployment and simplified management. 
+
+---
+
+# Server Hardware Architecture
+---
+
+The key components or server hardware architecture include the **motherboard, processor, RAM and storage.**
+**The motherboard** resides at the heart of the server, providing the central nexus through which system components are interconnected and external devices are attached.
+
+The processor, or CPU, resides on the motherboard. **CPU components include the arithmetic logic unit, floating point unit, registers and cache memory.** A server might also contain a GPU, which cna support applicaitons such as machine learning and simulations.
+
+RAM microchips also plug into the motherboard, serving as a system's main memory. **RAM holds the OS, applications and in-use data for fast access by the processor.** As for the storage, a server might use a hard disk drive(HDD), a sloid-state drive(SSD), the cloud or a mix. 
+
+## CPU vs GPU
+
+###  CPU
+
+THe CPU is often described as the brain of the computer and is considered the main processor. The CPU uses logic cicurity to interpret, process and execute instructions and commands set to it from the OS, programs or various computer components.
+
+### GPU
+
+GPUs were initially designed to complement the CPU. The units have a lot in common: They're both critical computing engines that can handle data, but GPUs specifically accelerate graphics rendering.
+  
+Although a CPU can send instructions to a graphics card, CPUs can handle only a few software threads at a time. With multiple processing cores, they're great for serial processing - executing a wide variety of workloads or a series of tasks by focusing on completing individual taks quickly - but image rendering is complex. **A GPU unit contains many more cores than a CPU, which enables it to tackle thousands of operations at once rather than just a handful.**
 
 ---
 
@@ -99,55 +152,31 @@ Check below:
 
 ---
 
-# Servers
----
-
-Servers are the workhorses of a data center. They are typically connected to the network through a series of switches, routers, and firewalls, which provide network connectivity and security.
-
-In a data center, servers are organized into racks, which can contain anywhere from a few servers to hundreds or even thousands of servers, depending on the size of the data center. Servers are also available in different from factors, including blade servers, which are designed for high-density computing environments, and rack-mount servers, which are more traditional server designs.
-
-## Rack Server
-
-**A Server designed without an external enclosure**  
-Good for limitied space and general-purpose applications. Self-contained, efficient, and cost-effective. Can be easily expanded an hot-swapped. High power usage and maintenace.
-
-## Blade Server
-
-**A circuit board with minimum server components**  
-fits into a server enclosure with multiple blades. Good for high-density and intensive computing environments. Space-saving, hot-swappable, and easy to manage. High heat generation and cooling needs.
-
-## Tower Server
-
-**A Server integrated into a desktop computer**  
-Good for small and medium-sized businesses or office areas. Highly customizable and optimized for specific needs. More CPU power, memory and expansion options. Space-Consuming and hard to manage.
-
-## Rack Server vs Blade Server 
-
-An organization seeking to run a heterogenous data center might choose rack servers because various makes and models can exist together in a common physical deployment approach. Rack server also offer a range of power connections and network cabling choices. Large rack server also offer extensibility, accommodating additional processors, memory and local storage disks. Blade server, meanwhile, are geared toward single-vendor IT settings that seek to unite compute, storage and networking within a single system. The blade server approach offers the benefits of faster deployment and simplified management. 
+# Power System
+Reference: [Understanding Key Elements of Data Center Power Distribution][link3]
 
 ---
 
-# Server Hardware Architecture
----
+Lower voltage power is then delivered to the data center via components via UPS, PDUs, and RPPs.
 
-The key components or server hardware architecture include the **motherboard, processor, RAM and storage.**
-**The motherboard** resides at the heart of the server, providing the central nexus through which system components are interconnected and external devices are attached.
+## Uninterruptible Power Supply (UPS)
+Power utility issues can be temporarily countered with an uninterruptible power supply (UPS). These devices offer battery backup to cover the time between the detection of utility issues and a generator starting.
 
-The processor, or CPU, resides on the motherboard. **CPU components include the arithmetic logic unit, floating point unit, registers and cache memory.** A server might also contain a GPU, which cna support applicaitons such as machine learning and simulations.
+## Power Distribution Unit (PDU)
+Individual IT equipment racks are served by power distribution units (PDUS) offering both metered and unmetered options. With metered PDUs, organizations can understand more about their power consumption, which enables them to begin taking steps toward optimizing their usage.
 
-RAM microchips also plug into the motherboard, serving as a system's main memory. **RAM holds the OS, applications and in-use data for fast access by the processor.** As for the storage, a server might use a hard disk drive(HDD), a sloid-state drive(SSD), the cloud or a mix. 
+## Remote Power Panel (RPP)
+Remote power panels (RPPs) are the connectors between the PDUs and the individual IT devices. They can generally be found in the same rack as the IT equipment they are serving.
 
-## CPU vs GPU
+## Server Rack
+Finally, power in the data center reaches the server rack. IT equipment is mounted on these racks with power cords connecting them to PDUs.
 
-###  CPU
+![datacenter](/images/posts/datacenter.png)
 
-THe CPU is often described as the brain of the computer and is considered the main processor. The CPU uses logic cicurity to interpret, process and execute instructions and commands set to it from the OS, programs or various computer components.
+## Cold Aisles / Hot Aisles
 
-### GPU
-
-GPUs were initially designed to complement the CPU. The units have a lot in common: They're both critical computing engines that can handle data, but GPUs specifically accelerate graphics rendering.
-  
-Although a CPU can send instructions to a graphics card, CPUs can handle only a few software threads at a time. With multiple processing cores, they're great for serial processing - executing a wide variety of workloads or a series of tasks by focusing on completing individual taks quickly - but image rendering is complex. **A GPU unit contains many more cores than a CPU, which enables it to tackle thousands of operations at once rather than just a handful.**
+**Cold Aisles** are where the front of servers face the aisle. Here, cooled air from the air conditioning units enters the server racks.  
+**Hot Aisles** are where the backs of servers face the aisle. This is where hot air is expelled and then directed towards cooling systems to be reconditioned. 
 
 ---
 
@@ -189,3 +218,4 @@ Check the health of individual drives in the RAID array. Look for SMART data pro
 [link]:https://domicmeia.github.io/post/opcon1/
 [link1]:https://domicmeia.github.io/post/hardwaretroulbe/
 [link2]:https://techinfo-112.blogspot.com/2021/11/laptop%20guide.html?gclid=CjwKCAiAp5qsBhAPEiwAP0qeJk3UgnN2MO6MNi-FIxH3tBvyDguZfvYjmeSsUXKlPjgF-A2tLD07XRoCkjwQAvD_BwE&m=1
+[link3]:https://www.tierpoint.com/blog/data-center-power-distibution/
