@@ -163,7 +163,11 @@ But, Why? [10Base-T, 100Base-TX는 UTP cable 8가닥중 2가닥을 꼬은 pair 2
 - Distance:  100 meters between the hub and the node
 - Node limit:  No more than 1024 nodes per hub
 - Topology:  Star-bus topology: physical star, logical bus
-- Cable type:  Cat 3 or better UTP cabling with RJ-45 connect- 
+- Cable type:  Cat 3 or better UTP cabling with RJ-45 connect
+
+## Ethernet LAN cable type
+
+![lancable](/images/posts/lancable.jpeg)
 
 [blog]:https://blog.naver.com/goduck2/220111709554
 [link1]:https://blog.naver.com/goduck2/221094706689

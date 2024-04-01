@@ -11,7 +11,7 @@ summary = "focus on TCP"
 * [Segmentation](#segementation)
 * [TCP and UDP](#tcp-and-udp)
 * [Why is there a UDP](#why-is-there-a-udp)
-_ [Diagonosing TCP/IP Network Issue](#diagonosing-tcpip-network-issue)
+* [Diagonosing TCP/IP Network Issue](#diagonosing-tcpip-network-issue)
 
 ---
 
