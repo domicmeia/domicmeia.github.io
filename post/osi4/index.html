@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 31 Mar 2024 20:34:25 &#43;0900"
+                  Modified <relative-time datetime="Mon, 01 Apr 2024 14:59:40 &#43;0900"
                     class="no-wrap">
-                    Sun, 31 Mar 2024 20:34:25 &#43;0900</relative-time>
+                    Mon, 01 Apr 2024 14:59:40 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      569 Words
+                      814 Words
                     <span class="file-info-divider"></span>
-                                        3 min
+                                        4 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -359,7 +359,8 @@
 <li><a href="#ip-vs-tcpip">IP vs TCP/IP</a></li>
 <li><a href="#segementation">Segmentation</a></li>
 <li><a href="#tcp-and-udp">TCP and UDP</a></li>
-<li><a href="#why-is-there-a-udp">Why is there a UDP</a></li>
+<li><a href="#why-is-there-a-udp">Why is there a UDP</a>
+_ <a href="#diagonosing-tcpip-network-issue">Diagonosing TCP/IP Network Issue</a></li>
 </ul>
 <hr>
 <h1 id="ip-vs-tcpip">IP vs TCP/IP</h1>
@@ -388,6 +389,27 @@
 <h1 id="why-is-there-a-udp">Why is there a UDP?</h1>
 <hr>
 <p>UDP exists because it eliminates the need for connection establishment, keeping it simple with <strong>no connection state</strong> at the sender or receiver and boasting a small header size. Without congestion control, UDP can blast away as <strong>fast</strong> as desired, functioning <strong>even in the face of congestion.</strong> It&rsquo;s particularly suited for streaming multimedia applications that are <strong>loss-tolerant and rate-sensitive</strong>, as well as for protocols like DNS, SNMP, and HTTP/3.</p>
+<hr>
+<h1 id="diagonosing-tcpip-network-issue">Diagonosing TCP/IP Network Issue</h1>
+<hr>
+<ol>
+<li><strong>Diagnose the NIC.</strong> Use the diagnostic tool to see if the NIC is working.</li>
+<li><strong>Check your NIC&rsquo;s driver.</strong> Replace it if necessary.</li>
+<li><strong>Diagnose locally.</strong> If the NIC&rsquo;s okay, diagnose locally by pinging a few neighboring systems, by both IP address and DNS name. If you can&rsquo;t ping by DNS, check your DNS settings.
+<ul>
+<li>Reference: <a href="https://domicmeia.github.io/post/google/">Networking: ping google.com</a></li>
+</ul>
+</li>
+<li><strong>Check IP address and subnet mask.</strong> If you&rsquo;re having a problem pinging locally, make sure you have the right IP address and subnet mask. If you&rsquo;re on DHCP, try renewing the lease.</li>
+<li><strong>Run <code>netstat</code>.</strong> Running <code>netsatat</code> with no options shows you all the current connections to your system.</li>
+<li><strong>Run <code>netstat -s</code>.</strong> Running with -s option displays several statistics that can help you diagnose problem. For example, if the display shows you are sending but not receiving, you almost certainly have a bad cable with a broken receive wire.</li>
+<li><strong>Diagnose to the gateway.</strong> If you can&rsquo;t get on the Internet, check to see if you can ping the router. If you can&rsquo;t ping the router, either it&rsquo;s down or you&rsquo;re not connected to if. IF you can only ping the near side, something in the router itself is messed up, like the routing table.</li>
+<li>If you can ping the router, try to ping something on the internet. If you still can&rsquo;t get through, you can try to locate the problem <strong>using the <code>traceroute</code> to identify packet loss.</strong>
+<ul>
+<li>Reference: <a href="https://domicmeia.github.io/post/traceroute/">Networking: traceroute</a></li>
+</ul>
+</li>
+</ol>
 </article>
               </div>
 
