@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 01 Apr 2024 15:04:31 &#43;0900"
+                  Modified <relative-time datetime="Mon, 01 Apr 2024 16:52:33 &#43;0900"
                     class="no-wrap">
-                    Mon, 01 Apr 2024 15:04:31 &#43;0900</relative-time>
+                    Mon, 01 Apr 2024 16:52:33 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      1629 Words
+                      1994 Words
                     <span class="file-info-divider"></span>
-                                        7 min
+                                        9 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -357,6 +357,7 @@
 <h2 id="목차">목차</h2>
 <ul>
 <li><a href="#all-about-lan">All about LAN</a></li>
+<li>[LAN and VLAN]</li>
 <li><a href="#major-equipment-in-lan">Major Equipment in LAN</a></li>
 <li><a href="#topology">Topology</a>
 <ul>
@@ -394,6 +395,38 @@
 <li>When an IP and Subnet are configured on an interface, a directly connected (connected) route entry is created for the directly reachable LAN.</li>
 <li>Routers receive and process broadcast packets, but do not forward them to other interfaces, so broadcast packets do not pass through routers.</li>
 <li>Routers receive frames with their interface MAC addresses attached. If the destination IP of the packet is the same as the router&rsquo;s interface IP, it is processed directly by the CPU; if it belongs to the same LAN as the router&rsquo;s interface, it is directly forwarded; and if it belongs to another LAN, it is forwarded to another router based on the Routing Table.</li>
+</ul>
+<hr>
+<h1 id="lan-and-vlan">LAN and VLAN</h1>
+<hr>
+<h2 id="lan-local-area-network">LAN (Local Area Network)</h2>
+<p> </p>
+<ul>
+<li><strong>Range within which broadcast packets can be delivered.</strong></li>
+<li>In order for communication between two computers (hosts) on a LAN to be possible, knowledge of both MAC addresses and IP addresses is required.</li>
+<li>If you know the IP address but not the MAC address, an ARP packet is sent as a broadcast packet to discover the MAC address.</li>
+</ul>
+<h2 id="basic-lan-networking">Basic LAN Networking</h2>
+<p>L1, L2, and L3 require the following three components.</p>
+<h2 id="routing-table">Routing Table</h2>
+<p>Information table specifying which route (interface) to use to send data to a destination IP address. You can view the routing table by typing commands such as <code>netstat -r</code> or <code>sh ip route</code>.</p>
+<h2 id="arp-table">ARP Table</h2>
+<p>Table containing MAC address information for IP addresses. Initially, there is no information in the ARP Table for any IP address. Therefore, MAC information needs to be retrieved and recorded in the ARP Table. Once recorded, if not used again, entries in the table are typically removed after 4 hours.</p>
+<h2 id="mac-table">MAC Table</h2>
+<p>Switches determine which port to send a frame to based on the MAC address. The MAC table records which port to send frames to based on MAC addresses and follows the Transparent Bridging standard.</p>
+<ul>
+<li>When a switch receives a broadcast packet or a unicast packet with an unknown destination, it sends the packet to all ports.</li>
+<li>Broadcast traffic can cause loops if there are multiple connections between switches.</li>
+<li>Spanning Tree Protocol (STP) was developed to prevent such infinite loops.</li>
+</ul>
+<h2 id="vlan-virtual-local-area-network">VLAN (Virtual Local Area Network)</h2>
+<ul>
+<li>Regardless of how many switches, hubs, or bridges are used to configure a network, it remains a single LAN.</li>
+<li><strong>A single LAN refers to the scope of a network where broadcast traffic propagates.</strong></li>
+<li>VLANs were introduced to separate networks (LANs) within switches so that broadcast traffic does not propagate between different LAN segments. VLANs maintain the characteristics of LANs.</li>
+<li>Without a router, communication cannot occur between different LANs, as routers do not forward broadcast traffic to other ports.</li>
+<li><strong>VLANs are configured on individual ports of switches.</strong></li>
+<li>Switches identify traffic entering each port based on the VLAN number configured on that port and only forward broadcast traffic to ports set to the same VLAN.</li>
 </ul>
 <hr>
 <h1 id="major-equipment-in-lan">Major Equipment in LAN</h1>
