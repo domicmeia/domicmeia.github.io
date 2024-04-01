@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 01 Apr 2024 17:39:52 &#43;0900"
+                  Modified <relative-time datetime="Mon, 01 Apr 2024 18:25:14 &#43;0900"
                     class="no-wrap">
-                    Mon, 01 Apr 2024 17:39:52 &#43;0900</relative-time>
+                    Mon, 01 Apr 2024 18:25:14 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      1469 Words
+                      1694 Words
                     <span class="file-info-divider"></span>
-                                        7 min
+                                        8 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -356,6 +356,15 @@
 </blockquote>
 <h2 id="목차">목차</h2>
 <ul>
+<li><a href="#servers">Servers</a>
+<ul>
+<li><a href="#server-hardware-architecture">Server Hardware Architecture</a>
+<ul>
+<li><a href="#cpu-vs-gpu">CPU vs GPU</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#data-storage-system">Data Storage System</a>
 <ul>
 <li><a href="#hdd-and-ssd">HDD and SSD</a>
@@ -374,17 +383,38 @@
 <li><a href="#file-servers">(*)File servers</a></li>
 </ul>
 </li>
-<li><a href="#servers">Servers</a>
-<ul>
-<li><a href="#server-hardware-architecture">Server Hardware Architecture</a>
-<ul>
-<li><a href="#cpu-vs-gpu">CPU vs GPU</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="#power-system">Power System</a></li>
 <li><a href="#questions">Questions</a></li>
 </ul>
+<hr>
+<h1 id="servers">Servers</h1>
+<hr>
+<p>Servers are the workhorses of a data center. They are typically connected to the network through a series of switches, routers, and firewalls, which provide network connectivity and security.</p>
+<p>In a data center, servers are organized into racks, which can contain anywhere from a few servers to hundreds or even thousands of servers, depending on the size of the data center. Servers are also available in different from factors, including blade servers, which are designed for high-density computing environments, and rack-mount servers, which are more traditional server designs.</p>
+<h2 id="rack-server">Rack Server</h2>
+<p><strong>A Server designed without an external enclosure</strong><br>
+Good for limitied space and general-purpose applications. Self-contained, efficient, and cost-effective. Can be easily expanded an hot-swapped. High power usage and maintenace.</p>
+<h2 id="blade-server">Blade Server</h2>
+<p><strong>A circuit board with minimum server components</strong><br>
+fits into a server enclosure with multiple blades. Good for high-density and intensive computing environments. Space-saving, hot-swappable, and easy to manage. High heat generation and cooling needs.</p>
+<h2 id="tower-server">Tower Server</h2>
+<p><strong>A Server integrated into a desktop computer</strong><br>
+Good for small and medium-sized businesses or office areas. Highly customizable and optimized for specific needs. More CPU power, memory and expansion options. Space-Consuming and hard to manage.</p>
+<h2 id="rack-server-vs-blade-server">Rack Server vs Blade Server</h2>
+<p>An organization seeking to run a heterogenous data center might choose rack servers because various makes and models can exist together in a common physical deployment approach. Rack server also offer a range of power connections and network cabling choices. Large rack server also offer extensibility, accommodating additional processors, memory and local storage disks. Blade server, meanwhile, are geared toward single-vendor IT settings that seek to unite compute, storage and networking within a single system. The blade server approach offers the benefits of faster deployment and simplified management.</p>
+<hr>
+<h1 id="server-hardware-architecture">Server Hardware Architecture</h1>
+<hr>
+<p>The key components or server hardware architecture include the <strong>motherboard, processor, RAM and storage.</strong>
+<strong>The motherboard</strong> resides at the heart of the server, providing the central nexus through which system components are interconnected and external devices are attached.</p>
+<p>The processor, or CPU, resides on the motherboard. <strong>CPU components include the arithmetic logic unit, floating point unit, registers and cache memory.</strong> A server might also contain a GPU, which cna support applicaitons such as machine learning and simulations.</p>
+<p>RAM microchips also plug into the motherboard, serving as a system&rsquo;s main memory. <strong>RAM holds the OS, applications and in-use data for fast access by the processor.</strong> As for the storage, a server might use a hard disk drive(HDD), a sloid-state drive(SSD), the cloud or a mix.</p>
+<h2 id="cpu-vs-gpu">CPU vs GPU</h2>
+<h3 id="cpu">CPU</h3>
+<p>THe CPU is often described as the brain of the computer and is considered the main processor. The CPU uses logic cicurity to interpret, process and execute instructions and commands set to it from the OS, programs or various computer components.</p>
+<h3 id="gpu">GPU</h3>
+<p>GPUs were initially designed to complement the CPU. The units have a lot in common: They&rsquo;re both critical computing engines that can handle data, but GPUs specifically accelerate graphics rendering.</p>
+<p>Although a CPU can send instructions to a graphics card, CPUs can handle only a few software threads at a time. With multiple processing cores, they&rsquo;re great for serial processing - executing a wide variety of workloads or a series of tasks by focusing on completing individual taks quickly - but image rendering is complex. <strong>A GPU unit contains many more cores than a CPU, which enables it to tackle thousands of operations at once rather than just a handful.</strong></p>
 <hr>
 <h1 id="data-storage-system">Data Storage System</h1>
 <hr>
@@ -439,34 +469,22 @@
 <p>Check below:
 <a href="https://domicmeia.github.io/post/opcon1/">OS Concepts. Chapter 11: Mass Storage EX 11-23</a></p>
 <hr>
-<h1 id="servers">Servers</h1>
+<h1 id="power-system">Power System</h1>
+<p>Reference: <a href="https://www.tierpoint.com/blog/data-center-power-distibution/">Understanding Key Elements of Data Center Power Distribution</a></p>
 <hr>
-<p>Servers are the workhorses of a data center. They are typically connected to the network through a series of switches, routers, and firewalls, which provide network connectivity and security.</p>
-<p>In a data center, servers are organized into racks, which can contain anywhere from a few servers to hundreds or even thousands of servers, depending on the size of the data center. Servers are also available in different from factors, including blade servers, which are designed for high-density computing environments, and rack-mount servers, which are more traditional server designs.</p>
-<h2 id="rack-server">Rack Server</h2>
-<p><strong>A Server designed without an external enclosure</strong><br>
-Good for limitied space and general-purpose applications. Self-contained, efficient, and cost-effective. Can be easily expanded an hot-swapped. High power usage and maintenace.</p>
-<h2 id="blade-server">Blade Server</h2>
-<p><strong>A circuit board with minimum server components</strong><br>
-fits into a server enclosure with multiple blades. Good for high-density and intensive computing environments. Space-saving, hot-swappable, and easy to manage. High heat generation and cooling needs.</p>
-<h2 id="tower-server">Tower Server</h2>
-<p><strong>A Server integrated into a desktop computer</strong><br>
-Good for small and medium-sized businesses or office areas. Highly customizable and optimized for specific needs. More CPU power, memory and expansion options. Space-Consuming and hard to manage.</p>
-<h2 id="rack-server-vs-blade-server">Rack Server vs Blade Server</h2>
-<p>An organization seeking to run a heterogenous data center might choose rack servers because various makes and models can exist together in a common physical deployment approach. Rack server also offer a range of power connections and network cabling choices. Large rack server also offer extensibility, accommodating additional processors, memory and local storage disks. Blade server, meanwhile, are geared toward single-vendor IT settings that seek to unite compute, storage and networking within a single system. The blade server approach offers the benefits of faster deployment and simplified management.</p>
-<hr>
-<h1 id="server-hardware-architecture">Server Hardware Architecture</h1>
-<hr>
-<p>The key components or server hardware architecture include the <strong>motherboard, processor, RAM and storage.</strong>
-<strong>The motherboard</strong> resides at the heart of the server, providing the central nexus through which system components are interconnected and external devices are attached.</p>
-<p>The processor, or CPU, resides on the motherboard. <strong>CPU components include the arithmetic logic unit, floating point unit, registers and cache memory.</strong> A server might also contain a GPU, which cna support applicaitons such as machine learning and simulations.</p>
-<p>RAM microchips also plug into the motherboard, serving as a system&rsquo;s main memory. <strong>RAM holds the OS, applications and in-use data for fast access by the processor.</strong> As for the storage, a server might use a hard disk drive(HDD), a sloid-state drive(SSD), the cloud or a mix.</p>
-<h2 id="cpu-vs-gpu">CPU vs GPU</h2>
-<h3 id="cpu">CPU</h3>
-<p>THe CPU is often described as the brain of the computer and is considered the main processor. The CPU uses logic cicurity to interpret, process and execute instructions and commands set to it from the OS, programs or various computer components.</p>
-<h3 id="gpu">GPU</h3>
-<p>GPUs were initially designed to complement the CPU. The units have a lot in common: They&rsquo;re both critical computing engines that can handle data, but GPUs specifically accelerate graphics rendering.</p>
-<p>Although a CPU can send instructions to a graphics card, CPUs can handle only a few software threads at a time. With multiple processing cores, they&rsquo;re great for serial processing - executing a wide variety of workloads or a series of tasks by focusing on completing individual taks quickly - but image rendering is complex. <strong>A GPU unit contains many more cores than a CPU, which enables it to tackle thousands of operations at once rather than just a handful.</strong></p>
+<p>Lower voltage power is then delivered to the data center via components via UPS, PDUs, and RPPs.</p>
+<h2 id="uninterruptible-power-supply-ups">Uninterruptible Power Supply (UPS)</h2>
+<p>Power utility issues can be temporarily countered with an uninterruptible power supply (UPS). These devices offer battery backup to cover the time between the detection of utility issues and a generator starting.</p>
+<h2 id="power-distribution-unit-pdu">Power Distribution Unit (PDU)</h2>
+<p>Individual IT equipment racks are served by power distribution units (PDUS) offering both metered and unmetered options. With metered PDUs, organizations can understand more about their power consumption, which enables them to begin taking steps toward optimizing their usage.</p>
+<h2 id="remote-power-panel-rpp">Remote Power Panel (RPP)</h2>
+<p>Remote power panels (RPPs) are the connectors between the PDUs and the individual IT devices. They can generally be found in the same rack as the IT equipment they are serving.</p>
+<h2 id="server-rack">Server Rack</h2>
+<p>Finally, power in the data center reaches the server rack. IT equipment is mounted on these racks with power cords connecting them to PDUs.</p>
+<p><img src="/images/posts/datacenter.png" alt="datacenter"></p>
+<h2 id="cold-aisles--hot-aisles">Cold Aisles / Hot Aisles</h2>
+<p><strong>Cold Aisles</strong> are where the front of servers face the aisle. Here, cooled air from the air conditioning units enters the server racks.<br>
+<strong>Hot Aisles</strong> are where the backs of servers face the aisle. This is where hot air is expelled and then directed towards cooling systems to be reconditioned.</p>
 <hr>
 <h1 id="questions">Questions</h1>
 <hr>
