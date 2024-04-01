@@ -15,7 +15,7 @@
   <link rel="stylesheet" href='https://domicmeia.github.io/css/syntax.css' />
   
   <title>
-    [OS]Data Storage System | Domicmeia
+    [OS]System Hardware  | Domicmeia
   </title>
   
   <link rel="icon" type="image/x-icon" href="/images/avatar.jpeg" />
@@ -25,7 +25,7 @@
   
   <meta
   name="description"
-  content="All about Data Storage"
+  content="All about Data Storage and Server"
 />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://domicmeia.github.io/post/storage1/" />
@@ -34,11 +34,11 @@
 <meta name="twitter:card" content="summary" />
 <meta
   name="twitter:title"
-  content="[OS]Data Storage System - Domicmeia"
+  content="[OS]System Hardware  - Domicmeia"
 />
 <meta
   name="twitter:description"
-  content="All about Data Storage"
+  content="All about Data Storage and Server"
 />
 <meta name="twitter:site" content="https://domicmeia.github.io/" />
 <meta name="twitter:creator" content="" />
@@ -54,14 +54,14 @@
 />
 <meta
   property="og:title"
-  content="[OS]Data Storage System - Domicmeia"
+  content="[OS]System Hardware  - Domicmeia"
 />
 <meta
   property="og:description"
-  content="All about Data Storage"
+  content="All about Data Storage and Server"
 />
 <meta property="og:url" content="https://domicmeia.github.io/post/storage1/" />
-<meta property="og:site_name" content="[OS]Data Storage System" />
+<meta property="og:site_name" content="[OS]System Hardware " />
 <meta
   property="og:image"
   content="https://domicmeia.github.io/"
@@ -277,7 +277,7 @@
                   <span class="author">
                     <a href="https://domicmeia.github.io/">domicmeia</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://domicmeia.github.io/post/storage1/">[OS]Data Storage System</a></strong>
+                      href="https://domicmeia.github.io/post/storage1/">[OS]System Hardware </a></strong>
                 </h1>
                 <div class="note m-0">
                   Created <relative-time datetime="Sat, 30 Mar 2024 14:51:33 &#43;0900"
@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 01 Apr 2024 15:46:34 &#43;0900"
+                  Modified <relative-time datetime="Mon, 01 Apr 2024 17:39:52 &#43;0900"
                     class="no-wrap">
-                    Mon, 01 Apr 2024 15:46:34 &#43;0900</relative-time>
+                    Mon, 01 Apr 2024 17:39:52 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      649 Words
+                      1469 Words
                     <span class="file-info-divider"></span>
-                                        3 min
+                                        7 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -356,7 +356,8 @@
 </blockquote>
 <h2 id="목차">목차</h2>
 <ul>
-<li><a href="#overview">Ovierview</a></li>
+<li><a href="#data-storage-system">Data Storage System</a>
+<ul>
 <li><a href="#hdd-and-ssd">HDD and SSD</a>
 <ul>
 <li><a href="#hdd-vs-ssd">HDD vs SSD</a></li>
@@ -372,8 +373,20 @@
 <li><a href="#storage-systems">Storage Systems</a></li>
 <li><a href="#file-servers">(*)File servers</a></li>
 </ul>
+</li>
+<li><a href="#servers">Servers</a>
+<ul>
+<li><a href="#server-hardware-architecture">Server Hardware Architecture</a>
+<ul>
+<li><a href="#cpu-vs-gpu">CPU vs GPU</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#questions">Questions</a></li>
+</ul>
 <hr>
-<h1 id="overview">Overview</h1>
+<h1 id="data-storage-system">Data Storage System</h1>
 <hr>
 <p><strong>Local storage</strong> is directly connected from <strong>within</strong> your system or with an <strong>external expansion</strong> port such as USB, eSATA, or Thunderbolt, while network storage relies on wired (<strong>RJ-45</strong>) or wireless network connections to reach drives on other networked computers or in special <strong>file servers and NAS systems</strong>. Online, we have access to files through cloud storage, <strong>FTP servers</strong>, and direct downloads from web sites. Applications and data storage in the cloud play an important role in having access to the same data and software from multiple devices.</p>
 <hr>
@@ -399,7 +412,7 @@
 <h2 id="u2-and-m2">U.2 and M.2</h2>
 <p>U.2 and M.2 combines the benfits of <strong>both SATA and NVMe</strong> interfaces, offering high performance and compatibility with a longer lifespan. Its versatility makes it an ideal choice for both consumer and enterprise applications.</p>
 <hr>
-<h1 id="storage-systems">Storage Systems</h1>
+<h1 id="types-of-storage-system">Types of Storage System</h1>
 <hr>
 <p><img src="/images/posts/storage.jpg" alt="storage"></p>
 <h2 id="dasdirect-attached-storage">DAS(Direct Attached Storage)</h2>
@@ -425,6 +438,59 @@
 </blockquote>
 <p>Check below:
 <a href="https://domicmeia.github.io/post/opcon1/">OS Concepts. Chapter 11: Mass Storage EX 11-23</a></p>
+<hr>
+<h1 id="servers">Servers</h1>
+<hr>
+<p>Servers are the workhorses of a data center. They are typically connected to the network through a series of switches, routers, and firewalls, which provide network connectivity and security.</p>
+<p>In a data center, servers are organized into racks, which can contain anywhere from a few servers to hundreds or even thousands of servers, depending on the size of the data center. Servers are also available in different from factors, including blade servers, which are designed for high-density computing environments, and rack-mount servers, which are more traditional server designs.</p>
+<h2 id="rack-server">Rack Server</h2>
+<p><strong>A Server designed without an external enclosure</strong><br>
+Good for limitied space and general-purpose applications. Self-contained, efficient, and cost-effective. Can be easily expanded an hot-swapped. High power usage and maintenace.</p>
+<h2 id="blade-server">Blade Server</h2>
+<p><strong>A circuit board with minimum server components</strong><br>
+fits into a server enclosure with multiple blades. Good for high-density and intensive computing environments. Space-saving, hot-swappable, and easy to manage. High heat generation and cooling needs.</p>
+<h2 id="tower-server">Tower Server</h2>
+<p><strong>A Server integrated into a desktop computer</strong><br>
+Good for small and medium-sized businesses or office areas. Highly customizable and optimized for specific needs. More CPU power, memory and expansion options. Space-Consuming and hard to manage.</p>
+<h2 id="rack-server-vs-blade-server">Rack Server vs Blade Server</h2>
+<p>An organization seeking to run a heterogenous data center might choose rack servers because various makes and models can exist together in a common physical deployment approach. Rack server also offer a range of power connections and network cabling choices. Large rack server also offer extensibility, accommodating additional processors, memory and local storage disks. Blade server, meanwhile, are geared toward single-vendor IT settings that seek to unite compute, storage and networking within a single system. The blade server approach offers the benefits of faster deployment and simplified management.</p>
+<hr>
+<h1 id="server-hardware-architecture">Server Hardware Architecture</h1>
+<hr>
+<p>The key components or server hardware architecture include the <strong>motherboard, processor, RAM and storage.</strong>
+<strong>The motherboard</strong> resides at the heart of the server, providing the central nexus through which system components are interconnected and external devices are attached.</p>
+<p>The processor, or CPU, resides on the motherboard. <strong>CPU components include the arithmetic logic unit, floating point unit, registers and cache memory.</strong> A server might also contain a GPU, which cna support applicaitons such as machine learning and simulations.</p>
+<p>RAM microchips also plug into the motherboard, serving as a system&rsquo;s main memory. <strong>RAM holds the OS, applications and in-use data for fast access by the processor.</strong> As for the storage, a server might use a hard disk drive(HDD), a sloid-state drive(SSD), the cloud or a mix.</p>
+<h2 id="cpu-vs-gpu">CPU vs GPU</h2>
+<h3 id="cpu">CPU</h3>
+<p>THe CPU is often described as the brain of the computer and is considered the main processor. The CPU uses logic cicurity to interpret, process and execute instructions and commands set to it from the OS, programs or various computer components.</p>
+<h3 id="gpu">GPU</h3>
+<p>GPUs were initially designed to complement the CPU. The units have a lot in common: They&rsquo;re both critical computing engines that can handle data, but GPUs specifically accelerate graphics rendering.</p>
+<p>Although a CPU can send instructions to a graphics card, CPUs can handle only a few software threads at a time. With multiple processing cores, they&rsquo;re great for serial processing - executing a wide variety of workloads or a series of tasks by focusing on completing individual taks quickly - but image rendering is complex. <strong>A GPU unit contains many more cores than a CPU, which enables it to tackle thousands of operations at once rather than just a handful.</strong></p>
+<hr>
+<h1 id="questions">Questions</h1>
+<hr>
+<h2 id="what-are-the-minimum-parts-requires-to-boot-up-a-server">What are the minimum parts requires to boot up a server?</h2>
+<p>The minimum parts required to boot up a server typically include:</p>
+<ol>
+<li>Moterboard: Provides the foundational circuitry and connections for other components.</li>
+<li>CPU: Executes instructions and processes data.</li>
+<li>RAM: Temporarily stores data and instructions needed by the CPU</li>
+<li>Power Supply Unit: Supplies electrical power to the server components.</li>
+<li>Storage Device: Conatins the OS and other necessary software. This could be a HDD, SSD or a network boot server in some cases.</li>
+<li>BIOS or UEFI: Provides firmware to initialize hardware and facilitate the boot process.</li>
+</ol>
+<h2 id="what-tests-can-be-run-to-determine-the-health-of-a-server">What tests can be run to determine the health of a server?</h2>
+<p>In a Linux server, administrators can use the syslog facility to monitor system logs for error messages and warnings. For instance, running the command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tail -f /var/log/syslog
+</span></span></code></pre></div><p>If there&rsquo;s a hardware issue such as disk I/O errors or memory failures, corresponding error messages will be logged here, helping administrators identify and diagnose the underlying problem.</p>
+<h2 id="how-would-you-determine-the-health-of-a-raid-array">How would you determine the health of a RAID array?</h2>
+<p>Check the health of individual drives in the RAID array. Look for SMART data provided by the drives to identify any signs of potential failure, such as reallocated sectors, pending sectors, or other SMART attributes indicating drive degradation.</p>
+<h2 id="you-may-also-like">You may also like</h2>
+<ul>
+<li><a href="https://domicmeia.github.io/post/hardwaretroulbe/">OS: Boot Process</a></li>
+<li><a href="https://techinfo-112.blogspot.com/2021/11/laptop%20guide.html?gclid=CjwKCAiAp5qsBhAPEiwAP0qeJk3UgnN2MO6MNi-FIxH3tBvyDguZfvYjmeSsUXKlPjgF-A2tLD07XRoCkjwQAvD_BwE&amp;m=1">테크인포- 노트북 추천, 구매가이드 총 정리글</a></li>
+</ul>
 </article>
               </div>
 

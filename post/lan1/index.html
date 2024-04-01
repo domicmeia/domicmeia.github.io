@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 01 Apr 2024 17:02:10 &#43;0900"
+                  Modified <relative-time datetime="Mon, 01 Apr 2024 17:06:17 &#43;0900"
                     class="no-wrap">
-                    Mon, 01 Apr 2024 17:02:10 &#43;0900</relative-time>
+                    Mon, 01 Apr 2024 17:06:17 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -417,7 +417,6 @@
 <h1 id="lan-and-vlan">LAN and VLAN</h1>
 <hr>
 <h2 id="lan-local-area-network">LAN (Local Area Network)</h2>
-<p> </p>
 <ul>
 <li><strong>Range within which broadcast packets can be delivered.</strong></li>
 <li>In order for communication between two computers (hosts) on a LAN to be possible, knowledge of both MAC addresses and IP addresses is required.</li>
@@ -425,11 +424,11 @@
 </ul>
 <h2 id="basic-lan-networking">Basic LAN Networking</h2>
 <p>L1, L2, and L3 require the following three components.</p>
-<h2 id="routing-table">Routing Table</h2>
+<h3 id="routing-table">Routing Table</h3>
 <p>Information table specifying which route (interface) to use to send data to a destination IP address. You can view the routing table by typing commands such as <code>netstat -r</code> or <code>sh ip route</code>.</p>
-<h2 id="arp-table">ARP Table</h2>
+<h3 id="arp-table">ARP Table</h3>
 <p>Table containing MAC address information for IP addresses. Initially, there is no information in the ARP Table for any IP address. Therefore, MAC information needs to be retrieved and recorded in the ARP Table. Once recorded, if not used again, entries in the table are typically removed after 4 hours.</p>
-<h2 id="mac-table">MAC Table</h2>
+<h3 id="mac-table">MAC Table</h3>
 <p>Switches determine which port to send a frame to based on the MAC address. The MAC table records which port to send frames to based on MAC addresses and follows the Transparent Bridging standard.</p>
 <ul>
 <li>When a switch receives a broadcast packet or a unicast packet with an unknown destination, it sends the packet to all ports.</li>
