@@ -1,5 +1,5 @@
 +++
-title = "[Networking]OSI 1&2 layer: NIC"
+title = "[Networking]OSI layer 1&2: NIC"
 date = 2024-03-30T20:03:54+09:00
 tags = ["Networking", "Hardware"]
 summary = "How NICs work"
@@ -69,7 +69,7 @@ However, depending on the vendor's implementation, Promiscuous Mode may be disab
 ---
 
 # Subnet
-Reference:[Networking: OSI 3 layer][link3]
+Reference:[Networking: OSI layer 3][link3]
 
 ---
 

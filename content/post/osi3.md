@@ -1,5 +1,5 @@
 +++
-title = "[Networking]OSI 3 layer"
+title = "[Networking]OSI layer 3"
 date = 2024-03-31T15:21:44+09:00
 tags = ["Networking", "Hardware"]
 summary = "What is IP?"
@@ -26,7 +26,7 @@ MAC addresses are known as **Physical addresses**
 IP addresses are known as **Logical addresses** to distinguish if from the pyhsical address, the MAC address of the NIC.
 
 If need more info, you may interest:  
-[Networking: OSI 1&2 Layer: NIC][link1]
+[Networking: OSI Layer 1&2 : NIC][link1]
 
 Each rotuer srips off the incoming frame, determines where to send the data according to the IP address in the packet, creates a new frame, and then sends the packet within a frame on its merry way. The next frame type will be the appropriate technology for whatever connection technology connects to the next rotuer. 
 

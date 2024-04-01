@@ -1,5 +1,5 @@
 +++
-title = "[Networking]OSI 4 layer"
+title = "[Networking]OSI layer 4"
 date = 2024-03-31T16:26:38+09:00
 tags = ["Networking", "Hardware"]
 summary = "focus on TCP"
@@ -52,6 +52,16 @@ So, while segmentation is a core mechanism in TCP, it's not universally present 
 TCP is not a protocol but is a member of the IP protocol suite. The TCP refers to Trasmission Control Protocol and is a massively used protocol. One of the benefits of TCP is that it establishes the connection **on both ends** before any data start to flow. It is also used to **sync up the data flow** as if a case arrives when the packets arrive out of order, so the receiving system should be able to f**igure out what the puzzle of packets is supposed to look like.**
 
 We can call the UDP the twin of the TCP. The UDP stands for User Datgram Protocol. The UDP doesn't care if somebody is listening on the other end or not, and it is called the connection protocol. Whereas, when we talk about the TCP, it makes everybody stay on the same page. The transmission speed on a **UDP is faster than the transmission speed fo TCP.** The TCP always needs confirmation from the other side that the message is received or not. On the other side, the UDP is like a tv broadcast in which the transmitter doesn't care or know about the person on the other hand.
+
+### NOTE
+> Some of the common ports are as follows:
+> - **80** HTTP
+> - **25** SMTP
+> - **22** SSH
+> - **23** Telnet
+> - **443** HTTPS
+> - **20 and 21** FTP
+> - **53** UTP&TCP
 
 ---
 
