@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 01 Apr 2024 17:32:29 &#43;0900"
+                  Modified <relative-time datetime="Mon, 01 Apr 2024 21:08:30 &#43;0900"
                     class="no-wrap">
-                    Mon, 01 Apr 2024 17:32:29 &#43;0900</relative-time>
+                    Mon, 01 Apr 2024 21:08:30 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      1177 Words
+                      1416 Words
                     <span class="file-info-divider"></span>
-                                        5 min
+                                        6 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -359,10 +359,13 @@
 <li>Concepts
 <ul>
 <li><a href="#general-boot-process">Boot Process</a></li>
-<li><a href="#linux-boot-process">Linux Boot Process</a></li>
+<li><a href="#linux-boot-process">Linux Boot Process</a>
+<ul>
+<li><a href="#grublilo">GRUB/LILO</a></li>
 </ul>
 </li>
-<li><a href="#questions">Questions</a></li>
+</ul>
+</li>
 <li><a href="#troubleshooting">Troubleshooting</a></li>
 </ul>
 <hr>
@@ -441,6 +444,18 @@
 </ul>
 </li>
 </ol>
+<h2 id="grublilo">GRUB/LILO</h2>
+<p>GRUB (GRand Unified Bootloader) and LILO (LInux LOader) are both boot loaders commonly used in Linux-based operating systems to initiate the boot process. They play a crucial role in loading the operating system kernel into memory and transferring control to it during system startup.</p>
+<p><strong>GRUB (GRand Unified Bootloader)</strong>:</p>
+<ul>
+<li>GRUB is one of the most widely used boot loaders in the Linux ecosystem.</li>
+<li>It is flexible and powerful, offering features such as multi-boot support, menu-driven interface, and the ability to load kernels from various file systems including ext4, Btrfs, and others.</li>
+<li>GRUB supports both BIOS (Legacy) and UEFI firmware interfaces, making it compatible with a wide range of hardware platforms.</li>
+<li>Configuration for GRUB is typically stored in a file called <code>grub.cfg</code> or <code>menu.lst</code>, where users can specify boot options, kernel parameters, and boot menu configurations.</li>
+<li>GRUB can be installed to the Master Boot Record (MBR) or the EFI System Partition (ESP) depending on the system&rsquo;s firmware type.</li>
+<li>GRUB is actively maintained and regularly updated, making it a reliable choice for managing the boot process in Linux systems.</li>
+</ul>
+<p>In summary, while both GRUB and LILO serve the purpose of boot loading in Linux systems, GRUB is the more flexible and feature-rich option, offering support for a wide range of configurations and hardware platforms. LILO, on the other hand, is a simpler boot loader that was popular in the past but has largely been superseded by GRUB in modern Linux distributions.</p>
 <hr>
 <h1 id="troubleshooting">Troubleshooting</h1>
 <hr>
@@ -526,7 +541,7 @@
         
         <div class="pagination-button previous-post">
           
-          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/opcon1/">[OS Concepts]Chapter 11: Mass Storage EX 11-23&nbsp;</a><div> »</div>
+          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/opcon1/">[OS]Chapter 11: Mass Storage EX 11-23&nbsp;</a><div> »</div>
           
         </div>
       </div>

@@ -15,7 +15,7 @@
   <link rel="stylesheet" href='https://domicmeia.github.io/css/syntax.css' />
   
   <title>
-    [OS Concepts]Chapter 11: Mass Storage EX 11-23 | Domicmeia
+    [OS]Chapter 11: Mass Storage EX 11-23 | Domicmeia
   </title>
   
   <link rel="icon" type="image/x-icon" href="/images/avatar.jpeg" />
@@ -34,7 +34,7 @@
 <meta name="twitter:card" content="summary" />
 <meta
   name="twitter:title"
-  content="[OS Concepts]Chapter 11: Mass Storage EX 11-23 - Domicmeia"
+  content="[OS]Chapter 11: Mass Storage EX 11-23 - Domicmeia"
 />
 <meta
   name="twitter:description"
@@ -54,14 +54,14 @@
 />
 <meta
   property="og:title"
-  content="[OS Concepts]Chapter 11: Mass Storage EX 11-23 - Domicmeia"
+  content="[OS]Chapter 11: Mass Storage EX 11-23 - Domicmeia"
 />
 <meta
   property="og:description"
   content="EX-45 11.23"
 />
 <meta property="og:url" content="https://domicmeia.github.io/post/opcon1/" />
-<meta property="og:site_name" content="[OS Concepts]Chapter 11: Mass Storage EX 11-23" />
+<meta property="og:site_name" content="[OS]Chapter 11: Mass Storage EX 11-23" />
 <meta
   property="og:image"
   content="https://domicmeia.github.io/"
@@ -277,7 +277,7 @@
                   <span class="author">
                     <a href="https://domicmeia.github.io/">domicmeia</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://domicmeia.github.io/post/opcon1/">[OS Concepts]Chapter 11: Mass Storage EX 11-23</a></strong>
+                      href="https://domicmeia.github.io/post/opcon1/">[OS]Chapter 11: Mass Storage EX 11-23</a></strong>
                 </h1>
                 <div class="note m-0">
                   Created <relative-time datetime="Mon, 25 Mar 2024 18:51:25 &#43;0900"
@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 31 Mar 2024 15:20:27 &#43;0900"
+                  Modified <relative-time datetime="Mon, 01 Apr 2024 21:17:09 &#43;0900"
                     class="no-wrap">
-                    Sun, 31 Mar 2024 15:20:27 &#43;0900</relative-time>
+                    Mon, 01 Apr 2024 21:17:09 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      260 Words
+                      353 Words
                     <span class="file-info-divider"></span>
-                                        1 min
+                                        2 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -351,28 +351,36 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><blockquote>
+                <article class="markdown-body entry-content container-lg"><h1 id="raid-overview">RAID Overview</h1>
+<p><img src="/images/posts/raid.jpeg" alt="RAID"></p>
+<ul>
+<li><strong>RAID 0</strong>: It is called striping, which allows you to split the data into multiple disks without redundancy.</li>
+<li><strong>RAID 1</strong>: It is called mirroring, which allows you to create a complete copy of data on multiple disks.</li>
+<li><strong>RAID 5</strong>: It distributes the parity information and data on multiple disks.</li>
+<li><strong>RAID 6</strong>: It is the improved version of RAID 5 as it uses two sets of parity information to provide higher data redundancy.</li>
+<li><strong>RAID 10</strong>: It combines RAID 0 and RAID 1 to generate the set of mirror disks to improve performance and redundancy.</li>
+</ul>
+<hr>
+<blockquote>
 <p>Assume that you have a mixed configuration comprising disks organized as RAID 1 and RAID 5 disks. Assume that the system has flexibility in deciding which disk organization to use for storing a particular file. Which files should be stored in the RAID 1 disks and which in the RAID 5 disks in order to optimize performance?</p>
 </blockquote>
-<h1 id="raid-1mirroring">RAID 1(Mirroring)</h1>
+<h2 id="raid-1mirroring">RAID 1(Mirroring)</h2>
 <ul>
 <li>RAID 1 provides redundancy by mirroring data across multiple disks. Every write operation is duplicated on both disks in the mirrored pair</li>
 <li>It offers high read performance as data can be read form either disk in the mirror pair.</li>
 <li>Files that require high read performance and are critical in terms of availability or reliability should be stored in RAID 1. This includes system fiels, frequently accessed application binaries, and critical DB files.</li>
 </ul>
-<h1 id="raid-5striping-with-parity">RAID 5(Striping with Parity)</h1>
+<h2 id="raid-5striping-with-parity">RAID 5(Striping with Parity)</h2>
 <ul>
 <li>RAID 5 offers a balance between performance, redundancy, and usable storage capacity. It uses block-level striping with distributed parity across multiple disks.</li>
 <li>Read performance is generally good, especially for large sequential reads, as data can be read in parallel from multiple disks.</li>
 <li>Write performance can be slower than RAID 1, particularly for small random writes, due to the need to calculate parity infromation.</li>
 </ul>
-<h1 id="based-on-these-consideration">Based on these consideration:</h1>
+<h2 id="based-on-these-consideration">Based on these consideration:</h2>
 <ul>
 <li>Critical system files, frequently accessed application binaries, and important database file should be sotred on RAID 1 disks to ensure high read performance and redundancy.</li>
 <li>User files, documents, media files, and less critical application data can be stored on RAID 5 disks to make efficient use of storage capacity while still providing redundancy and acceptable performance.</li>
 </ul>
-<h1 id="raid-overview">RAID Overview</h1>
-<p><img src="/images/posts/raid.jpeg" alt="RAID"></p>
 </article>
               </div>
 
