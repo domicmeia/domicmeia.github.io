@@ -29,6 +29,10 @@ Since IP is strictly a data send/recieve protocol, there is no built-in checking
 3. The client sends an ACK number to the server, acknowledging the server's sequence number.
 4. The sequence number on both ends are synchronized. Both can now send and recieve data independently.
 
+## Why the TCP/IP model has only 4 layer compared to the OSI 7 layers?
+
+Overall, the TCP/IP model's four-layer architecture strikes a balance between simplicity, efficiency, and interoperability, making it the foundation of the modern internet and networking infrastructure. While the OSI model provides a more comprehensive theoretical framework, the TCP/IP model's pragmatic approach has proven highly effective in practice.
+
 ---
 
 # Segementation
