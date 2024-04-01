@@ -90,36 +90,6 @@ Depending on the OS, initialization processes such as mounting file system, star
 
 ---
 
-# Questions
----
-
-## What are the minimum parts requires to boot up a server?
-
-The minimum parts required to boot up a server typically include:
-
-1. Moterboard: Provides the foundational circuitry and connections for other components.
-2. CPU: Executes instructions and processes data.
-3. RAM: Temporarily stores data and instructions needed by the CPU
-4. Power Supply Unit: Supplies electrical power to the server components.
-5. Storage Device: Conatins the OS and other necessary software. This could be a HDD, SSD or a network boot server in some cases.
-6. BIOS or UEFI: Provides firmware to initialize hardware and facilitate the boot process.
-
-## What tests can be run to determine the health of a server?
-
-In a Linux server, administrators can use the syslog facility to monitor system logs for error messages and warnings. For instance, running the command:
-
-```bash
-tail -f /var/log/syslog
-```
-
-If there's a hardware issue such as disk I/O errors or memory failures, corresponding error messages will be logged here, helping administrators identify and diagnose the underlying problem. 
-
-## How would you determine the health of a RAID array?
-
-Check the health of individual drives in the RAID array. Look for SMART data provided by the drives to identify any signs of potential failure, such as reallocated sectors, pending sectors, or other SMART attributes indicating drive degradation.
-
----
-
 # Troubleshooting
 ---
 

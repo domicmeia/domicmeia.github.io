@@ -65,7 +65,7 @@ Reference: [오리뎅이의 LAN통신이야기 -1, 삼테이블을 정복하면 
 ---
 
 ## LAN (Local Area Network)
- 
+
 - **Range within which broadcast packets can be delivered.**
 - In order for communication between two computers (hosts) on a LAN to be possible, knowledge of both MAC addresses and IP addresses is required.
 - If you know the IP address but not the MAC address, an ARP packet is sent as a broadcast packet to discover the MAC address.
@@ -73,15 +73,15 @@ Reference: [오리뎅이의 LAN통신이야기 -1, 삼테이블을 정복하면 
 ## Basic LAN Networking
 
 L1, L2, and L3 require the following three components.
-## Routing Table
+### Routing Table
 
 Information table specifying which route (interface) to use to send data to a destination IP address. You can view the routing table by typing commands such as `netstat -r` or `sh ip route`.
 
-## ARP Table
+### ARP Table
 
 Table containing MAC address information for IP addresses. Initially, there is no information in the ARP Table for any IP address. Therefore, MAC information needs to be retrieved and recorded in the ARP Table. Once recorded, if not used again, entries in the table are typically removed after 4 hours.
 
-## MAC Table
+### MAC Table
 Switches determine which port to send a frame to based on the MAC address. The MAC table records which port to send frames to based on MAC addresses and follows the Transparent Bridging standard.
   
 - When a switch receives a broadcast packet or a unicast packet with an unknown destination, it sends the packet to all ports.
