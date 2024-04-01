@@ -8,7 +8,7 @@ summary = "LAN Synopsis"
 
 ## 목차
 * [All about LAN](#all-about-lan)
-* [LAN and VLAN]
+* [LAN and VLAN](#lan-and-vlan)
 * [Major Equipment in LAN](#major-equipment-in-lan)
 * [Topology](#topology)
   + [Star Topology](#star-topology)
@@ -25,6 +25,22 @@ summary = "LAN Synopsis"
 Reference: [오리뎅이의 LAN통신이야기 -1, 삼테이블을 정복하면 LAN통신은 끝!!][blog]
 
 ---
+	1. 삼테이블(Routing Table, ARP Table, Mac Table)을 알면 LAN 통신이 보인다.
+	2. LAN이란 ARP Request(Broadcast) packet이 미치는 범위의 네트워크이다.
+	3. Switch는 broadcast Frame을 수신 포트를 제외한 다른 모든 포트로 Broadcast한다.
+	4. Switch는 Frame이 수신되면 source Mac address와 수신 port 정보를 이용하여 MAC table을 만든다.
+	5. Switch는 MAC Table에 Destination MAC address가 없는 Unicast Frame이나 Multicast Frame의 경우에 수신 port를 제외한 모든 port로 flooding한다.
+	6. 브로드캐스트 및 Flooding 패킷의 특성으로 인하여 switch간 연결에 폐루프(closed loop)가 형성되면 looping 현상이 발생한다.
+	7. Switch looping 현상을 자동으로 차단해 주기 위해서 사용되는 프로토콜이 STP(Spanning Tree Protocol)이다.
+	8. 최근 네트워크 스위치 장비들은 Convergense Time(장애 발생 후 우회 패스로 절체 완료 되기 까지의 시간)이 2초 이내로 짧은 RSTP(Rapid Spanning Tree Protocol)를 기본적으로 사용한다.
+	9. 동일 LAN간 통신은 직접 상대방 IP로 ARP Request를 보내서, ARP reply를 동일 LAN의 상대로부터 받고 직접 패킷을 전달한다.
+	10. ARP Request는 동일 LAN상의 모든 Node로 전달이 되는데, Target IP와 동일한 IP를 가진 Node만 ARP Reply를 보낸다.
+	11. ARP Request를 받은 LAN상의 Node들 중 IP가 Target IP와 같지 않은 다른 Node들은 자신들의 ARP Table을 update한다.
+	12. 다른 LAN간 통신은 라우터(Gateway) IP로 ARP request를 보내서 ARP Reply를 라우터로부터 받고, 패킷을 라우터로 전달한다.
+	13. Subnet은 동일 LAN의 크기를 지정해 주는 것이며, 같은 Subnet에 속하는 상대방과는 직접 전달로 통신한다.
+	14. Interface에 IP와 Subnet을 설정하면, 직접 전달 가능한 동일 LAN에 대해서는 directly connected(연결됨) route entry가 생성된다.
+	15. Router가 브로드캐스트 패킷을 수신해서 처리하고, 다른 interface로 전달하지 않기 때문에 브로드캐스트 패킷은 Router를 통과하지 못한다.
+	16. Router는 자신의 interface mac을 달고 오는 프레임을 수신해서 처리한다. 패킷의 목적지 IP가 자기 Interface의 IP와 같으면, CPU로 수신해서 직접 처리하고, 자기 Interface가 속한 LAN에 직접 연결된 IP이면 직접 전달을 하며, 다른 LAN에 속한 IP인 경우에는 Routing Table을 참조하여 다른 라우터로 전달한다. 
 
 - If you know the three tables **(Routing Table, ARP Table, Mac Table)**, LAN communication becomes easy.
 - LAN refers to a network **within the range of ARP Request (Broadcast) packets.**
@@ -116,17 +132,7 @@ A bridge operates in the **Data Link Layer(L2)** of the OSI 7 Layer model, parti
 
 A router operates in the **Network Layer(L3)** of the OSI 7 Layer model. When **dividing** one LAN into multiple networks or connecting LANs through WAN, routers are utilized. Routers also include repeater and bridge functions. They find the fastest data transmission path between source and destination among multiple networks and separate traffic between each network. **Traffic within the same network does not affect other networks**; traffic passes through the router only when the source and destination are in different networks. **Unlike bridges, routers can block broadcast traffic and use network addresses** (e.g., IP addresses) to send data to the destination.
 
-## Terminal server
-
-Instead of directly connecting client computers to the LAN via LAN cards, terminal servers allow connections through asynchronous communication ports.
-
-## Print server
-
-This directly connects high-end printers to the LAN, enabling multiple users to share the printer simultaneously.
-
-## Remote access server
-
-Allows users at remote locations to access the LAN as if they were directly connected, with computers connecting to RAS via modems or ISDN.
+![hardware](/images/posts/hardware.png)
 
 ---
 
