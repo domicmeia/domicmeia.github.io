@@ -8,6 +8,7 @@ summary = "LAN Synopsis"
 
 ## 목차
 * [All about LAN](#all-about-lan)
+* [LAN and VLAN]
 * [Major Equipment in LAN](#major-equipment-in-lan)
 * [Topology](#topology)
   + [Star Topology](#star-topology)
@@ -41,6 +42,44 @@ Reference: [오리뎅이의 LAN통신이야기 -1, 삼테이블을 정복하면 
 - When an IP and Subnet are configured on an interface, a directly connected (connected) route entry is created for the directly reachable LAN.
 - Routers receive and process broadcast packets, but do not forward them to other interfaces, so broadcast packets do not pass through routers.
 - Routers receive frames with their interface MAC addresses attached. If the destination IP of the packet is the same as the router's interface IP, it is processed directly by the CPU; if it belongs to the same LAN as the router's interface, it is directly forwarded; and if it belongs to another LAN, it is forwarded to another router based on the Routing Table.
+
+---
+
+# LAN and VLAN
+---
+
+## LAN (Local Area Network)
+ 
+- **Range within which broadcast packets can be delivered.**
+- In order for communication between two computers (hosts) on a LAN to be possible, knowledge of both MAC addresses and IP addresses is required.
+- If you know the IP address but not the MAC address, an ARP packet is sent as a broadcast packet to discover the MAC address.
+
+## Basic LAN Networking
+
+L1, L2, and L3 require the following three components.
+## Routing Table
+
+Information table specifying which route (interface) to use to send data to a destination IP address. You can view the routing table by typing commands such as `netstat -r` or `sh ip route`.
+
+## ARP Table
+
+Table containing MAC address information for IP addresses. Initially, there is no information in the ARP Table for any IP address. Therefore, MAC information needs to be retrieved and recorded in the ARP Table. Once recorded, if not used again, entries in the table are typically removed after 4 hours.
+
+## MAC Table
+Switches determine which port to send a frame to based on the MAC address. The MAC table records which port to send frames to based on MAC addresses and follows the Transparent Bridging standard.
+  
+- When a switch receives a broadcast packet or a unicast packet with an unknown destination, it sends the packet to all ports.
+- Broadcast traffic can cause loops if there are multiple connections between switches.
+- Spanning Tree Protocol (STP) was developed to prevent such infinite loops.
+
+## VLAN (Virtual Local Area Network)
+
+- Regardless of how many switches, hubs, or bridges are used to configure a network, it remains a single LAN.
+- **A single LAN refers to the scope of a network where broadcast traffic propagates.**
+- VLANs were introduced to separate networks (LANs) within switches so that broadcast traffic does not propagate between different LAN segments. VLANs maintain the characteristics of LANs.
+- Without a router, communication cannot occur between different LANs, as routers do not forward broadcast traffic to other ports.
+- **VLANs are configured on individual ports of switches.**
+- Switches identify traffic entering each port based on the VLAN number configured on that port and only forward broadcast traffic to ports set to the same VLAN.
 
 ---
 
