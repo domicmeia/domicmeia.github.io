@@ -1,5 +1,5 @@
 +++
-title = "[OS]Issue with linux operating system"
+title = "[OS]Boot Process"
 date = 2024-03-25T21:26:07+09:00
 tags = ["OS", "Troubleshooting"]
 summary = "OS boot process and troubleshooting"
