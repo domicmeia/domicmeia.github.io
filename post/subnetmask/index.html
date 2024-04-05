@@ -15,7 +15,7 @@
   <link rel="stylesheet" href='https://domicmeia.github.io/css/syntax.css' />
   
   <title>
-    [Networking]OSI layer 4 | Domicmeia
+    [Networking]Subnetmask | Domicmeia
   </title>
   
   <link rel="icon" type="image/x-icon" href="/images/avatar.jpeg" />
@@ -25,20 +25,20 @@
   
   <meta
   name="description"
-  content="focus on TCP"
+  content="How to calculate the subnetmask"
 />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://domicmeia.github.io/post/osi4/" />
+<link rel="canonical" href="https://domicmeia.github.io/post/subnetmask/" />
 
 
 <meta name="twitter:card" content="summary" />
 <meta
   name="twitter:title"
-  content="[Networking]OSI layer 4 - Domicmeia"
+  content="[Networking]Subnetmask - Domicmeia"
 />
 <meta
   name="twitter:description"
-  content="focus on TCP"
+  content="How to calculate the subnetmask"
 />
 <meta name="twitter:site" content="https://domicmeia.github.io/" />
 <meta name="twitter:creator" content="" />
@@ -54,14 +54,14 @@
 />
 <meta
   property="og:title"
-  content="[Networking]OSI layer 4 - Domicmeia"
+  content="[Networking]Subnetmask - Domicmeia"
 />
 <meta
   property="og:description"
-  content="focus on TCP"
+  content="How to calculate the subnetmask"
 />
-<meta property="og:url" content="https://domicmeia.github.io/post/osi4/" />
-<meta property="og:site_name" content="[Networking]OSI layer 4" />
+<meta property="og:url" content="https://domicmeia.github.io/post/subnetmask/" />
+<meta property="og:site_name" content="[Networking]Subnetmask" />
 <meta
   property="og:image"
   content="https://domicmeia.github.io/"
@@ -69,7 +69,7 @@
 <meta property="og:image:width" content="2048" />
 <meta property="og:image:height" content="1024" />
 
-<meta property="article:published_time" content="2024-03-31 16:26:38 &#43;0900 KST" />
+<meta property="article:published_time" content="2024-04-05 18:32:26 &#43;0900 KST" />
 
 
 
@@ -277,18 +277,18 @@
                   <span class="author">
                     <a href="https://domicmeia.github.io/">domicmeia</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://domicmeia.github.io/post/osi4/">[Networking]OSI layer 4</a></strong>
+                      href="https://domicmeia.github.io/post/subnetmask/">[Networking]Subnetmask</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Sun, 31 Mar 2024 16:26:38 &#43;0900"
+                  Created <relative-time datetime="Fri, 05 Apr 2024 18:32:26 &#43;0900"
                     class="no-wrap">
-                    Sun, 31 Mar 2024 16:26:38 &#43;0900</relative-time>
+                    Fri, 05 Apr 2024 18:32:26 &#43;0900</relative-time>
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 01 Apr 2024 15:57:59 &#43;0900"
+                  Modified <relative-time datetime="Fri, 05 Apr 2024 18:44:40 &#43;0900"
                     class="no-wrap">
-                    Mon, 01 Apr 2024 15:57:59 &#43;0900</relative-time>
+                    Fri, 05 Apr 2024 18:44:40 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      898 Words
+                      720 Words
                     <span class="file-info-divider"></span>
-                                        4 min
+                                        3 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -335,13 +335,13 @@
                       Networking
                     </a>
                     
-                    <a class="muted-link mr-3" href="/tags/hardware">
+                    <a class="muted-link mr-3" href="/tags/">
                       <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd"
                           d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
                         </path>
                       </svg>
-                      Hardware
+                      
                     </a>
                     
                     
@@ -354,77 +354,134 @@
                 <article class="markdown-body entry-content container-lg"><blockquote>
 <p>This post was written for <code>studying</code>. There maybe a lot wrong going on.</p>
 </blockquote>
-<h2 id="목차">목차</h2>
-<ul>
-<li><a href="#ip-vs-tcpip">IP vs TCP/IP</a></li>
-<li><a href="#segementation">Segmentation</a></li>
-<li><a href="#tcp-and-udp">TCP and UDP</a></li>
-<li><a href="#why-is-there-a-udp">Why is there a UDP</a></li>
-<li><a href="#diagonosing-tcpip-network-issue">Diagonosing TCP/IP Network Issue</a></li>
-</ul>
-<hr>
-<h1 id="ip-vs-tcpip">IP vs TCP/IP</h1>
-<hr>
-<p>Since IP is strictly a data send/recieve protocol, there is no built-in checking that verifies whether the data packet sent were actually recieved. In contrast to IP, TCP/IP is a higher level smart communications protocol that can do more things. It creates a virtual network when more than one computer is connected to the network and uses the 3 ways handshake model to establish the connection which makes it more reliable.</p>
-<h2 id="tcp-3-way-handshake">TCP 3-Way Handshake</h2>
-<p><img src="/images/posts/3way.png" alt="3wayhandshake"></p>
+<p>Let&rsquo;s walk through an example of subnetting for a large-scale network.</p>
+<p>Let&rsquo;s say we have been given the IP address block 192.168.0.0/16 (CIDR notation) for our network, and we need to subnet it to accommodate multiple departments within our organization.</p>
 <ol>
-<li>The client sends a SYN(synchronize sequence number) packet to the server, which has a random sequence number.</li>
-<li>The server sends back a SYN-ACK(SYN+1) packet.</li>
-<li>The client sends an ACK number to the server, acknowledging the server&rsquo;s sequence number.</li>
-<li>The sequence number on both ends are synchronized. Both can now send and recieve data independently.</li>
-</ol>
-<h2 id="why-the-tcpip-model-has-only-4-layer-compared-to-the-osi-7-layers">Why the TCP/IP model has only 4 layer compared to the OSI 7 layers?</h2>
-<p>Overall, the TCP/IP model&rsquo;s four-layer architecture strikes a balance between simplicity, efficiency, and interoperability, making it the foundation of the modern internet and networking infrastructure. While the OSI model provides a more comprehensive theoretical framework, the TCP/IP model&rsquo;s pragmatic approach has proven highly effective in practice.</p>
-<hr>
-<h1 id="segementation">Segementation</h1>
-<hr>
-<p>TCP breaks down the data stream from the Application Layer into smaller units called segments. These segments are then transmitted individually across the network and reassembled by the receiver into the original data stream. <strong>Segmentation allows TCP to efficiently manage the transmission of data, handle flow control, and recover from network errors.</strong></p>
-<p>While segmentation is a prominent feature of TCP, other transport layer protocols may not necessarily utilize segmentation in the same way. For example, the User Datagram Protocol (UDP), also at the Transport Layer, does not employ segmentation. UDP simply takes the data from the Application Layer and encapsulates it into datagrams, which are then transmitted as is without segmentation or reassembly at the transport layer.</p>
-<p>So, while segmentation is a core mechanism in TCP, it&rsquo;s not universally present in all transport layer protocols.</p>
-<hr>
-<h1 id="tcp-and-udp">TCP and UDP</h1>
-<hr>
-<p>TCP is not a protocol but is a member of the IP protocol suite. The TCP refers to Trasmission Control Protocol and is a massively used protocol. One of the benefits of TCP is that it establishes the connection <strong>on both ends</strong> before any data start to flow. It is also used to <strong>sync up the data flow</strong> as if a case arrives when the packets arrive out of order, so the receiving system should be able to f<strong>igure out what the puzzle of packets is supposed to look like.</strong></p>
-<p>We can call the UDP the twin of the TCP. The UDP stands for User Datgram Protocol. The UDP doesn&rsquo;t care if somebody is listening on the other end or not, and it is called the connection protocol. Whereas, when we talk about the TCP, it makes everybody stay on the same page. The transmission speed on a <strong>UDP is faster than the transmission speed fo TCP.</strong> The TCP always needs confirmation from the other side that the message is received or not. On the other side, the UDP is like a tv broadcast in which the transmitter doesn&rsquo;t care or know about the person on the other hand.</p>
-<h3 id="note">NOTE</h3>
-<blockquote>
-<p>Some of the common ports are as follows:</p>
+<li>
+<p><strong>Plan your network</strong>:</p>
 <ul>
-<li><strong>80</strong> HTTP</li>
-<li><strong>25</strong> SMTP</li>
-<li><strong>22</strong> SSH</li>
-<li><strong>23</strong> Telnet</li>
-<li><strong>443</strong> HTTPS</li>
-<li><strong>20 and 21</strong> FTP</li>
-<li><strong>53</strong> UTP&amp;TCP</li>
-</ul>
-</blockquote>
-<hr>
-<h1 id="why-is-there-a-udp">Why is there a UDP?</h1>
-<hr>
-<p>UDP exists because it eliminates the need for connection establishment, keeping it simple with <strong>no connection state</strong> at the sender or receiver and boasting a small header size. Without congestion control, UDP can blast away as <strong>fast</strong> as desired, functioning <strong>even in the face of congestion.</strong> It&rsquo;s particularly suited for streaming multimedia applications that are <strong>loss-tolerant and rate-sensitive</strong>, as well as for protocols like DNS, SNMP, and HTTP/3.</p>
-<hr>
-<h1 id="diagonosing-tcpip-network-issue">Diagonosing TCP/IP Network Issue</h1>
-<hr>
-<ol>
-<li><strong>Diagnose the NIC.</strong> Use the diagnostic tool to see if the NIC is working.</li>
-<li><strong>Check your NIC&rsquo;s driver.</strong> Replace it if necessary.</li>
-<li><strong>Diagnose locally.</strong> If the NIC&rsquo;s okay, diagnose locally by pinging a few neighboring systems, by both IP address and DNS name. If you can&rsquo;t ping by DNS, check your DNS settings.
+<li>We need to divide our network into subnets to accommodate different departments: Sales, Marketing, HR, and IT.</li>
+<li>Each department requires a different number of hosts, as follows:
 <ul>
-<li>Reference: <a href="https://domicmeia.github.io/post/google/">Networking: ping google.com</a></li>
+<li>Sales: 100 hosts</li>
+<li>Marketing: 50 hosts</li>
+<li>HR: 30 hosts</li>
+<li>IT: 20 hosts</li>
 </ul>
 </li>
-<li><strong>Check IP address and subnet mask.</strong> If you&rsquo;re having a problem pinging locally, make sure you have the right IP address and subnet mask. If you&rsquo;re on DHCP, try renewing the lease.</li>
-<li><strong>Run <code>netstat</code>.</strong> Running <code>netsatat</code> with no options shows you all the current connections to your system.</li>
-<li><strong>Run <code>netstat -s</code>.</strong> Running with -s option displays several statistics that can help you diagnose problem. For example, if the display shows you are sending but not receiving, you almost certainly have a bad cable with a broken receive wire.</li>
-<li><strong>Diagnose to the gateway.</strong> If you can&rsquo;t get on the Internet, check to see if you can ping the router. If you can&rsquo;t ping the router, either it&rsquo;s down or you&rsquo;re not connected to if. IF you can only ping the near side, something in the router itself is messed up, like the routing table.</li>
-<li>If you can ping the router, try to ping something on the internet. If you still can&rsquo;t get through, you can try to locate the problem <strong>using the <code>traceroute</code> to identify packet loss.</strong>
+<li>We&rsquo;ll also allocate additional subnets for future growth.</li>
+</ul>
+</li>
+<li>
+<p><strong>Choose an appropriate subnetting strategy</strong>:</p>
 <ul>
-<li>Reference: <a href="https://domicmeia.github.io/post/traceroute/">Networking: traceroute</a></li>
+<li>Since we have different requirements for each department, we&rsquo;ll use Variable-Length Subnet Masking (VLSM) to allocate subnets of varying sizes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Calculate the number of bits required for subnetting</strong>:</p>
+<ul>
+<li>We&rsquo;ll start by determining the number of bits required to accommodate the largest number of hosts, which is for the Sales department (100 hosts). Using the formula 2^n - 2, we find that we need 7 host bits to accommodate 100 hosts per subnet.</li>
+<li>For Marketing (50 hosts), we need 6 host bits.</li>
+<li>For HR (30 hosts), we need 5 host bits.</li>
+<li>For IT (20 hosts), we need 5 host bits as well.</li>
+<li>We&rsquo;ll also reserve some bits for subnetting, so let&rsquo;s reserve 4 bits for subnetting.</li>
+</ul>
+</li>
+<li>
+<p><strong>Choose a subnet mask</strong>:</p>
+<ul>
+<li>Based on our calculations, the subnet mask for Sales will be /25 (16 + 7), for Marketing it will be /26 (16 + 6), for HR and IT it will be /27 (16 + 5).</li>
+<li>We&rsquo;ll use /28 for future growth.</li>
+</ul>
+</li>
+<li>
+<p><strong>Convert the subnet mask to binary</strong>:</p>
+<ul>
+<li>/25 subnet mask: 11111111.11111111.11111111.10000000 (255.255.255.128)</li>
+<li>/26 subnet mask: 11111111.11111111.11111111.11000000 (255.255.255.192)</li>
+<li>/27 subnet mask: 11111111.11111111.11111111.11100000 (255.255.255.224)</li>
+<li>/28 subnet mask: 11111111.11111111.11111111.11110000 (255.255.255.240)</li>
+</ul>
+</li>
+<li>
+<p><strong>Implement the subnet mask</strong>:</p>
+<ul>
+<li>Assign IP addresses within each subnet according to the subnet mask. For example, Sales could use IP addresses ranging from 192.168.0.1 to 192.168.0.126, with a subnet mask of 255.255.255.128.</li>
 </ul>
 </li>
 </ol>
+<p>To solve this problem, we&rsquo;ll follow these steps:</p>
+<ol>
+<li><strong>Determine the subnet mask</strong> for 50 subnets.</li>
+<li>Calculate the network address, assignable IP addresses, and broadcast address for each subnet.</li>
+</ol>
+<p>Let&rsquo;s start with the first problem:</p>
+<h3 id="for-the-subnet-14845149916">For the subnet 148.45.14.99/16:</h3>
+<ol>
+<li>
+<p><strong>Determine the subnet mask</strong> for 50 subnets:</p>
+<p>Since the given IP address is 148.45.14.99/16, it means the first 16 bits are dedicated to the network address, and the remaining 16 bits are for host addresses. To create 50 subnets, we need to borrow additional bits from the host portion. We can find the number of bits needed by calculating (log_2(50) \approx 5.64). Since we can&rsquo;t have a fractional number of bits, we&rsquo;ll round up to 6. So, we need 6 additional bits for subnetting.</p>
+<p>The original subnet mask is /16, so we add 6 bits to it, making it /22. Therefore, the subnet mask for the 50 subnets will be 255.255.252.0 (/22 in CIDR notation).</p>
+</li>
+<li>
+<p><strong>Calculate the network address, assignable IP addresses, and broadcast address for each subnet</strong>:</p>
+<ul>
+<li>
+<p><strong>Subnet Mask</strong>: 255.255.252.0 (/22)</p>
+</li>
+<li>
+<p><strong>Network Address</strong>:
+To find the network address for each subnet, we&rsquo;ll use the formula:</p>
+<pre tabindex="0"><code>Network Address = Given IP Address AND Subnet Mask
+</code></pre><p>For the given IP address 148.45.14.99 and subnet mask 255.255.252.0, the network address will be:</p>
+<pre tabindex="0"><code>148.45.12.0
+</code></pre></li>
+<li>
+<p><strong>Assignable IP Addresses</strong>:
+To find the number of assignable IP addresses, we subtract 2 from the total number of addresses in the subnet. This is because the first address is the network address, and the last address is the broadcast address.</p>
+<p>So, the number of assignable IP addresses will be (2^{(32 - 22)} - 2 = 1022).</p>
+</li>
+<li>
+<p><strong>Broadcast Address</strong>:
+The broadcast address is the address where all the host bits are set to 1.</p>
+<pre tabindex="0"><code>Broadcast Address = Network Address + Assignable IP Addresses - 1
+                  = 148.45.12.1023
+</code></pre></li>
+</ul>
+</li>
+</ol>
+<p>Therefore, for the subnet 148.45.14.99/16 with 50 subnets, the details are as follows:</p>
+<ul>
+<li><strong>Subnet Mask</strong>: 255.255.252.0 (/22)</li>
+<li><strong>Network Address</strong>: 148.45.12.0</li>
+<li><strong>Assignable IP Addresses</strong>: 1022 (148.45.12.1 to 148.45.15.1022)</li>
+<li><strong>Broadcast Address</strong>: 148.45.15.1023</li>
+</ul>
+<p>Now, let&rsquo;s move on to the second problem:</p>
+<h3 id="for-the-subnet-13317267824">For the subnet 133.172.67.8/24:</h3>
+<p>Given that the subnet mask is already /24:</p>
+<ul>
+<li>
+<p><strong>Subnet Mask</strong>: 255.255.255.0 (/24)</p>
+</li>
+<li>
+<p><strong>Network Address</strong>: 133.172.67.0</p>
+</li>
+<li>
+<p><strong>Assignable IP Addresses</strong>: (2^{(32 - 24)} - 2 = 254)</p>
+</li>
+<li>
+<p><strong>Broadcast Address</strong>: 133.172.67.255</p>
+</li>
+</ul>
+<p>Therefore, for the subnet 133.172.67.8/24, the details are as follows:</p>
+<ul>
+<li><strong>Subnet Mask</strong>: 255.255.255.0 (/24)</li>
+<li><strong>Network Address</strong>: 133.172.67.0</li>
+<li><strong>Assignable IP Addresses</strong>: 254 (133.172.67.1 to 133.172.67.254)</li>
+<li><strong>Broadcast Address</strong>: 133.172.67.255</li>
+</ul>
 </article>
               </div>
 
@@ -437,13 +494,11 @@
       <div class="pagination-nav">
         <div class="pagination-button next-post">
           
-          <div>«&nbsp;</div><a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/subnetmask/"> [Networking]Subnetmask</a>
-          
         </div>
         
         <div class="pagination-button previous-post">
           
-          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/osi3/">[Networking]OSI layer 3&nbsp;</a><div> »</div>
+          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/osi4/">[Networking]OSI layer 4&nbsp;</a><div> »</div>
           
         </div>
       </div>
