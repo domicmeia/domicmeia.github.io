@@ -6,7 +6,7 @@ summary = "How to calculate the subnetmask"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.
 
-Let's walk through an example of subnetting for a large-scale network.
+## Before reading, read [오리뎅이의 LAN통신 이야기: subnet, subnetmask][link1]
 
 Let's say we have been given the IP address block 192.168.0.0/16 (CIDR notation) for our network, and we need to subnet it to accommodate multiple departments within our organization.
 
@@ -48,7 +48,9 @@ To solve this problem, we'll follow these steps:
 1. **Determine the subnet mask** for 50 subnets.
 2. Calculate the network address, assignable IP addresses, and broadcast address for each subnet.
 
-Let's start with the first problem:
+---
+
+# Let's start with the first problem:
 
 ### For the subnet 148.45.14.99/16:
 
@@ -114,3 +116,8 @@ Therefore, for the subnet 133.172.67.8/24, the details are as follows:
 - **Assignable IP Addresses**: 254 (133.172.67.1 to 133.172.67.254)
 - **Broadcast Address**: 133.172.67.255
 
+need more? [Practicing Subnet Mask][link]
+
+
+[link]:https://www.ranet.co.th/IPsubnet01-eng.php
+[link1]:https://blog.naver.com/goduck2/220196781065
