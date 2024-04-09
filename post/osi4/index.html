@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 01 Apr 2024 15:57:59 &#43;0900"
+                  Modified <relative-time datetime="Tue, 09 Apr 2024 20:32:10 &#43;0900"
                     class="no-wrap">
-                    Mon, 01 Apr 2024 15:57:59 &#43;0900</relative-time>
+                    Tue, 09 Apr 2024 20:32:10 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      898 Words
+                      1031 Words
                     <span class="file-info-divider"></span>
-                                        4 min
+                                        5 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -376,6 +376,14 @@
 </ol>
 <h2 id="why-the-tcpip-model-has-only-4-layer-compared-to-the-osi-7-layers">Why the TCP/IP model has only 4 layer compared to the OSI 7 layers?</h2>
 <p>Overall, the TCP/IP model&rsquo;s four-layer architecture strikes a balance between simplicity, efficiency, and interoperability, making it the foundation of the modern internet and networking infrastructure. While the OSI model provides a more comprehensive theoretical framework, the TCP/IP model&rsquo;s pragmatic approach has proven highly effective in practice.</p>
+<hr>
+<h1 id="encapsulation">Encapsulation</h1>
+<hr>
+<p>Encapsulation is a method of hiding implemenatation details or making only relevant details available to the recipient.</p>
+<p>Even protocols that operate in a single OSI layer use data encapsulation.(HTTP/1)</p>
+<p>Generally, a payload travels down the client&rsquo;s network stack, over physcial media to the server, and up the server&rsquo;s network stack to its corresponding layer. The result is that data sent form one layer at the origin node arrives at the same layer on the destination node. The server&rsquo;s response takes the same path in the opposite direction. On the client&rsquo;s side, L6 receives L7&rsquo;s payload, the encapsulates the payload with a header to create L6&rsquo;s payload. L5 receives L6&rsquo;s payload, adds its own header, and sends its payload on to L4.</p>
+<p><img src="/images/posts/encaps.png" alt="encapsulation"></p>
+<p>TCP is a protocol whose payloads are also known as <em>segments</em>.</p>
 <hr>
 <h1 id="segementation">Segementation</h1>
 <hr>
