@@ -35,6 +35,21 @@ Overall, the TCP/IP model's four-layer architecture strikes a balance between si
 
 ---
 
+# Encapsulation
+---
+
+Encapsulation is a method of hiding implemenatation details or making only relevant details available to the recipient.
+
+Even protocols that operate in a single OSI layer use data encapsulation.(HTTP/1)
+
+Generally, a payload travels down the client's network stack, over physcial media to the server, and up the server's network stack to its corresponding layer. The result is that data sent form one layer at the origin node arrives at the same layer on the destination node. The server's response takes the same path in the opposite direction. On the client's side, L6 receives L7's payload, the encapsulates the payload with a header to create L6's payload. L5 receives L6's payload, adds its own header, and sends its payload on to L4.
+
+![encapsulation](/images/posts/encaps.png)
+
+TCP is a protocol whose payloads are also known as *segments*.
+
+---
+
 # Segementation
 ---
 
@@ -42,7 +57,7 @@ TCP breaks down the data stream from the Application Layer into smaller units ca
 
 While segmentation is a prominent feature of TCP, other transport layer protocols may not necessarily utilize segmentation in the same way. For example, the User Datagram Protocol (UDP), also at the Transport Layer, does not employ segmentation. UDP simply takes the data from the Application Layer and encapsulates it into datagrams, which are then transmitted as is without segmentation or reassembly at the transport layer.
 
-So, while segmentation is a core mechanism in TCP, it's not universally present in all transport layer protocols.
+So, while segmentation is a core mechanism in TCP, it's not universally present in all transport layer protocols. 
 
 ---
 
