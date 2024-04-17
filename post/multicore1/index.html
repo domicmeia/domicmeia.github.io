@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 17 Apr 2024 17:32:51 &#43;0900"
+                  Modified <relative-time datetime="Wed, 17 Apr 2024 17:36:16 &#43;0900"
                     class="no-wrap">
-                    Wed, 17 Apr 2024 17:32:51 &#43;0900</relative-time>
+                    Wed, 17 Apr 2024 17:36:16 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -416,7 +416,7 @@ DP는 기본적으로 문제를 나누고 그 문제의 결과값을 재활용�
 <li>dp[x]: x를 1로 만들기 위해 필요한 최소의 연산 횟수</li>
 </ul>
 <p>그럼 각 상태를 결정하기 위해 어떤 점화식을 세울 수 있을까. 다음과 같이 생각해 볼 수 있다.
-<img src="./image/dp1.png" alt="dp1">
+<img src="/images/posts/dp1.png" alt="dp1">
 혹시나 순서대로 3으로 나눌 수 있을 때 3으로 나누고, 2로 나눌 수 있을 때 2로 나누고 1을 빼면 되지 않을까라는 생각은 버려야 한다. 10의 경우, 10-5-4-2-1 보다 10-9-3-1이 연산횟수가 적다. 따라서 이 문제는 DP로 풀어야 한다.</p>
 <h2 id="dp-적용-방법">DP 적용 방법</h2>
 <ol>
