@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <script
+    type="application/javascript"
+    src='https://domicmeia.github.io/js/theme-mode.js'
+  ></script>
+  <link rel="stylesheet" href='https://domicmeia.github.io/css/frameworks.min.css' />
+  <link rel="stylesheet" href='https://domicmeia.github.io/css/github.min.css' />
+  <link rel="stylesheet" href='https://domicmeia.github.io/css/github-style.css' />
+  <link rel="stylesheet" href='https://domicmeia.github.io/css/light.css' />
+  <link rel="stylesheet" href='https://domicmeia.github.io/css/dark.css' />
+  <link rel="stylesheet" href='https://domicmeia.github.io/css/syntax.css' />
+  
+  <title>
+    [Multicoreprogramming]DP- kor | Domicmeia
+  </title>
+  
+  <link rel="icon" type="image/x-icon" href="/images/avatar.jpeg" />
+  
+  <meta name="theme-color" content="#1e2327" />
+
+  
+  <meta
+  name="description"
+  content="DP concepts"
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://domicmeia.github.io/post/multicore1/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta
+  name="twitter:title"
+  content="[Multicoreprogramming]DP- kor - Domicmeia"
+/>
+<meta
+  name="twitter:description"
+  content="DP concepts"
+/>
+<meta name="twitter:site" content="https://domicmeia.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta
+  name="twitter:image"
+  content="https://domicmeia.github.io/"
+/>
+
+
+<meta
+  property="og:type"
+  content="article"
+/>
+<meta
+  property="og:title"
+  content="[Multicoreprogramming]DP- kor - Domicmeia"
+/>
+<meta
+  property="og:description"
+  content="DP concepts"
+/>
+<meta property="og:url" content="https://domicmeia.github.io/post/multicore1/" />
+<meta property="og:site_name" content="[Multicoreprogramming]DP- kor" />
+<meta
+  property="og:image"
+  content="https://domicmeia.github.io/"
+/>
+<meta property="og:image:width" content="2048" />
+<meta property="og:image:height" content="1024" />
+
+<meta property="article:published_time" content="2024-04-17 17:19:27 &#43;0900 KST" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+  
+
+<style>
+  .height-limitation {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+
+  .loader {
+    border: 4px solid #f3f3f3;
+    border-bottom: 4px solid var(--color-fg-muted);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
+<div style="position: relative">
+  <header
+    class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on"
+  >
+    <div
+      class="Header-item mobile-none"
+      style="margin-top: -4px; margin-bottom: -4px"
+    >
+      <a class="Header-link" href="https://domicmeia.github.io/" aria-label="Home">
+        <svg
+          class="octicon"
+          height="32"
+          viewBox="0 0 16 16"
+          version="1.1"
+          width="32"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button
+        class="Header-link btn-link js-details-target"
+        type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'"
+        aria-label="Search"
+      >
+        <svg
+          height="24"
+          class="octicon octicon-three-bars"
+          viewBox="0 0 16 16"
+          version="1.1"
+          width="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      style="display: none"
+      id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex"
+    >
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to"
+      >
+        <div class="position-relative">
+          <form
+            target="_blank"
+            action="https://www.google.com/search"
+            accept-charset="UTF-8"
+            method="get"
+            autocomplete="off"
+          >
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center"
+            >
+              <input
+                type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q"
+                value=""
+                placeholder="Search"
+                autocomplete="off"
+              />
+              <input type="hidden" name="q" value="site:https://domicmeia.github.io/" />
+              <div
+                class="js-jump-to-suggestions-container jump-to-suggestions overflow-hidden position-absolute"
+              >
+                <div
+                  id="search-progress"
+                  class="d-none color-bg-primary no-underline p-2"
+                  role="progress"
+                  aria-selected="false"
+                >
+                  <div class="loader"></div>
+                </div>
+
+                <ul
+                  id="jump-to-results"
+                  role="listbox"
+                  class="Box border-0 p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container js-active-navigation-container height-limitation"
+                ></ul>
+              </div>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="Header-item Header-item--full flex-justify-center d-md-none position-relative"
+    >
+      <a class="Header-link" href="https://domicmeia.github.io/" aria-label="Home">
+        <svg
+          class="octicon octicon-mark-github v-align-middle"
+          height="32"
+          viewBox="0 0 16 16"
+          version="1.1"
+          width="32"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+    <div class="Theme-switcher Header-item" style="margin-right: 0">
+      <span
+        role="button"
+        class="Header-link no-select"
+        onclick="switchTheme()"
+        style="cursor: pointer"
+        aria-label="Switch theme"
+      >
+        <svg
+          style="fill: var(--color-profile-color-modes-toggle-moon)"
+          class="no-select"
+          viewBox="0 0 16 16"
+          version="1.1"
+          width="16"
+          height="16"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z"
+          ></path>
+        </svg>
+      </span>
+    </div>
+  </header>
+</div>
+
+  
+<div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://domicmeia.github.io/">
+                  <img class=" avatar-user"
+                    src="/images/avatar.jpeg"
+                    width="32" height="32" alt="domicmeia"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://domicmeia.github.io/">domicmeia</a></span><span
+                    class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
+                      href="https://domicmeia.github.io/post/multicore1/">[Multicoreprogramming]DP- kor</a></strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Wed, 17 Apr 2024 17:19:27 &#43;0900"
+                    class="no-wrap">
+                    Wed, 17 Apr 2024 17:19:27 &#43;0900</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Wed, 17 Apr 2024 17:32:51 &#43;0900"
+                    class="no-wrap">
+                    Wed, 17 Apr 2024 17:32:51 &#43;0900</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      2322 Words
+                    <span class="file-info-divider"></span>
+                                        11 min
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                    
+                    <a class="muted-link mr-3" href="/tags/multicoreprogramming">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      Multicoreprogramming
+                    </a>
+                    
+                    <a class="muted-link mr-3" href="/tags/hardware">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      Hardware
+                    </a>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><blockquote>
+<p><code>공부 목적</code>으로 작성한 포스팅입니다. 오타가 많고, 틀린 내용이 있을 수 있습니다.</p>
+</blockquote>
+<h2 id="목차">목차</h2>
+<ol>
+<li><a href="#%EC%9E%AC%EA%B7%80---%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98">재귀 - 피보나치</a></li>
+<li><a href="#dp-%EC%82%AC%EC%9A%A9-%EC%A1%B0%EA%B1%B4">DP 사용 조건</a></li>
+<li><a href="#%EB%B6%84%ED%95%A0-%EC%A0%95%EB%B3%B5-vs-%EB%8F%99%EC%A0%81-%EA%B3%84%ED%9A%8D%EB%B2%95">분할 정복 vs 동적 계획법</a></li>
+<li><a href="#dp-%EB%AA%A8%EB%8D%B8%ED%99%94">DP 모델화</a></li>
+<li><a href="#dp-%EC%A0%81%EC%9A%A9-%EB%B0%A9%EB%B2%95">DP 적용 방법</a></li>
+</ol>
+<hr>
+<p>일단 동적 계획법(Dynamic Programming)은 큰 문제를 작은 문제로 나눠서 푸는 알고리즘이다. 피보나치 수열을 예로 들자.</p>
+<h2 id="재귀---피보나치">재귀 - 피보나치</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">fibo</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span></code></pre></div><p>이 함수는 피보나치 수열의 n번째 수를 구하는 함수이다. fibo(6)은 아래와 같이 진행된다.
+<img src="/images/posts/fibo1.png" alt="fibo1">
+이미 진행된 연산인 fibo(4)와 fibo(3)이 여러번 진행된 것을 볼 수 있다. 이러한 반복 연산의 결점을 보완한 알고리즘이 바로 DP이다.</p>
+<h2 id="dp-사용-조건">DP 사용 조건</h2>
+<p>DP가 적용되기 위해서는 2가지 조건을 만족해야 한다. Optimal Substructure와 Overlaping SubProblem이다. 계속 예를 들어보자.
+피보니치 수열의 식은 <code>F(n)=F(n-1)+F(n-2) (n&gt;2)</code>이다. 이 식은 다음의 두 가지를 보인다.</p>
+<ol>
+<li>F(n-1)과 F(n-2)을 더하면 F(n)이 나온다.</li>
+<li>귀납법의 증명을 통해 n=k일 때 성립하면 n=k+1도 성립한다. 즉, F(k+1)=F(k)+F(k-1)또한 성립한다.</li>
+</ol>
+<p>첫번째를 <code>Optimal Substructure(최적 부분 구조)</code>라 한다. 큰 문제의 정답을 작은 문제를 통해 풀이하는 것을 의미한다. 그래서 특정 문제의
+정답은 문제의 크기에 상관없이 항상 동일하다. 예를 들어 A 지점에서 B지점까지 가는 중간에 X가 있다고 가정하자. A에서 X로 가는 경우의
+수가 얼마나 많든, X에서 B로 가는 경우의 수가 얼마나 많든 상관없이 A-X/X-B가 가장 짧은 경로라면 전체 최적 경로도 A-X-B이다. 이와 같이
+<strong>부분 문제에서 구한 최적 결과가 전체 문제에서 동일하게 적용되어 결과가 변하지 않을 때</strong> DP를 사용할 수 있다.</p>
+<p>두번째를 <code>Overlaping SubProblem(중복 부분 문제)</code>라 한다. 예를 들어 F(4)=F(3)+F(2)과 F(3)=F(2)+F(1) 식에서 F(3)과 F(2)항이 겹친다.
+DP는 기본적으로 문제를 나누고 그 문제의 결과값을 재활용하여 전체 답을 구한다. 그래서 <strong>동일한 작은 문제들이 반복하여 나타나는 경우에만 사용이 가능</strong>하다. 그러므로 우리는 1회 계산했을 때의 값을 저장해 다음 피보나치 식에서 이를 재사용한다.</p>
+<h2 id="분할-정복-vs-동적-계획법">분할 정복 vs 동적 계획법</h2>
+<h3 id="분할-정복">분할 정복</h3>
+<ul>
+<li>연관 없는 부분문제로 분할 한다.</li>
+<li>부분문제를 독립, 재귀적으로 해결한다.</li>
+<li>부분문제의 해를 결합한다.</li>
+<li>하향식 방법으로 접근</li>
+</ul>
+<h3 id="dp">DP</h3>
+<ul>
+<li>모든 부분문제는 연관되어 있다.</li>
+<li>모든 부분문제를 한번만 계산하고 결과를 저장하고 재사용한다.</li>
+<li>분할 정복은 같은 부분문제가 나타날 경우 다시 계산한다.</li>
+<li>보통 상향식 방법으로 접근 but 하향식 방법으로도 구현 가능(e.g. TSP 문제 - 반복 재귀DP)</li>
+</ul>
+<h2 id="dp-모델화">DP 모델화</h2>
+<p>동적 계획법은 큰 문제를 이루는 작은 문제들을 먼저 해결하고 작은 문제들의 최적 해를 이용하여 순환적으로 큰 문제를 해결한다. 또한 DP는 문제의 순환적인 성질 때문에 이전에 계산되어졌던 작은 문제의 해가 다른 어딘가에서 필요하게 되는데, 이를 위해 이미 해결된 문제들의 해들을 어떤 저장 공간에 저장하게 된다. 그리고 이렇게 저장된 해들이 다시 필요할 때 마다 해를 얻기 위해 다시 문제를 재계산하지 않고 table의 참조를 통해서 중복된 계산을 피하게 된다. 따라서 DP는 DAG(사이클이 없는 유형)으로 모델화된다. 그래프를 다루는 요소는</p>
+<ul>
+<li>정점 : 문제에서의 특정 상황을 유일하기 결정짓는 변수들로 이루어진 상태</li>
+<li>간선 : 상태간의 전이를 나타내는 점화식</li>
+</ul>
+<p>각 정점은 현재 상태에 대한 답을 갖고, 이러한 답을 나타내는 배열을 dp라고 이름을 짓는다. 예를 들어 변수가 x, y라면 dp[x][y] 같은 형태로
+상태의 답을 나타낸다. 우리는 최소한의 상태와 최소한의 점화식을 사용하여 전체 상황을 표현할 수 있어야 한다. <a href="https://www.acmicpc.net/problem/1463">문제</a>로 연습해보자.
+이 문제에서의 상태는</p>
+<ul>
+<li>dp[x]: x를 1로 만들기 위해 필요한 최소의 연산 횟수</li>
+</ul>
+<p>그럼 각 상태를 결정하기 위해 어떤 점화식을 세울 수 있을까. 다음과 같이 생각해 볼 수 있다.
+<img src="./image/dp1.png" alt="dp1">
+혹시나 순서대로 3으로 나눌 수 있을 때 3으로 나누고, 2로 나눌 수 있을 때 2로 나누고 1을 빼면 되지 않을까라는 생각은 버려야 한다. 10의 경우, 10-5-4-2-1 보다 10-9-3-1이 연산횟수가 적다. 따라서 이 문제는 DP로 풀어야 한다.</p>
+<h2 id="dp-적용-방법">DP 적용 방법</h2>
+<ol>
+<li>Top-Down</li>
+<li>Bottom-Up</li>
+</ol>
+<p>Top-Down은 간단히 말해 <code>재귀 함수를 사용하는 방법</code>이다. 가장 큰 문제를 방문 후 작은 문제를 호출한다. 점화식을 이해하기 쉽다는 장점이 있다.
+이 방식(Memozation<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>)은 하향식이라고도 한다. 피보나치 수열을 다시 생각해 보자. 피보나치 수을 구하는 알고리즘에서 fibo(n)의 값을 계산하자마자 저장하면, 실행시간을 O(n)으로 줄일 수 있다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//memo를 위한 배열을 할당하고, 모두 -1으로 초기화 한다.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//memo[0]을 0으로 memo[1]는 1로 초기화 한다.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="n">IF</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="n">AND</span><span class="w"> </span><span class="n">memo</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">memo</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">2</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="n">Return</span><span class="w"> </span><span class="n">memo</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="w">
+</span></span></span></code></pre></div><p>하지만 재귀 함수 호출로 인한 시스템 호출 스택을 사용하게 되고 실행 속도 저하 또는 오버플로우가 발생할 수 있다. 이를 해결하기 위해서 <code>반복문을 사용</code>하는 방식도 있다. 이 방식(Tabulation)을 Bottom-Up이라하며, 상향식이라고도 불린다. 가장 작은 문제들부터 답을 구해가며 전체 문제의 답을 찾으며 시간과 메모리 사용량을 줄일 수 있다. 피보나치 수열을 이 방식으로 풀면</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="n">fibo</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="n">fibo</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="n">FOR</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">n</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">fibo</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">fibo</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="n">1</span><span class="o">]+</span><span class="n">fibo</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="n">2</span><span class="o">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="n">Return</span><span class="w"> </span><span class="n">fibo</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="w">
+</span></span></span></code></pre></div><p>그럼 위의 <a href="https://www.acmicpc.net/problem/1463">문제</a>를 두 가지 방법으로 구현해보자.</p>
+<h3 id="top-down">Top-Down</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">db</span><span class="p">[</span><span class="mi">1000002</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">go</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">db</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">go</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">temp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">temp</span> <span class="o">=</span> <span class="n">go</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">&gt;</span> <span class="n">temp</span><span class="p">)</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">temp</span> <span class="o">=</span> <span class="n">go</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">&gt;</span> <span class="n">temp</span><span class="p">)</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">db</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">ret</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">cnt</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">go</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="bottom-up">Bottom-Up</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">db</span><span class="p">[</span><span class="mi">1000002</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">db</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">x</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">db</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="n">db</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">db</span><span class="p">[</span><span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="n">db</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">db</span><span class="p">[</span><span class="n">i</span> <span class="o">/</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">db</span><span class="p">[</span><span class="n">x</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>동적 계획법은 Optimal Substructure을 만족하기 때문에, 같은 문제는 정답이 같다. 이러한 특성을 이용하기 위해 정답을 한 번 구하면 그 정답을 캐시에 메모해 놓는데, 이를 메모이제이션이라고 한다. DP와 메모이제이션은 같은 개념이 아니라는 것에 주의하자.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</article>
+              </div>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination-nav">
+        <div class="pagination-button next-post">
+          
+        </div>
+        
+        <div class="pagination-button previous-post">
+          
+          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/subnetmask/">[Networking]Subnetmask&nbsp;</a><div> »</div>
+          
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='https://domicmeia.github.io/js/toc.js'></script>
+<link rel="stylesheet" href='https://domicmeia.github.io/css/toc.css' />
+
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light"
+  >
+    <ul
+      class="list-style-none d-flex flex-wrap col-12 flex-justify-center mb-2 mb-lg-0"
+    >
+      
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+</body>
+
+<script type="application/javascript" src="https://domicmeia.github.io/js/github-style.js"></script>
+
+<script src="https://domicmeia.github.io/js/mark.es6.min.js"></script>
+
+
+<script type="text/javascript">
+
+  const host = window.location.host;
+  const keyword = localStorage.getItem('keyword');
+  localStorage.removeItem('keyword');
+
+  if (keyword) {
+    const markInstance = new Mark(document.body);
+    markInstance.unmark({
+      done: function() {
+        markInstance.mark(keyword);
+      }
+    });
+  }
+
+  const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--color-bg-primary');
+  const mutedColor = getComputedStyle(document.documentElement).getPropertyValue('--color-fg-muted');
+  const hoverColor = '#216EEB';
+
+  let originalStyle;
+  let svgOriginalStyle;
+  let titleOriginalStyle;
+
+  const onMouseOver = (node) => {
+    originalStyle = Object.assign({}, node.style);
+    node.style.backgroundColor = hoverColor;
+
+    const child = node.querySelector('.js-jump');
+    child.classList.remove('d-on-nav-focus');
+
+    const title = node.querySelector('.title');
+    if (title && primaryColor === ' #fff') {
+      titleOriginalStyle = title.style;
+      title.style.color = '#fff';
+    }
+
+    const svg = node.querySelector('.octicon');
+    if (svg) {
+      svgOriginalStyle = svg.style;
+      svg.style.color = '#fff';
+    }
+  }
+
+  const onMouseLeave = (node) => {
+    node.style = originalStyle;
+    const child = node.querySelector('.js-jump');
+    child.classList.add('d-on-nav-focus');
+
+    const title = node.querySelector('.title');
+    title.style = titleOriginalStyle;
+
+    const svg = node.querySelector('.octicon');
+    svg.style = svgOriginalStyle;
+  }
+
+  const createSearchItem = (title, link, index) => {
+    return `
+    <li class="color-bg-primary search-item d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search"
+        role="option" aria-selected="false" tabindex="${index}">
+        <a onmouseover="onMouseOver(this)" onmouseleave="onMouseLeave(this)"
+          class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2"
+          href="${link}" data-item-type="scoped_search">
+          <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center ">
+            <svg title="Repository" aria-label="Repository" role="img" height="16" viewBox="0 0 16 16"
+              version="1.1" width="16" data-view-component="true"
+              class="octicon octicon-repo js-jump-to-octicon-repo  flex-shrink-0">
+              <path fill-rule="evenodd"
+                d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+              </path>
+            </svg>
+          </div>    
+
+          <div
+            class="title jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+            ${title}
+          </div>
+
+          <div aria-hidden="true" style="color: var(--color-fg-muted);"
+            class="color-bg-primary js-jump border rounded-2 flex-shrink-0 color-bg-subtle px-1 ml-1 f6 d-on-nav-focus js-jump-to-badge-jump">
+            Jump to
+            <span class="d-inline-block ml-1 v-align-middle">↵</span>
+          </div>
+        </a>
+      </li>
+    `
+  }
+
+  const createGoogleSearchItem = (keyword) => {
+    return `
+    <li class="color-bg-primary search-item d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search"
+        role="option" aria-selected="false" tabindex="0">
+        <a onmouseover="onMouseOver(this)" onmouseleave="onMouseLeave(this)"
+          class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2"
+          href="https://www.google.com/search?q=${keyword}" target="_blank" data-item-type="scoped_search">
+          <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center ">
+            <svg title="Search" aria-label="Search" role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-search js-jump-to-octicon-search flex-shrink-0">
+                <path fill-rule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"></path>
+            </svg>
+          </div>    
+
+          <div
+            class="title jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+            ${keyword}
+          </div>
+
+          <div aria-hidden="true" style="color: var(--color-fg-muted);"
+            class="color-bg-primary js-jump border rounded-2 flex-shrink-0 color-bg-subtle px-1 ml-1 f6 d-on-nav-focus js-jump-to-badge-jump">
+            Google search
+            <span class="d-inline-block ml-1 v-align-middle">↵</span>
+          </div>
+        </a>
+      </li>
+    `
+  }
+
+  const stripHtml = (html) => {
+    let tmp = document.createElement('div');
+    tmp.innerHTML = html;
+
+    
+    const styles = tmp.getElementsByTagName('style');
+    while(styles[0]) {
+      styles[0].parentNode.removeChild(styles[0]);
+    }
+
+    
+    const scripts = tmp.getElementsByTagName('script');
+    while(scripts[0]) {
+      scripts[0].parentNode.removeChild(scripts[0]);
+    }
+    
+    return tmp.textContent || tmp.innerText || "";
+  }
+
+  const inputDom = document.querySelector(".Header-search-input");
+  const resultDom = document.getElementById('jump-to-results');
+  let debounceTimer;
+  let parser;
+  let xmlDoc;
+
+  const search = (_keyword) => {
+
+    resultDom.innerHTML = '';
+
+    const keyword = _keyword;
+
+    if (!keyword) return;
+
+    const progressDom = document.getElementById('search-progress');
+    if (progressDom && progressDom.classList.contains('d-none')) {
+      progressDom.classList.remove('d-none');
+    }
+
+    localStorage.setItem('keyword', keyword);
+    fetch(`${host.indexOf('localhost') > -1 ? 'http://' : 'https://'}${host}/index.xml`).then(resp => resp.text()).then(async (res) => {
+      parser = new DOMParser();
+      xmlDoc = parser.parseFromString(res, 'text/xml');
+      const linkResult = xmlDoc.getElementsByTagName('link');
+      const titleResult = xmlDoc.getElementsByTagName('title');
+      const arr = [];
+
+      const matched = [];
+      await (async function searchLink() {
+        for (let i = 0; i < linkResult.length; i++) {
+          await fetch(linkResult[i].textContent).then(resp => resp.text().then(res => {
+            const pureText = stripHtml(res);
+            if (pureText.indexOf(keyword) >= 0) {
+              matched.push(i);
+            }
+          }))
+        }
+      })();
+
+      const googleSearchItem = createGoogleSearchItem(keyword);
+      const node= document.createRange().createContextualFragment(googleSearchItem);
+      resultDom.appendChild(node);
+
+      matched.map((itemIndex, index) => {
+        const r = createSearchItem(titleResult[itemIndex].textContent, linkResult[itemIndex].textContent, index + 1);
+        const node = document.createRange().createContextualFragment(r);
+        resultDom.appendChild(node);
+      });
+
+      if (progressDom && !progressDom.classList.contains('d-none')) {
+        progressDom.classList.add('d-none');
+      }
+    });
+  }
+
+  const debounce = (callback, time) => {
+    window.clearTimeout(debounceTimer);
+    debounceTimer = window.setTimeout(callback, time);
+  };
+
+  ['focus', 'input'].forEach(event => {
+    inputDom.addEventListener(event, (e) => {
+      debounce(() => search(e.target.value), 500);
+    }, false);
+  });
+
+  inputDom.addEventListener('blur', () => {
+    setTimeout(() => {
+      resultDom.innerHTML = '';
+    }, 100);
+  });
+
+</script>
+
+
+
+
+
+
+</html>
