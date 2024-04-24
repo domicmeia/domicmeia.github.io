@@ -6,13 +6,20 @@
     <description>Recent content in Tags on Domicmeia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Apr 2024 17:38:19 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2024 15:44:03 +0900</lastBuildDate>
     <atom:link href="https://domicmeia.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hardware</title>
       <link>https://domicmeia.github.io/tags/hardware/</link>
-      <pubDate>Wed, 17 Apr 2024 17:19:27 +0900</pubDate>
+      <pubDate>Wed, 24 Apr 2024 15:21:18 +0900</pubDate>
       <guid>https://domicmeia.github.io/tags/hardware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>https://domicmeia.github.io/tags/networking/</link>
+      <pubDate>Wed, 24 Apr 2024 15:21:18 +0900</pubDate>
+      <guid>https://domicmeia.github.io/tags/networking/</guid>
       <description></description>
     </item>
     <item>
@@ -20,13 +27,6 @@
       <link>https://domicmeia.github.io/tags/multicoreprogramming/</link>
       <pubDate>Wed, 17 Apr 2024 17:19:27 +0900</pubDate>
       <guid>https://domicmeia.github.io/tags/multicoreprogramming/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Networking</title>
-      <link>https://domicmeia.github.io/tags/networking/</link>
-      <pubDate>Fri, 05 Apr 2024 18:32:26 +0900</pubDate>
-      <guid>https://domicmeia.github.io/tags/networking/</guid>
       <description></description>
     </item>
     <item>
