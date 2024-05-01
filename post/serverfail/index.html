@@ -15,7 +15,7 @@
   <link rel="stylesheet" href='https://domicmeia.github.io/css/syntax.css' />
   
   <title>
-    [Networking]Static Routing Synopsis | Domicmeia
+    Testing a simulated external server failure | Domicmeia
   </title>
   
   <link rel="icon" type="image/x-icon" href="/images/avatar.jpeg" />
@@ -25,20 +25,20 @@
   
   <meta
   name="description"
-  content="Static Routing Synopsis"
+  content="to verify that the Directory Proxy Server redirects LDAP requests appropriately."
 />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://domicmeia.github.io/post/staticrouting/" />
+<link rel="canonical" href="https://domicmeia.github.io/post/serverfail/" />
 
 
 <meta name="twitter:card" content="summary" />
 <meta
   name="twitter:title"
-  content="[Networking]Static Routing Synopsis - Domicmeia"
+  content="Testing a simulated external server failure - Domicmeia"
 />
 <meta
   name="twitter:description"
-  content="Static Routing Synopsis"
+  content="to verify that the Directory Proxy Server redirects LDAP requests appropriately."
 />
 <meta name="twitter:site" content="https://domicmeia.github.io/" />
 <meta name="twitter:creator" content="" />
@@ -54,14 +54,14 @@
 />
 <meta
   property="og:title"
-  content="[Networking]Static Routing Synopsis - Domicmeia"
+  content="Testing a simulated external server failure - Domicmeia"
 />
 <meta
   property="og:description"
-  content="Static Routing Synopsis"
+  content="to verify that the Directory Proxy Server redirects LDAP requests appropriately."
 />
-<meta property="og:url" content="https://domicmeia.github.io/post/staticrouting/" />
-<meta property="og:site_name" content="[Networking]Static Routing Synopsis" />
+<meta property="og:url" content="https://domicmeia.github.io/post/serverfail/" />
+<meta property="og:site_name" content="Testing a simulated external server failure" />
 <meta
   property="og:image"
   content="https://domicmeia.github.io/"
@@ -69,7 +69,7 @@
 <meta property="og:image:width" content="2048" />
 <meta property="og:image:height" content="1024" />
 
-<meta property="article:published_time" content="2024-04-24 15:21:18 &#43;0900 KST" />
+<meta property="article:published_time" content="2024-05-01 20:35:49 &#43;0900 KST" />
 
 
 
@@ -277,18 +277,18 @@
                   <span class="author">
                     <a href="https://domicmeia.github.io/">domicmeia</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://domicmeia.github.io/post/staticrouting/">[Networking]Static Routing Synopsis</a></strong>
+                      href="https://domicmeia.github.io/post/serverfail/">Testing a simulated external server failure</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Wed, 24 Apr 2024 15:21:18 &#43;0900"
+                  Created <relative-time datetime="Wed, 01 May 2024 20:35:49 &#43;0900"
                     class="no-wrap">
-                    Wed, 24 Apr 2024 15:21:18 &#43;0900</relative-time>
+                    Wed, 01 May 2024 20:35:49 &#43;0900</relative-time>
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 01 May 2024 20:35:36 &#43;0900"
+                  Modified <relative-time datetime="Wed, 01 May 2024 20:51:50 &#43;0900"
                     class="no-wrap">
-                    Wed, 01 May 2024 20:35:36 &#43;0900</relative-time>
+                    Wed, 01 May 2024 20:51:50 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,7 +318,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      431 Words
+                      375 Words
                     <span class="file-info-divider"></span>
                                         2 min
 
@@ -326,22 +326,22 @@
                   <div class="file-actions flex-order-2 pt-0">
                     
                     
-                    <a class="muted-link mr-3" href="/tags/networking">
+                    <a class="muted-link mr-3" href="/tags/linux">
                       <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd"
                           d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
                         </path>
                       </svg>
-                      Networking
+                      Linux
                     </a>
                     
-                    <a class="muted-link mr-3" href="/tags/hardware">
+                    <a class="muted-link mr-3" href="/tags/troubleshooting">
                       <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd"
                           d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
                         </path>
                       </svg>
-                      Hardware
+                      Troubleshooting
                     </a>
                     
                     
@@ -355,37 +355,52 @@
 <p>This post was written for <code>studying</code>. There maybe a lot wrong going on.</p>
 </blockquote>
 <h2 id="목차">목차</h2>
+<ul>
+<li><a href="#testing-external-server-communication">Testing external server communication</a></li>
+<li><a href="#to-run-a-simulated-external-server-failure">To run a simulated external server failure</a></li>
+</ul>
 <hr>
-<h1 id="heading"></h1>
+<h1 id="testing-external-server-communication">Testing external server communication</h1>
 <hr>
-<p>In end host devices such as PCs or servers, the IP address of the routing device configured to communicate with other networks is called the <strong>Gateway</strong> In routers, when indirect forwarding through another routing device is required, the IP address of the other routing device that needs to be configured is referred to as the <strong>nexthop</strong></p>
-<p>When considering different approaches for setting up routing on end hosts (PCs or servers) and routers, we have three options:</p>
+<p>Run the <strong>ldapseasrch</strong> command to test communications on the ds-central-01 serverTask.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@proxy-east-01: bin/ldapsearch --port <span class="m">389</span> --bindDN <span class="s2">&#34;cn=directory manager&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--bindPassword password <span class="se">\ </span>
+</span></span><span class="line"><span class="cl">--baseDN <span class="s2">&#34;dc=example,dc=com,ds-backend-server=ds-central-01.example.com:389&#34;</span> <span class="se">\ </span>
+</span></span><span class="line"><span class="cl">--searchScope base <span class="s2">&#34;(objectclass=*)&#34;</span>    
+</span></span></code></pre></div><hr>
+<h1 id="to-run-a-simulated-external-server-failure">To run a simulated external server failure</h1>
+<hr>
 <ol>
-<li>Configuring <strong>only the gateway (for end hosts) or nexthop (for routers).</strong></li>
-<li>Configuring <strong>only the interface.</strong></li>
-<li>Configuring <strong>both the gateway/nexthop and the interface.</strong></li>
+<li>Stop the <code>ds-east-01.example.com:389</code> and <code>ds-east-02.example.com:389</code> server instances and test searches through <code>proxy-east-01.example.com</code></li>
+<li>Perform several searches against the Directory Proxy Server and verify activity in each of the servers in the east location, <code>ds-east-01 and ds-east-02</code>, by looking at the access logs.</li>
 </ol>
-<p>Each approach has its own characteristics:</p>
-<ul>
-<li>Approach 1) involves <strong>recursive lookup</strong> and doesn&rsquo;t remove entries when the interface is down.</li>
-<li>Approach 2) attempts <strong>direct communication with the target(직접통신)</strong> and performs ARP resolution for all target IPs.</li>
-<li>Approach 3) avoids recursive lookup, automatically removes entries when the interface is down, and performs ARP resolution for only one [gateway|nexthop].</li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@proxy-east-01: bin/ldapsearch --bindDN <span class="s2">&#34;cn=Directory Manager&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--bindPassword password --baseDN <span class="s2">&#34;dc=example,dc=com&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--searchScope base --useStartTLS <span class="s2">&#34;(objectclass=*)&#34;</span>
+</span></span></code></pre></div><ul>
+<li><code>bin/ldapsearch</code>: Executes the binary file <code>ldapsearch</code>, which is used to connect to and search an LDAP server.</li>
+<li><code>--bindDN &quot;cn=Directory Manager&quot;</code>: Specifies the Distinguished Name (DN) of the user to bind when connecting to the LDAP server. In this case, it&rsquo;s &ldquo;cn=Directory Manager&rdquo;.</li>
+<li><code>--bindPassword password</code>: Specifies the password to use when binding to the LDAP server. In this case, it&rsquo;s &ldquo;password&rdquo;. While not recommended for security reasons, the password is provided in plain text here for convenience.</li>
+<li><code>--baseDN &quot;dc=example,dc=com&quot;</code>: Specifies the Base DN (Distinguished Name) where the search will start. In this case, it&rsquo;s &ldquo;dc=example,dc=com&rdquo;.</li>
+<li><code>--searchScope base</code>: Sets the scope of the search. &ldquo;Base&rdquo; indicates that the search will be performed within the specified Base DN only.</li>
+<li><code>--useStartTLS</code>: Establishes a secure connection using TLS (Transport Layer Security).</li>
+<li><code>&quot;(objectclass=*)&quot;</code>: Specifies the filter for LDAP objects to search. Here, it&rsquo;s set to search for all objects.</li>
 </ul>
-<p>It&rsquo;s evident that Approach 3) is the most ideal. Unless there are specific reasons to use Approach 1) or Approach 2), it&rsquo;s recommended to configure routing using Approach 3).</p>
-<ul>
-<li>Special reasons to use Approach 1): When the device doesn&rsquo;t support configuring both options, and using Approach 2) would result in too many ARP table entries.</li>
-<li>Special reasons to use Approach 2): When communication between peers on different subnet ranges needs to be established.</li>
-</ul>
-<hr>
-<h1 id="how-to-configure-static-routing-on-router">How to configure Static Routing on router</h1>
-<hr>
-<p>When sending data to a peer directly connected to its own interface, whether it&rsquo;s a host device (PC or server) or a routing device, it&rsquo;s sent as <strong>&ldquo;Connected,&rdquo;</strong> hence, no gateway or nexthop is required in the routing table. Gateway or nexthop is only necessary when indirectly forwarding packets to networks not belonging to its own interface.</p>
-<blockquote>
-<p>The method and commands for configuring static routing differ slightly depending on the network device vendor.</p>
-</blockquote>
-<p>For Cisco routers, when configuring a static route, you can use either the interface or the nexthop, or both. Similar to Linux, if you use only the interface, the router attempts ARP resolution for all destinations to directly forward frames. On the other hand, if you use only the nexthop, recursive lookup occurs in the routing table to find the exit interface.</p>
-<p><strong>Unless there are specific reasons, it&rsquo;s advisable to use both the interface and nexthop.</strong></p>
-<p>&hellip;.좀 나중에 이어써야겠다..</p>
+<ol start="3">
+<li>Stop the Directory Server instance on <code>ds-east-01.example.com</code> and <code>ds-east-02.example.com</code> using the <strong>stop-server</strong> command and immediately retry the searches in step 2.
+There should be no errors or noticeable delay in processing the search.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@proxy-east-01: bin/stop-server
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">root@proxy-east-01: bin/ldapsearch <span class="se">\ </span>
+</span></span><span class="line"><span class="cl">--bindDN <span class="s2">&#34;cn=Directory Manager&#34;</span> --bindPassword password <span class="se">\ </span>
+</span></span><span class="line"><span class="cl">--baseDN <span class="s2">&#34;dc=example,dc=com&#34;</span> --searchScope base --useStartTLS <span class="se">\ </span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;(objectclass=*)&#34;</span> 
+</span></span></code></pre></div><ol start="4">
+<li>Check the access log to confirm that requests made to these servers are routed to the central servers because these servers are the first failover location in the failover list for the ds-east-01 and ds-east-02 servers.</li>
+<li>Restart the Directory Server instance on ds-east-01.example.com and ds-east-02.example.com.</li>
+<li>Check their access logs to ensure that traffic is redirected back from the failover servers.</li>
+</ol>
 </article>
               </div>
 
@@ -398,13 +413,11 @@
       <div class="pagination-nav">
         <div class="pagination-button next-post">
           
-          <div>«&nbsp;</div><a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/serverfail/"> Testing a simulated external server failure</a>
-          
         </div>
         
         <div class="pagination-button previous-post">
           
-          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/multicore1/">[Multicoreprogramming]DP- kor&nbsp;</a><div> »</div>
+          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/staticrouting/">[Networking]Static Routing Synopsis&nbsp;</a><div> »</div>
           
         </div>
       </div>

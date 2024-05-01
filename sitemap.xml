@@ -2,23 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://domicmeia.github.io/post/staticrouting/</loc>
-    <lastmod>2024-04-24T15:44:03+09:00</lastmod>
-  </url><url>
     <loc>https://domicmeia.github.io/</loc>
-    <lastmod>2024-04-24T15:44:03+09:00</lastmod>
+    <lastmod>2024-05-01T20:51:50+09:00</lastmod>
   </url><url>
-    <loc>https://domicmeia.github.io/tags/hardware/</loc>
-    <lastmod>2024-04-24T15:44:03+09:00</lastmod>
-  </url><url>
-    <loc>https://domicmeia.github.io/tags/networking/</loc>
-    <lastmod>2024-04-24T15:44:03+09:00</lastmod>
+    <loc>https://domicmeia.github.io/tags/linux/</loc>
+    <lastmod>2024-05-01T20:51:50+09:00</lastmod>
   </url><url>
     <loc>https://domicmeia.github.io/post/</loc>
-    <lastmod>2024-04-24T15:44:03+09:00</lastmod>
+    <lastmod>2024-05-01T20:51:50+09:00</lastmod>
   </url><url>
     <loc>https://domicmeia.github.io/tags/</loc>
-    <lastmod>2024-04-24T15:44:03+09:00</lastmod>
+    <lastmod>2024-05-01T20:51:50+09:00</lastmod>
+  </url><url>
+    <loc>https://domicmeia.github.io/post/serverfail/</loc>
+    <lastmod>2024-05-01T20:51:50+09:00</lastmod>
+  </url><url>
+    <loc>https://domicmeia.github.io/tags/troubleshooting/</loc>
+    <lastmod>2024-05-01T20:51:50+09:00</lastmod>
+  </url><url>
+    <loc>https://domicmeia.github.io/post/staticrouting/</loc>
+    <lastmod>2024-05-01T20:35:36+09:00</lastmod>
+  </url><url>
+    <loc>https://domicmeia.github.io/tags/hardware/</loc>
+    <lastmod>2024-05-01T20:35:36+09:00</lastmod>
+  </url><url>
+    <loc>https://domicmeia.github.io/tags/networking/</loc>
+    <lastmod>2024-05-01T20:35:36+09:00</lastmod>
   </url><url>
     <loc>https://domicmeia.github.io/post/multicore1/</loc>
     <lastmod>2024-04-17T17:38:19+09:00</lastmod>
@@ -46,9 +55,6 @@
   </url><url>
     <loc>https://domicmeia.github.io/post/traceroute/</loc>
     <lastmod>2024-03-31T15:19:26+09:00</lastmod>
-  </url><url>
-    <loc>https://domicmeia.github.io/tags/troubleshooting/</loc>
-    <lastmod>2024-04-01T21:08:30+09:00</lastmod>
   </url><url>
     <loc>https://domicmeia.github.io/post/lan1/</loc>
     <lastmod>2024-04-01T17:06:17+09:00</lastmod>
@@ -97,9 +103,6 @@
   </url><url>
     <loc>https://domicmeia.github.io/post/howtochangethefontsize/</loc>
     <lastmod>2024-01-29T23:22:23+09:00</lastmod>
-  </url><url>
-    <loc>https://domicmeia.github.io/tags/linux/</loc>
-    <lastmod>2024-02-22T16:02:51+09:00</lastmod>
   </url><url>
     <loc>https://domicmeia.github.io/post/linuxinterview/</loc>
     <lastmod>2024-01-29T23:21:57+09:00</lastmod>
