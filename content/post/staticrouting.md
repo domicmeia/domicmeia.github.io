@@ -46,4 +46,4 @@ For Cisco routers, when configuring a static route, you can use either the inter
 
 
 
-....
+....좀 나중에 이어써야겠다..
