@@ -6,8 +6,15 @@
     <description>Recent content on Domicmeia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 May 2024 20:51:50 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 12 Oct 2024 15:30:23 +0900</lastBuildDate>
     <atom:link href="https://domicmeia.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[OS]Storage</title>
+      <link>https://domicmeia.github.io/post/storage/</link>
+      <pubDate>Fri, 11 Oct 2024 12:55:27 +0900</pubDate>
+      <guid>https://domicmeia.github.io/post/storage/</guid>
+      <description>Datacenter Storage</description>
+    </item>
     <item>
       <title>Testing a simulated external server failure</title>
       <link>https://domicmeia.github.io/post/serverfail/</link>
