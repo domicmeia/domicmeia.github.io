@@ -15,7 +15,7 @@
   <link rel="stylesheet" href='https://domicmeia.github.io/css/syntax.css' />
   
   <title>
-    [OS]Storage | Domicmeia
+    [Networking]Datacenter Network | Domicmeia
   </title>
   
   <link rel="icon" type="image/x-icon" href="/images/avatar.jpeg" />
@@ -25,20 +25,20 @@
   
   <meta
   name="description"
-  content="Datacenter Storage"
+  content="Network Topology of Datacenter"
 />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://domicmeia.github.io/post/storage/" />
+<link rel="canonical" href="https://domicmeia.github.io/post/datacenternetwork/" />
 
 
 <meta name="twitter:card" content="summary" />
 <meta
   name="twitter:title"
-  content="[OS]Storage - Domicmeia"
+  content="[Networking]Datacenter Network - Domicmeia"
 />
 <meta
   name="twitter:description"
-  content="Datacenter Storage"
+  content="Network Topology of Datacenter"
 />
 <meta name="twitter:site" content="https://domicmeia.github.io/" />
 <meta name="twitter:creator" content="" />
@@ -54,14 +54,14 @@
 />
 <meta
   property="og:title"
-  content="[OS]Storage - Domicmeia"
+  content="[Networking]Datacenter Network - Domicmeia"
 />
 <meta
   property="og:description"
-  content="Datacenter Storage"
+  content="Network Topology of Datacenter"
 />
-<meta property="og:url" content="https://domicmeia.github.io/post/storage/" />
-<meta property="og:site_name" content="[OS]Storage" />
+<meta property="og:url" content="https://domicmeia.github.io/post/datacenternetwork/" />
+<meta property="og:site_name" content="[Networking]Datacenter Network" />
 <meta
   property="og:image"
   content="https://domicmeia.github.io/"
@@ -69,7 +69,7 @@
 <meta property="og:image:width" content="2048" />
 <meta property="og:image:height" content="1024" />
 
-<meta property="article:published_time" content="2024-10-11 12:55:27 &#43;0900 KST" />
+<meta property="article:published_time" content="2024-10-12 16:41:10 &#43;0900 KST" />
 
 
 
@@ -277,18 +277,18 @@
                   <span class="author">
                     <a href="https://domicmeia.github.io/">domicmeia</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://domicmeia.github.io/post/storage/">[OS]Storage</a></strong>
+                      href="https://domicmeia.github.io/post/datacenternetwork/">[Networking]Datacenter Network</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Fri, 11 Oct 2024 12:55:27 &#43;0900"
+                  Created <relative-time datetime="Sat, 12 Oct 2024 16:41:10 &#43;0900"
                     class="no-wrap">
-                    Fri, 11 Oct 2024 12:55:27 &#43;0900</relative-time>
+                    Sat, 12 Oct 2024 16:41:10 &#43;0900</relative-time>
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sat, 12 Oct 2024 15:30:23 &#43;0900"
+                  Modified <relative-time datetime="Sun, 13 Oct 2024 18:51:51 &#43;0900"
                     class="no-wrap">
-                    Sat, 12 Oct 2024 15:30:23 &#43;0900</relative-time>
+                    Sun, 13 Oct 2024 18:51:51 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,21 +318,21 @@
                         </div>
                       </div>
                     </details-menu>
-                      338 Words
+                      1496 Words
                     <span class="file-info-divider"></span>
-                                        2 min
+                                        7 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
                     
                     
-                    <a class="muted-link mr-3" href="/tags/os">
+                    <a class="muted-link mr-3" href="/tags/networking">
                       <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd"
                           d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
                         </path>
                       </svg>
-                      OS
+                      Networking
                     </a>
                     
                     <a class="muted-link mr-3" href="/tags/hardware">
@@ -356,25 +356,158 @@
 </blockquote>
 <h2 id="목차">목차</h2>
 <ul>
-<li><a href="#storage-overview">Storage Overview</a></li>
-<li><a href="#storage-systems">Storage Systems</a></li>
-<li><a href="#automatic-data-rebuild-on-new-hardware">Automatic Data rebuild on New Hardware</a></li>
+<li><a href="#osi-layer-in-datacenter">OSI layer in Datacenter</a></li>
+<li><a href="#flow-control">Flow Control</a></li>
+<li><a href="#types-of-networks">Types of Networks</a></li>
+<li><a href="#network-topology-overview">Network Topology Overview</a></li>
+<li><a href="#top-of-rack-tor-switch-with-out-of-band-oob-management">Top-of-Rack (ToR) Switch with Out-of-Band (OOB) Management</a>
+<ul>
+<li><a href="#tor-swtich-overview">ToR Swtich Overview</a></li>
+<li><a href="#how-oob-management-works-with-tor-switches">How OOB Management Works with ToR Switches</a></li>
+<li><a href="#connectivity">Connectivity</a></li>
+</ul>
+</li>
+<li><a href="#fiber-connectors-and-transceivers-in-datacenters">Fiber Connectors and Transceivers in Datacenters</a>
+<ul>
+<li><a href="#fiber-connector">Fiber Connector</a></li>
+<li><a href="#fiber-transceiver">Fiber Transciever</a></li>
+</ul>
+</li>
+<li><a href="#single-mode-sm-vs-multi-mode-mm">Single-Mode (SM) vs Multi-Mode (MM)</a></li>
 </ul>
 <hr>
-<h1 id="storage-overview">Storage Overview</h1>
+<h1 id="osi-layer-in-datacenter">OSI layer in Datacenter</h1>
 <hr>
-<p>Google use a distributed storage architecture where data is not stored in just one location but spread across multiple physical locations. And they leverages different stroage systems depending on the type of data and use cases like block Storage and object Storage. Frequently accessed, high-performance data (like databases or VM disks) is stored on block storage, while less critical, larger datasets (like backups, archives, or media) are stored on object storage.</p>
+<p>The <strong>transport layer</strong> provides reliable message delivery to applications and whether the protocol bookkeeping is done in software like TCP or hardware directly affects the application performance. The <strong>network layer</strong> porvides a logical namespace for endpoints and possibly switches in the systems. The network layer handles <strong>packets</strong> and provides the <strong>routing</strong> information identifying paths through the network among all source, destinations pairs. It is the network layer that asserts routes, either at the source or along each individual hop lik distributed routing along the path. The <strong>data link layer</strong> provides link-level flow control to manage the receiver&rsquo;s input buffer in units of flits (flow contorl units). The lowest level of the protocol stack, the <strong>physical media layer</strong>, is where data is encoded and driven onto the medium.</p>
+<p><img src="/images/posts/osinew.png" alt="osinew"></p>
 <hr>
-<h1 id="storage-systems">Storage Systems</h1>
+<h1 id="flow-control">Flow Control</h1>
 <hr>
-<p><strong>Block storage</strong> is used for structured, performance-sensitive data, like virtual machines, databases, and other low-latency applications. One example is persistent disks used for <em>Google Compute Engine</em>, which provides block level storage that can be dynamically attached or detached to instances.</p>
-<p>For block stoarge, Google uses technologies like <strong>RAID</strong>, which spreads data across multiple physical disks and uses parity data to recover from drive failures. This ensures that if one drive in the datacenter fails, the RAID array can rebuild the data using redundant copies stored on other drives.</p>
-<p>For large-scale, unstructed data like files, images, backup, or media, Google uses <em>Google Cloud Storage</em>. This is an <strong>object storage solution</strong> where data is stored as objects in <strong>buckets</strong>. These buckets can hold any amount of data, and data can be accessed from anywhere globally. GCS data is replicated across multiple zones or regions, ensuring high durability.</p>
+<p>The basic mechanism by which resources in the network are managed is <strong>flow control</strong>. Flow control provides a simple accounting method for managing resources that are in demand by multiple uncoodrdinated sources. When a resource is requested but not currently available for use, we can drop the request and all subsequent requests until the resource is freed, or block and wait for the request to free</p>
 <hr>
-<h1 id="automatic-data-rebuild-on-new-hardware">Automatic Data rebuild on New Hardware</h1>
+<h1 id="types-of-networks">Types of Networks</h1>
 <hr>
-<p>When a disk fails, the RAID controller immediately detects the failure and shifts all read/write operations to the remaining functioning drives. In setups like RAID 5 or RAID 6, the system continues to function, but performance might degrade sligtly as the controller reconstructs data using parity.</p>
-<p>Once a new drive is inserted to replace the failed one, the RAID system begins the <strong>rebuild process</strong>. They system will use the parity information (RAID 5/6) or mirrored data (RAID 1/10) to recreate the lost data on the new disk.</p>
+<p>Topologies can be broken down into two different genres: <strong>direct and indirect</strong>. A <strong>direct network</strong> has processing nodes attached directly to the switching fabric; that is, the switching fabric is dis- tributed among the processing nodes. An <strong>indirect network</strong> has the endpoint network independent of the endpoints themselves – i.e., dedicated switch nodes exist and packets are forwarded indirectly through these switch nodes. The type of network determines some of the packaging and cabling requirements as well as fault resilience. It also impacts cost, for example, since a direct network can combine the switching fabric and the network interface controller (NIC) functionality in the same silicon package. An indirect network typically has two separate chips, with one for the NIC and another for the switching fabric of the network.</p>
+<hr>
+<h1 id="network-topology-overview">Network Topology Overview</h1>
+<hr>
+<ul>
+<li><strong>Leaf Layer (ToR Switches)</strong></li>
+</ul>
+<p>This is the first layer of switches, ToR switches. Each ToR switch connects directly to a rack of servers. This forms the <strong>leaf layer</strong>, where each rack is its own independent unit</p>
+<ul>
+<li><strong>Spine Layer</strong></li>
+</ul>
+<p>The Spine layer consists of high-capacity switches that connect multiple leaf switches. These are the central &ldquo;hubs&rdquo; that allow leaf switches to communicate with one another. Every ToR switch connects to <strong>multiple spine switches</strong>, creating multiple redundant paths for traffic. This ensures that even if one spine switch fails, traffic can still be routed through another.</p>
+<ul>
+<li><strong>Core layer</strong></li>
+</ul>
+<p>The core layer connects multiple spine switches together, providing even more redundancy and scalability. This layer is primarily responsible for connecting differnet clusters or zones within the datacenter. The core layer ensures that traffic between different paths of the datacenter can still flow efficiently, even as the network scales to include more devices.</p>
+<p><img src="/images/posts/spine.png" alt="spine"></p>
+<hr>
+<h1 id="top-of-rack-tor-switch-with-out-of-band-oob-management">Top-of-Rack (ToR) Switch with Out-of-Band (OOB) Management</h1>
+<hr>
+<h2 id="tor-swtich-overview">ToR Swtich Overview</h2>
+<p>A ToR switch sits at the top of each server rack in a datacenter and is responsible for connecting all the servers in the rack to the broader network, typically through high-speed connections (10G, 40G, 100G, or even 400G ports).</p>
+<p><img src="/images/posts/tor.png" alt="tor"></p>
+<h2 id="how-oob-management-works-with-tor-switches">How OOB Management Works with ToR Switches</h2>
+<h3 id="physical-separation">Physical Separation</h3>
+<ul>
+<li>
+<p><strong>Data Plane</strong>: Handles production traffic for the servers in the rack, connecting them to the core or spine switches. The data plane is responsible for the actual transmission of packets between servers, clients, and external network</p>
+</li>
+<li>
+<p><strong>Management Plane(OOB)</strong>: Operates on a seperate physical interface from the data plane, ensuring that management traffic does not interface with or depend on the production network. The OOB management network can be accessed through dedicated <strong>Ethernet ports</strong> on the ToR switches that connect directly to an OOB network.</p>
+</li>
+</ul>
+<h3 id="centeralized-management">Centeralized Management</h3>
+<ul>
+<li>
+<p>ToR switches with OOB management are connected to a centralized <strong>management console</strong>. This console allows network administrators to access the management interfaces of all ToR swithces via the OOB network.</p>
+</li>
+<li>
+<p>This centralized system typically includes access to <strong>SSH</strong> for configuration and monitoring of the switches.</p>
+</li>
+</ul>
+<h3 id="configuration--updates">Configuration &amp; Updates</h3>
+<ul>
+<li>
+<p><strong>Firmware upgrades, configuration changes,</strong> and <strong>patching</strong> of ToR switches can all be carried out via OOB management, ensuring that these tasks can be performed even during peak load time without affecting the data plane.</p>
+</li>
+<li>
+<p>Because the management network is isolated, these activities won&rsquo;t interface with normal data operations, reducing the risk of disruptions.</p>
+</li>
+</ul>
+<h2 id="connectivity">Connectivity</h2>
+<p><strong>Patch panels</strong> are often between the servers and the ToR switch to improve cable management and organization. They allow for easy patching and cable changes without directly interfering with the switch or servers.</p>
+<p><img src="/images/posts/cable.webp" alt="cable"></p>
+<h3 id="server-to-tor-connectivity">Server-to-Tor Connectivity</h3>
+<p><strong>Servers</strong> connect to the <strong>ToR switch</strong> using <strong>Copper Ethernet cables (Cat6/Cat6a)</strong> for distance within the rack or <strong>fiber optic cables</strong> for high-speed connections. The most common server interface are <strong>10GBASE-T Etherent</strong>, <strong>25G</strong>, or <strong>40G</strong> depending on the performacne requirements of the datacenter.</p>
+<ul>
+<li>
+<p><strong>Copper Cables (Cat6/Cat6a)</strong>: These are often used to connect servers to the ToR switch within the same rack.</p>
+</li>
+<li>
+<p><strong>Twinax (DAC)</strong>: A cost-effective and low-power option for <strong>short range</strong> connections between servers and ToR switch, often used for 10G, 25G, or 40G connections.</p>
+</li>
+</ul>
+<h3 id="tor-to-spine-connectivity">ToR-to-Spine Connectivity</h3>
+<p>The <strong>uplinks</strong> from the ToR switch to the <strong>spine switches</strong> are usually <strong>fiber optic cables (SMF)</strong>. These uplink are typically <strong>40G, 100G, or even 400G</strong></p>
+<ul>
+<li>
+<p><strong>Fiber Optic Cables</strong>: Used for connecting ToR switches to spine siwtches in a <strong>leaf-spine</strong> architecture. The fiber optic uplinks ensure high-speed, long-distance transmission across the datacenter.</p>
+</li>
+<li>
+<p><strong>SMF</strong>: It is commonly used for distacnes exceeding 100 meters, especially for 100G and 400G connections.</p>
+</li>
+<li>
+<p><strong>MMF</strong>: It can be used for shorter distances (up to around 100 meters), but it&rsquo;s less common in newer datacenters that require high bandwidth and scalability</p>
+</li>
+</ul>
+<hr>
+<h1 id="fiber-connectors-and-transceivers-in-datacenters">Fiber Connectors and Transceivers in Datacenters</h1>
+<hr>
+<h2 id="fiber-connector">Fiber Connector</h2>
+<p><strong>Connectors</strong> are used to join fiber optic cables to devices like transceivers, patch panels, and switches. The connectors need to precisely align the fiber cores to ensure efficient data transmission.</p>
+<ul>
+<li><strong>LC (Lucent Connector)</strong></li>
+</ul>
+<p>LC connectors are widely used in datacenters due to thier <strong>small form factor</strong> and high density. Commonly found in SFP transceivers for both SM and MM fiber. LC connectors are popular for <strong>high-density patch panels</strong> and connections between switches, servers, and storage devices.</p>
+<blockquote>
+<p>Common with <strong>SFP and QSFP</strong> transceivers, used for both SM and MM fiber</p>
+</blockquote>
+<ul>
+<li><strong>MTP/MPO (Multi-Fiber Push On)</strong></li>
+</ul>
+<p>MTP is multi-fiber connector, designed to connect multiple fibers (typically 12 or 24 fibers) within a single connector. It is often used for high-speed parallel optical transmissions like <strong>40GBASE-SR4</strong> and <strong>100GBASE-SR10</strong>, as well as for <strong>structured cabling</strong> in datacenters. It is ideal for environments requiring a lot of fiber connections in a small space, such as between aggregation switches or between the core and spine layers in large datacenters.</p>
+<blockquote>
+<p>Used with <strong>QSFP+, QSFP28, or QSFP-DD</strong> transceivers for parallel optics in high speed connections</p>
+</blockquote>
+<h2 id="fiber-transceiver">Fiber Transceiver</h2>
+<p><strong>Transceivers</strong> convert electrical signals into optical signals for transmission over fiber optics and then convert optical signals back into electrical signals at the receiving end.</p>
+<ul>
+<li><strong>SFP</strong></li>
+</ul>
+<p>SFP transeivers are widely used in 1G and 10G Ethernet switches, routers, and NICs within datacenters. They&rsquo;re modular, allowing for easy upgrades and replacements.</p>
+<ul>
+<li><strong>QSFP</strong></li>
+</ul>
+<p>These are commonly used in core, spine, and leaf switches where higher bandwidth is required. The <strong>QSFP+</strong> transceivers often use <strong>MTP/MPO connectors</strong> for parellel transmission of data.</p>
+<ul>
+<li><strong>CWDM/DWDM Transceivers</strong></li>
+</ul>
+<p>CWDM and DWDM transceivers support various data rate from 1G to 100G. They use different wavelengths of light to transmit multiple singals over a single SM fiber, greatly increasing the fiber&rsquo;s capacity. It is used in <strong>long-distance connections</strong> between datacenters or for high-bandwidth backbone links, as they allow many channels to be carried over a single fiber pair.</p>
+<hr>
+<h1 id="single-mode-sm-vs-multi-mode-mm">Single-Mode (SM) vs Multi-Mode (MM)</h1>
+<hr>
+<h3 id="increasing-bandwidth-demands">Increasing Bandwidth Demands</h3>
+<p>Datacenters are handling larger volumes of data with increasing speeds (e.g, <strong>100G</strong>, <strong>200G</strong>, <strong>400G</strong>, and higher). <strong>Single-Mode (SM) fiber</strong> is better suited for these higher data rates over longer distances, offering better performance at higher speeds. <strong>MM fiber</strong> has limitations in terms of bandwidth and distance due to <strong>modal dispersion</strong>, where different light modes travel at different speeds, causing signal degradation over longer distacnes. This makes it less suitable for high-speed applications across a large datacenter.</p>
+<h3 id="longer-distances-in-modern-datacenters">Longer Distances in Modern Datacenters</h3>
+<p>Mondern datacenters are getting larger, with racks often spread across long distances. <strong>MM fiber</strong> is limited to <strong>short distances</strong> (typically up to 500 meters for 10G or 100G), while <strong>SM fiber</strong> can support distances of up to <strong>100km</strong> or more. For larger facilities, or where flexbility in cabling is needed, SM fiber&rsquo;s ability to maintain high performance over long distances is essential.</p>
+<hr>
+<h1 id="reference">Reference</h1>
+<hr>
+<p><em>High Performance Datacenter Networks Architectures, Algorithms, and Opportunities. Mark D. Hill. University of Wisconsin. 2010. <a href="https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/37069.pdf">https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/37069.pdf</a></em></p>
 </article>
               </div>
 
@@ -387,13 +520,11 @@
       <div class="pagination-nav">
         <div class="pagination-button next-post">
           
-          <div>«&nbsp;</div><a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/datacenternetwork/"> [Networking]Datacenter Network</a>
-          
         </div>
         
         <div class="pagination-button previous-post">
           
-          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/serverfail/">Testing a simulated external server failure&nbsp;</a><div> »</div>
+          <a class="pagination-link link-reverse" href="https://domicmeia.github.io/post/storage/">[OS]Storage&nbsp;</a><div> »</div>
           
         </div>
       </div>
