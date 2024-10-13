@@ -6,7 +6,7 @@
     <description>Recent content in OS on Domicmeia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Oct 2024 15:30:23 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 13 Oct 2024 18:59:15 +0900</lastBuildDate>
     <atom:link href="https://domicmeia.github.io/tags/os/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[OS]Storage</title>
@@ -41,7 +41,7 @@
       <link>https://domicmeia.github.io/post/opcon1/</link>
       <pubDate>Mon, 25 Mar 2024 18:51:25 +0900</pubDate>
       <guid>https://domicmeia.github.io/post/opcon1/</guid>
-      <description>OS Concepts: EX-45 11.23</description>
+      <description>RAID concepts</description>
     </item>
   </channel>
 </rss>

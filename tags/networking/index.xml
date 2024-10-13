@@ -6,7 +6,7 @@
     <description>Recent content in Networking on Domicmeia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Oct 2024 18:51:51 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 13 Oct 2024 19:03:40 +0900</lastBuildDate>
     <atom:link href="https://domicmeia.github.io/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Networking]Datacenter Network</title>
@@ -14,13 +14,6 @@
       <pubDate>Sat, 12 Oct 2024 16:41:10 +0900</pubDate>
       <guid>https://domicmeia.github.io/post/datacenternetwork/</guid>
       <description>Network Topology of Datacenter</description>
-    </item>
-    <item>
-      <title>[Networking]Static Routing Synopsis</title>
-      <link>https://domicmeia.github.io/post/staticrouting/</link>
-      <pubDate>Wed, 24 Apr 2024 15:21:18 +0900</pubDate>
-      <guid>https://domicmeia.github.io/post/staticrouting/</guid>
-      <description>Static Routing Synopsis</description>
     </item>
     <item>
       <title>[Networking]Subnetmask</title>
