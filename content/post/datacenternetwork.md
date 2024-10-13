@@ -102,7 +102,7 @@ A ToR switch sits at the top of each server rack in a datacenter and is responsi
 
 **Servers** connect to the **ToR switch** using **Copper Ethernet cables (Cat6/Cat6a)** for distance within the rack or **fiber optic cables** for high-speed connections. The most common server interface are **10GBASE-T Etherent**, **25G**, or **40G** depending on the performacne requirements of the datacenter.
 
-- **Copper Cables (Cat6/Cat6a)**: These are often used to connect servers to the ToR switch within the same rack.
+- **Copper Cables (Cat6/Cat6a) [external link][link1]**: These are often used to connect servers to the ToR switch within the same rack.
 
 - **Twinax (DAC)**: A cost-effective and low-power option for **short range** connections between servers and ToR switch, often used for 10G, 25G, or 40G connections.
 
@@ -174,3 +174,8 @@ Mondern datacenters are getting larger, with racks often spread across long dist
 ---
 
 *High Performance Datacenter Networks Architectures, Algorithms, and Opportunities. Mark D. Hill. University of Wisconsin. 2010. https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/37069.pdf*
+
+
+
+
+[link1]:https://domicmeia.github.io/post/lan1/
