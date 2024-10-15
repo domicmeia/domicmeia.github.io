@@ -1,5 +1,5 @@
 +++
-title = "Issue with linux operating system"
+title = "Issue with linux operating system[ko]"
 date = 2024-01-27T23:52:09+09:00
 tags = ["Linux", "Troubleshooting"]
 summary = "Issue with linux operating system"

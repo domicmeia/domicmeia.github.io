@@ -1,5 +1,5 @@
 +++
-title = "[Multicoreprogramming]DP- kor"
+title = "[Multicoreprogramming]DP"
 date = 2024-04-17T17:19:27+09:00
 tags = ["Multicoreprogramming", "Hardware"]
 summary = "DP concepts"

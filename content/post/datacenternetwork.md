@@ -152,7 +152,7 @@ These are commonly used in core, spine, and leaf switches where higher bandwidth
 - **CWDM/DWDM Transceivers**
 
 CWDM and DWDM transceivers support various data rate from 1G to 100G. They use different wavelengths of light to transmit multiple singals over a single SM fiber, greatly increasing the fiber's capacity. It is used in **long-distance connections** between datacenters or for high-bandwidth backbone links, as they allow many channels to be carried over a single fiber pair.
-
+> DWDMs are primarily used as encryptors and decryptor, but they are also used to aggregate multiple network connections into a single fiber pair. These devices are generally used to connect AZs to each other.
 
 ---
 
@@ -166,7 +166,6 @@ Datacenters are handling larger volumes of data with increasing speeds (e.g, **1
 ### Longer Distances in Modern Datacenters
 
 Mondern datacenters are getting larger, with racks often spread across long distances. **MM fiber** is limited to **short distances** (typically up to 500 meters for 10G or 100G), while **SM fiber** can support distances of up to **100km** or more. For larger facilities, or where flexbility in cabling is needed, SM fiber's ability to maintain high performance over long distances is essential.
-
 
 ---
 
