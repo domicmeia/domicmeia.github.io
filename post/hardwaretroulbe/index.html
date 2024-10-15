@@ -15,7 +15,7 @@
   <link rel="stylesheet" href='https://domicmeia.github.io/css/syntax.css' />
   
   <title>
-    [OS]Boot Process | Domicmeia
+    [OS]Boot Process and Linux | Domicmeia
   </title>
   
   <link rel="icon" type="image/x-icon" href="/images/avatar.jpeg" />
@@ -34,7 +34,7 @@
 <meta name="twitter:card" content="summary" />
 <meta
   name="twitter:title"
-  content="[OS]Boot Process - Domicmeia"
+  content="[OS]Boot Process and Linux - Domicmeia"
 />
 <meta
   name="twitter:description"
@@ -54,14 +54,14 @@
 />
 <meta
   property="og:title"
-  content="[OS]Boot Process - Domicmeia"
+  content="[OS]Boot Process and Linux - Domicmeia"
 />
 <meta
   property="og:description"
   content="OS boot process and troubleshooting"
 />
 <meta property="og:url" content="https://domicmeia.github.io/post/hardwaretroulbe/" />
-<meta property="og:site_name" content="[OS]Boot Process" />
+<meta property="og:site_name" content="[OS]Boot Process and Linux" />
 <meta
   property="og:image"
   content="https://domicmeia.github.io/"
@@ -277,7 +277,7 @@
                   <span class="author">
                     <a href="https://domicmeia.github.io/">domicmeia</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://domicmeia.github.io/post/hardwaretroulbe/">[OS]Boot Process</a></strong>
+                      href="https://domicmeia.github.io/post/hardwaretroulbe/">[OS]Boot Process and Linux</a></strong>
                 </h1>
                 <div class="note m-0">
                   Created <relative-time datetime="Mon, 25 Mar 2024 21:26:07 &#43;0900"
@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 01 Apr 2024 21:08:30 &#43;0900"
+                  Modified <relative-time datetime="Tue, 15 Oct 2024 16:28:00 &#43;0900"
                     class="no-wrap">
-                    Mon, 01 Apr 2024 21:08:30 &#43;0900</relative-time>
+                    Tue, 15 Oct 2024 16:28:00 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      1416 Words
+                      1170 Words
                     <span class="file-info-divider"></span>
-                                        6 min
+                                        5 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -335,13 +335,13 @@
                       OS
                     </a>
                     
-                    <a class="muted-link mr-3" href="/tags/troubleshooting">
+                    <a class="muted-link mr-3" href="/tags/linux">
                       <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd"
                           d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
                         </path>
                       </svg>
-                      Troubleshooting
+                      Linux
                     </a>
                     
                     
@@ -367,25 +367,20 @@
 </ul>
 </li>
 <li><a href="#troubleshooting">Troubleshooting</a></li>
+<li>[Linux Filesystem]</li>
 </ul>
 <hr>
 <h1 id="general-boot-process">General Boot Process</h1>
 <hr>
-<p>The boot process, also known a bootstrapping or booting, is the sequence of operations that a computer system perform when it is turned on or restarted. It is the process by which the operating system is loaded into the RAM and becomes available for user interaction.</p>
+<p>The boot process is the sequence of operations that a computer system perform when it is turned on or restarted. It is the process by which the operating system is <strong>loaded into the RAM</strong> and becomes available for user interaction.</p>
 <h2 id="power-on-self-testpost">Power-On Self-Test(POST)</h2>
-<p>When the computer is powered on, POST checks various hardware such as the processor, memory, storage, and IO devices to ensure they are functioning correctly.</p>
-<p>If any hardware issue are detected during POST, error messages may be displayed, and the boot process may halt.</p>
+<p>When the computer is powered on, POST checks various hardware such as the processor, memory, storage, and IO devices to ensure they are functioning correctly. If any hardware issue are detected during POST, error messages may be displayed, and the boot process may halt.</p>
 <h2 id="initialization-of-bios-and-uefi">Initialization of BIOS and UEFI</h2>
-<p>After POST, the computer&rsquo;s firmware, either BIOS or UEFI, is initialized.</p>
-<p>BIOS or UEFI sets up the system environmet and selects the boot device from which the OP will be loaded.</p>
+<p>After POST, the computer&rsquo;s firmware, either BIOS or UEFI, is initialized. BIOS or UEFI sets up the system environmet and selects the boot device from which the OP will be loaded.</p>
 <h2 id="boot-device-selection-and-loading-of-bootloader">Boot Device selection and Loading of Bootloader</h2>
-<p>The BIOS or UEFI identifiels the bood device specified in its configuration such as a HDD, SSD or network boot server.</p>
-<p>The bootloader, which is small program stored on the boot device, is loaded into memory by the BIOS or UEFI.</p>
-<p>The bootloader&rsquo;s primary function is to locate and load the operating system kernel into memory.</p>
+<p>The BIOS or UEFI identifiels the bood device specified in its configuration such as a HDD, SSD or network boot server. The bootloader, which is small program stored on the boot device, is loaded into memory by the BIOS or UEFI. The bootloader&rsquo;s primary function is to locate and load the operating system kernel into memory.</p>
 <h2 id="operating-system-kernel-initialization">Operating System Kernel Initialization</h2>
-<p>Once the bootloader has loaded the operating system kernel into memory, control is passed to the kernel.</p>
-<p>The kernel initializes essential system services, device drivers, and hardware interfaces required for the OS to function.</p>
-<p>Depending on the OS, initialization processes such as mounting file system, starting system daemons, and establishing network connection may also occur during this stage.</p>
+<p>Once the bootloader has loaded the operating system kernel into memory, control is passed to the kernel. The kernel initializes essential system services, device drivers, and hardware interfaces required for the OS to function. Depending on the OS, initialization processes such as mounting file system, starting system daemons, and establishing network connection may also occur during this stage.</p>
 <hr>
 <h1 id="linux-boot-process">Linux Boot Process</h1>
 <hr>
@@ -459,70 +454,20 @@
 <hr>
 <h1 id="troubleshooting">Troubleshooting</h1>
 <hr>
-<h2 id="how-would-you-provision-an-operating-system-with-and-without-physical-access-to-a-server">How would you provision an operating system with and without physical access to a server?</h2>
-<p>Provisioning an operating system (OS) with and without physical access to a server involves different approaches and tools. Here&rsquo;s how you can do it in both scenarios:</p>
-<h3 id="provisioning-with-physical-access-to-a-server">Provisioning with Physical Access to a Server:</h3>
-<ol>
-<li>
-<p><strong>Using Installation Media</strong>:</p>
-<ul>
-<li>Obtain the installation media (e.g., DVD, USB drive) for the desired OS.</li>
-<li>Insert the installation media into the server&rsquo;s optical drive or USB port.</li>
-<li>Boot the server from the installation media.</li>
-<li>Follow the on-screen prompts to select the installation options, partition the disk, and install the OS.</li>
-</ul>
-</li>
-<li>
-<p><strong>Network Installation</strong>:</p>
-<ul>
-<li>Set up a network installation server (e.g., PXE server) on the local network.</li>
-<li>Configure the server&rsquo;s BIOS or UEFI to boot from the network.</li>
-<li>Boot the server, and it will obtain the OS installation files and instructions from the network installation server.</li>
-<li>Follow the on-screen prompts to complete the OS installation.</li>
-</ul>
-</li>
-<li>
-<p><strong>Remote Hands Assistance</strong>:</p>
-<ul>
-<li>If physical access to the server is limited but available, you can work with remote hands or on-site personnel to insert installation media, connect cables, and perform initial setup steps.</li>
-</ul>
-</li>
-</ol>
-<h3 id="provisioning-without-physical-access-to-a-server">Provisioning without Physical Access to a Server:</h3>
-<ol>
-<li>
-<p><strong>Remote Installation Tools</strong>:</p>
-<ul>
-<li>Utilize remote management tools such as iLO (Integrated Lights-Out) for HPE servers, iDRAC (Integrated Dell Remote Access Controller) for Dell servers, or IPMI (Intelligent Platform Management Interface) for generic servers.</li>
-<li>Connect to the server&rsquo;s remote management interface via a secure network connection.</li>
-<li>Use virtual media capabilities to mount the OS installation ISO image remotely.</li>
-<li>Power on the server and boot it from the virtual media.</li>
-<li>Proceed with the OS installation as if physically present at the server.</li>
-</ul>
-</li>
-<li>
-<p><strong>Cloud-based Provisioning</strong>:</p>
-<ul>
-<li>If the server is hosted in a cloud environment, such as AWS, Azure, or Google Cloud Platform, you can provision the OS using cloud management consoles or APIs.</li>
-<li>Select the desired OS image from the cloud provider&rsquo;s marketplace or repository.</li>
-<li>Configure the server instance with the desired specifications (e.g., CPU, memory, storage).</li>
-<li>Initiate the provisioning process, and the cloud platform will automatically deploy the OS to the server instance.</li>
-</ul>
-</li>
-<li>
-<p><strong>Pre-configured Images</strong>:</p>
-<ul>
-<li>Use pre-configured OS images provided by the server manufacturer or cloud provider.</li>
-<li>Deploy these images to the server remotely using management consoles or deployment tools.</li>
-<li>Customize the OS configuration as needed during the provisioning process.</li>
-</ul>
-</li>
-</ol>
-<p>In both scenarios, ensure that you have proper access credentials, network connectivity, and necessary permissions to perform the OS provisioning tasks effectively. Additionally, follow security best practices to protect sensitive data and maintain system integrity throughout the provisioning process.</p>
+<p>In data centers, I may not have physical access to the server. So i have to use the OOB management tools such as a serial console, IMPI, or a KVM swtich to access to console and observe error message during the boot process, particulary kernel panic messages, file system errors, or hardware-related issues.</p>
 <h2 id="what-would-you-do-if-a-server-boots-but-doesnt-load-an-operating-system">What would you do if a server boots but doesn&rsquo;t load an operating system?</h2>
 <h2 id="what-would-you-do-if-a-server-doesnt-make-it-past-post">What would you do if a server doesn&rsquo;t make it past POST?</h2>
 <h2 id="what-would-you-do-if-a-server-never-reaches-post">What would you do if a server never reaches POST?</h2>
 <p>&ndash;&gt; <a href="https://domicmeia.github.io/post/hwtrouble/">Check the article</a></p>
+<hr>
+<h1 id="troubleshooting-1">Troubleshooting</h1>
+<hr>
+<h3 id="inodes">inodes</h3>
+<p>An <strong>inode</strong> is a data structure hat holds metadata about a file such as permissions, timestamps, and file size. Each file has an associated inode. The inode doesn&rsquo;t contain file names, which are stored in directories. Instead, it points to the data blocks where file contents are stored.</p>
+<h3 id="superblock">Superblock</h3>
+<p>The <strong>superblock</strong> contains metadata about the filesystem itself. For example size, block size, number of inodes, etc.. If the superblock is corrupted, the filesystem can fail to mount.</p>
+<h3 id="journaling">Journaling</h3>
+<p>Filesystem like ext4, XFS, and Btrfs support <strong>journaling</strong>, which logs changes before they are committed to the main filesystem. This provides better crash recovery and prevents corruption. Non-journaling filesystems like ext2 don&rsquo;t have this safety mechanism, making them riskier in case of unexpected shutdowns.</p>
 </article>
               </div>
 

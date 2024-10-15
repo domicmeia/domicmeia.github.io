@@ -6,14 +6,28 @@
     <description>Recent content in Linux on Domicmeia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 May 2024 20:51:50 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 15 Oct 2024 16:28:00 +0900</lastBuildDate>
     <atom:link href="https://domicmeia.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[OS]Linux Troubleshooting Scenarios</title>
+      <link>https://domicmeia.github.io/post/linuxsy/</link>
+      <pubDate>Sun, 13 Oct 2024 19:07:31 +0900</pubDate>
+      <guid>https://domicmeia.github.io/post/linuxsy/</guid>
+      <description>Linux Troubleshooting Scenarios</description>
+    </item>
     <item>
       <title>Testing a simulated external server failure</title>
       <link>https://domicmeia.github.io/post/serverfail/</link>
       <pubDate>Wed, 01 May 2024 20:35:49 +0900</pubDate>
       <guid>https://domicmeia.github.io/post/serverfail/</guid>
       <description>to verify that the Directory Proxy Server redirects LDAP requests appropriately.</description>
+    </item>
+    <item>
+      <title>[OS]Boot Process and Linux</title>
+      <link>https://domicmeia.github.io/post/hardwaretroulbe/</link>
+      <pubDate>Mon, 25 Mar 2024 21:26:07 +0900</pubDate>
+      <guid>https://domicmeia.github.io/post/hardwaretroulbe/</guid>
+      <description>OS boot process and troubleshooting</description>
     </item>
     <item>
       <title>How to change the font-size of ubuntu with UTM?</title>
@@ -23,13 +37,6 @@
       <description></description>
     </item>
     <item>
-      <title>[interview]linux</title>
-      <link>https://domicmeia.github.io/post/linuxinterview/</link>
-      <pubDate>Sun, 28 Jan 2024 01:24:19 +0900</pubDate>
-      <guid>https://domicmeia.github.io/post/linuxinterview/</guid>
-      <description>Interview questions about Linux</description>
-    </item>
-    <item>
       <title>[interview]data center</title>
       <link>https://domicmeia.github.io/post/datacenterinterview/</link>
       <pubDate>Sun, 28 Jan 2024 01:19:31 +0900</pubDate>
@@ -37,7 +44,7 @@
       <description>Interview questions of data center</description>
     </item>
     <item>
-      <title>Issue with linux operating system</title>
+      <title>Issue with linux operating system[ko]</title>
       <link>https://domicmeia.github.io/post/issue-with-linux-operating-system/</link>
       <pubDate>Sat, 27 Jan 2024 23:52:09 +0900</pubDate>
       <guid>https://domicmeia.github.io/post/issue-with-linux-operating-system/</guid>
