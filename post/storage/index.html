@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sat, 12 Oct 2024 15:30:23 &#43;0900"
+                  Modified <relative-time datetime="Wed, 16 Oct 2024 09:14:45 &#43;0900"
                     class="no-wrap">
-                    Sat, 12 Oct 2024 15:30:23 &#43;0900</relative-time>
+                    Wed, 16 Oct 2024 09:14:45 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      338 Words
+                      1505 Words
                     <span class="file-info-divider"></span>
-                                        2 min
+                                        7 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -375,6 +375,136 @@
 <hr>
 <p>When a disk fails, the RAID controller immediately detects the failure and shifts all read/write operations to the remaining functioning drives. In setups like RAID 5 or RAID 6, the system continues to function, but performance might degrade sligtly as the controller reconstructs data using parity.</p>
 <p>Once a new drive is inserted to replace the failed one, the RAID system begins the <strong>rebuild process</strong>. They system will use the parity information (RAID 5/6) or mirrored data (RAID 1/10) to recreate the lost data on the new disk.</p>
+<p>In a datacenter, hardware components within a <strong>rack</strong> and the <strong>host (server)</strong> play a critical role in computing, networking, and storage operations. Understanding the architecture of these components is essential, especially for roles like a datacenter technician.</p>
+<h3 id="1-rack-components-in-a-datacenter"><strong>1. Rack Components in a Datacenter</strong></h3>
+<p>A <strong>rack</strong> is a physical framework that houses multiple servers and associated hardware components. Typical racks are 42U in height, where &ldquo;U&rdquo; refers to a standard unit of measurement for rack-mounted equipment (1U = 1.75 inches).</p>
+<h4 id="a-servershosts">a. <strong>Servers/Hosts</strong></h4>
+<ul>
+<li><strong>Role</strong>: Each server (or host) in the rack handles compute tasks and runs various applications or services. Servers are the most critical component, as they provide the processing power.</li>
+<li><strong>Types</strong>: They can be standard rack servers (1U, 2U, or 4U) or blade servers (compact servers mounted in chassis).</li>
+<li><strong>Components</strong> (See <strong>Host Components</strong> below for details):
+<ul>
+<li>CPU, RAM, storage (HDD/SSD), NIC (Network Interface Cards), etc.</li>
+</ul>
+</li>
+</ul>
+<h4 id="b-top-of-rack-tor-switches">b. <strong>Top-of-Rack (ToR) Switches</strong></h4>
+<ul>
+<li><strong>Role</strong>: ToR switches manage the networking within a rack, connecting each server to the datacenter’s broader network fabric.</li>
+<li><strong>Uplink</strong>: ToR switches are connected to spine switches or aggregation switches, typically via high-speed fiber optics.</li>
+<li><strong>Switching Capacity</strong>: ToR switches usually support multiple 10G, 25G, or 40G connections to the hosts and multiple uplinks with even higher speeds (40G, 100G) to the core/spine network.</li>
+</ul>
+<h4 id="c-power-distribution-unit-pdu">c. <strong>Power Distribution Unit (PDU)</strong></h4>
+<ul>
+<li><strong>Role</strong>: The PDU distributes electrical power to all the components in the rack, such as servers, switches, and storage devices.</li>
+<li><strong>Types</strong>: PDUs can be basic or intelligent, with the latter offering monitoring of power consumption and remote power cycling capabilities.</li>
+</ul>
+<h4 id="d-uninterruptible-power-supply-ups">d. <strong>Uninterruptible Power Supply (UPS)</strong></h4>
+<ul>
+<li><strong>Role</strong>: The UPS provides backup power in case of a power failure or fluctuations to prevent immediate system crashes.</li>
+<li><strong>Duration</strong>: Usually, UPS provides only short-term power, long enough for systems to shut down gracefully or for backup generators to kick in.</li>
+</ul>
+<h4 id="e-rack-level-cooling-optional">e. <strong>Rack-Level Cooling (Optional)</strong></h4>
+<ul>
+<li><strong>Role</strong>: While datacenters typically use large HVAC systems for cooling, some racks might have built-in cooling components (e.g., liquid cooling systems for high-density racks).</li>
+<li><strong>Cooling</strong>: Ensures the hardware stays at an optimal temperature, reducing thermal stress and avoiding system failures.</li>
+</ul>
+<h4 id="f-kvm-switch-keyboard-video-mouse">f. <strong>KVM Switch (Keyboard, Video, Mouse)</strong></h4>
+<ul>
+<li><strong>Role</strong>: KVM switches allow technicians to manage multiple servers from a single console. It simplifies physical access to the servers in case remote access is unavailable.</li>
+</ul>
+<h4 id="g-storage-arrays-optional">g. <strong>Storage Arrays (Optional)</strong></h4>
+<ul>
+<li><strong>Role</strong>: In some racks, dedicated storage arrays or JBOD (Just a Bunch of Disks) systems provide additional storage. These systems often connect to the hosts via high-speed interfaces such as Fibre Channel or iSCSI.</li>
+<li><strong>Types</strong>: Storage systems may consist of HDDs (Hard Disk Drives) or SSDs (Solid State Drives) and are typically part of a SAN (Storage Area Network) or NAS (Network-Attached Storage).</li>
+</ul>
+<hr>
+<h3 id="2-host-server-components"><strong>2. Host (Server) Components</strong></h3>
+<p>A <strong>host</strong> or <strong>server</strong> is the fundamental computing unit in a datacenter. It performs processing tasks, runs services, and handles workloads based on specific use cases.</p>
+<h4 id="a-central-processing-unit-cpu">a. <strong>Central Processing Unit (CPU)</strong></h4>
+<ul>
+<li><strong>Role</strong>: The CPU is the brain of the host. It processes instructions and performs calculations.</li>
+<li><strong>Types</strong>: Most servers use multi-core processors, such as Intel Xeon or AMD EPYC, which are designed for high-performance and multi-threaded workloads.</li>
+<li><strong>Considerations</strong>: For datacenter use, factors like the number of cores, clock speed, and power efficiency are critical.</li>
+</ul>
+<h4 id="b-memory-ram">b. <strong>Memory (RAM)</strong></h4>
+<ul>
+<li><strong>Role</strong>: RAM provides temporary storage for data that is actively being used or processed by the CPU.</li>
+<li><strong>Types</strong>: Servers typically use ECC (Error-Correcting Code) memory, which can detect and correct data corruption.</li>
+<li><strong>Capacity</strong>: RAM capacity can range from a few gigabytes (GB) to several terabytes (TB), depending on the server and its workload.</li>
+</ul>
+<h4 id="c-storage-hddssd">c. <strong>Storage (HDD/SSD)</strong></h4>
+<ul>
+<li><strong>Role</strong>: The host uses local storage to store operating systems, applications, and data.</li>
+<li><strong>Types</strong>:
+<ul>
+<li><strong>HDD (Hard Disk Drive)</strong>: Traditional spinning disk drives, slower but larger capacity.</li>
+<li><strong>SSD (Solid-State Drive)</strong>: Faster than HDDs, often used for OS and frequently accessed data.</li>
+<li><strong>NVMe (Non-Volatile Memory Express)</strong>: Ultra-fast storage, using PCIe interface, often used for high-performance workloads.</li>
+</ul>
+</li>
+<li><strong>RAID Configuration</strong>: Many servers use RAID (Redundant Array of Independent Disks) to provide redundancy and data protection.</li>
+</ul>
+<h4 id="d-network-interface-cards-nic">d. <strong>Network Interface Cards (NIC)</strong></h4>
+<ul>
+<li><strong>Role</strong>: NICs handle the server’s communication with the rest of the network. A host may have multiple NICs for redundancy and increased bandwidth.</li>
+<li><strong>Types</strong>:
+<ul>
+<li><strong>Ethernet NIC</strong>: Supports 1G, 10G, 25G, 40G, or 100G connections depending on the use case.</li>
+<li><strong>Fiber NIC</strong>: Used for high-speed networking (often 40G or 100G connections), common in enterprise datacenters.</li>
+</ul>
+</li>
+</ul>
+<h4 id="e-motherboard">e. <strong>Motherboard</strong></h4>
+<ul>
+<li><strong>Role</strong>: The motherboard connects all the internal components of the server, such as the CPU, RAM, storage, and network interfaces.</li>
+<li><strong>Considerations</strong>: In datacenters, server motherboards are designed for reliability, expansion, and remote management.</li>
+</ul>
+<h4 id="f-power-supply-unit-psu">f. <strong>Power Supply Unit (PSU)</strong></h4>
+<ul>
+<li><strong>Role</strong>: The PSU provides power to the server components. Redundant PSUs are common in datacenters to ensure the host continues running even if one PSU fails.</li>
+</ul>
+<h4 id="g-cooling-components">g. <strong>Cooling Components</strong></h4>
+<ul>
+<li><strong>Role</strong>: Servers generate a lot of heat, and they use internal fans or liquid cooling systems to maintain optimal operating temperatures.</li>
+<li><strong>Airflow</strong>: Proper airflow is essential, and fans are often arranged to ensure that cool air is pulled from the front and hot air is expelled at the back.</li>
+</ul>
+<h4 id="h-remote-management-tools-bmcipmi">h. <strong>Remote Management Tools (BMC/IPMI)</strong></h4>
+<ul>
+<li><strong>Role</strong>: Remote management is essential for datacenters. Servers typically have a <strong>Baseboard Management Controller (BMC)</strong> that provides remote access for monitoring, updating firmware, and performing actions like power cycling.</li>
+<li><strong>IPMI (Intelligent Platform Management Interface)</strong>: Allows for remote management even when the server’s main OS is down.</li>
+</ul>
+<h4 id="i-raid-controller-optional">i. <strong>RAID Controller (Optional)</strong></h4>
+<ul>
+<li><strong>Role</strong>: Some servers include RAID controllers for managing the RAID arrays of storage disks, improving redundancy and performance.</li>
+</ul>
+<h4 id="j-gpu-optional">j. <strong>GPU (Optional)</strong></h4>
+<ul>
+<li><strong>Role</strong>: Some servers may include GPUs (Graphics Processing Units) for compute-intensive tasks, such as AI, machine learning, or rendering.</li>
+<li><strong>Types</strong>: NVIDIA GPUs (like the Tesla or A100) are commonly used in high-performance computing (HPC) environments.</li>
+</ul>
+<hr>
+<h3 id="3-host-connectivity-and-cabling"><strong>3. Host Connectivity and Cabling</strong></h3>
+<h4 id="a-network-cabling">a. <strong>Network Cabling</strong></h4>
+<ul>
+<li><strong>Ethernet Cables</strong>: Typically CAT6 or CAT6a cables are used for network connections within the rack.</li>
+<li><strong>Fiber Optic Cables</strong>: For higher-speed uplinks (25G, 40G, 100G), fiber optic cables are used, connecting servers to ToR switches.</li>
+</ul>
+<h4 id="b-power-cables">b. <strong>Power Cables</strong></h4>
+<ul>
+<li>Servers are powered by connecting to the PDU in the rack via power cables. Redundant power supplies often have separate cables to different PDUs for redundancy.</li>
+</ul>
+<h4 id="c-managementout-of-band-oob-cables">c. <strong>Management/Out-of-Band (OOB) Cables</strong></h4>
+<ul>
+<li>Separate network cables connect to the server’s BMC/IPMI interface for OOB management, allowing technicians to remotely manage servers even when the main network connection is down.</li>
+</ul>
+<hr>
+<h3 id="summary"><strong>Summary</strong></h3>
+<ul>
+<li><strong>Rack Components</strong>: A typical datacenter rack contains servers, ToR switches, PDUs, and possibly storage arrays. The ToR switch connects servers to the network fabric, while the PDU distributes power.</li>
+<li><strong>Host (Server) Components</strong>: Each server or host in a rack contains key components like CPU, RAM, storage (HDD/SSD), NICs, and cooling systems. These systems are designed for high performance, reliability, and scalability.</li>
+<li><strong>Connectivity</strong>: Racks and hosts are connected via high-speed network cabling (Ethernet or fiber optics) and are powered by redundant power systems.</li>
+</ul>
 </article>
               </div>
 
