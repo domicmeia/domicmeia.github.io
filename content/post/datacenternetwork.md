@@ -24,7 +24,19 @@ summary = "Network Topology of Datacenter"
 # OSI layer in Datacenter
 ---
 
-The **transport layer** provides reliable message delivery to applications and whether the protocol bookkeeping is done in software like TCP or hardware directly affects the application performance. The **network layer** porvides a logical namespace for endpoints and possibly switches in the systems. The network layer handles **packets** and provides the **routing** information identifying paths through the network among all source, destinations pairs. It is the network layer that asserts routes, either at the source or along each individual hop lik distributed routing along the path. The **data link layer** provides link-level flow control to manage the receiver's input buffer in units of flits (flow contorl units). The lowest level of the protocol stack, the **physical media layer**, is where data is encoded and driven onto the medium.
+The **Physical layer (Layer 1)** encompasses the actual hardware, including cables (like Ethernet and fiber optics), switches, routers, and other devices that facilitate the physical transfer of electrical or optical signals. This layer is crucial for ensuring high bandwidth and low latency connections between servers and network equipment.
+
+The **Data Link layer (Layer 2)** is responsible for node-to-node communication and error detection/correction. In data centers, Top-of-Rack (ToR) switches operate at this layer, managing data frames between servers and handling tasks like VLAN tagging and MAC address filtering to create logical network segments. This layer helps to optimize bandwidth utilization and improve security by isolating traffic between different virtual networks.
+
+Moving to the **Network layer (Layer 3)**, this layer manages logical addressing and routing of data packets. Routers and Layer 3 switches in a data center ensure that data is directed correctly between different subnets and external networks. They utilize IP addressing and routing protocols to facilitate communication across the data center and between other locations, playing a critical role in the overall network topology, including Clos architectures
+
+At the **Transport layer (Layer 4)**, protocols such as TCP and UDP ensure reliable end-to-end communication. This layer handles flow control, error correction, and data segmentation, which are essential for applications that require dependable data transmission, such as file transfers, streaming, and database communications.
+
+The **Session layer (Layer 5)** is responsible for managing sessions between applications, ensuring that connections remain stable and synchronized. 
+
+The **Presentation layer (Layer 6)** transforms data into a format that applications can understand, including tasks such as data encryption and compression. This layer is particularly important for security in data centers, as it handles encryption protocols like SSL/TLS to protect sensitive information during transmission and ensures efficient data transfer by compressing large data sets.
+
+Finally, the **Application layer (Layer 7)** interfaces directly with user applications and services, managing protocols such as HTTP, FTP, and DNS. In a data center, this layer is crucial for delivering applications to end-users and for the operation of services such as load balancers and application firewalls that optimize traffic flow and enhance security. The Application layer ensures that user requests are routed to the appropriate servers and services, enabling seamless interaction and high availability.
 
 ![osinew](/images/posts/osinew.png)
 
