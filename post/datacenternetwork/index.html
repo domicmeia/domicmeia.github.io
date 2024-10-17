@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 13 Oct 2024 19:21:03 &#43;0900"
+                  Modified <relative-time datetime="Fri, 18 Oct 2024 08:03:08 &#43;0900"
                     class="no-wrap">
-                    Sun, 13 Oct 2024 19:21:03 &#43;0900</relative-time>
+                    Fri, 18 Oct 2024 08:03:08 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      1532 Words
+                      1775 Words
                     <span class="file-info-divider"></span>
-                                        7 min
+                                        8 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -378,7 +378,13 @@
 <hr>
 <h1 id="osi-layer-in-datacenter">OSI layer in Datacenter</h1>
 <hr>
-<p>The <strong>transport layer</strong> provides reliable message delivery to applications and whether the protocol bookkeeping is done in software like TCP or hardware directly affects the application performance. The <strong>network layer</strong> porvides a logical namespace for endpoints and possibly switches in the systems. The network layer handles <strong>packets</strong> and provides the <strong>routing</strong> information identifying paths through the network among all source, destinations pairs. It is the network layer that asserts routes, either at the source or along each individual hop lik distributed routing along the path. The <strong>data link layer</strong> provides link-level flow control to manage the receiver&rsquo;s input buffer in units of flits (flow contorl units). The lowest level of the protocol stack, the <strong>physical media layer</strong>, is where data is encoded and driven onto the medium.</p>
+<p>The <strong>Physical layer (Layer 1)</strong> encompasses the actual hardware, including cables (like Ethernet and fiber optics), switches, routers, and other devices that facilitate the physical transfer of electrical or optical signals. This layer is crucial for ensuring high bandwidth and low latency connections between servers and network equipment.</p>
+<p>The <strong>Data Link layer (Layer 2)</strong> is responsible for node-to-node communication and error detection/correction. In data centers, Top-of-Rack (ToR) switches operate at this layer, managing data frames between servers and handling tasks like VLAN tagging and MAC address filtering to create logical network segments. This layer helps to optimize bandwidth utilization and improve security by isolating traffic between different virtual networks.</p>
+<p>Moving to the <strong>Network layer (Layer 3)</strong>, this layer manages logical addressing and routing of data packets. Routers and Layer 3 switches in a data center ensure that data is directed correctly between different subnets and external networks. They utilize IP addressing and routing protocols to facilitate communication across the data center and between other locations, playing a critical role in the overall network topology, including Clos architectures</p>
+<p>At the <strong>Transport layer (Layer 4)</strong>, protocols such as TCP and UDP ensure reliable end-to-end communication. This layer handles flow control, error correction, and data segmentation, which are essential for applications that require dependable data transmission, such as file transfers, streaming, and database communications.</p>
+<p>The <strong>Session layer (Layer 5)</strong> is responsible for managing sessions between applications, ensuring that connections remain stable and synchronized.</p>
+<p>The <strong>Presentation layer (Layer 6)</strong> transforms data into a format that applications can understand, including tasks such as data encryption and compression. This layer is particularly important for security in data centers, as it handles encryption protocols like SSL/TLS to protect sensitive information during transmission and ensures efficient data transfer by compressing large data sets.</p>
+<p>Finally, the <strong>Application layer (Layer 7)</strong> interfaces directly with user applications and services, managing protocols such as HTTP, FTP, and DNS. In a data center, this layer is crucial for delivering applications to end-users and for the operation of services such as load balancers and application firewalls that optimize traffic flow and enhance security. The Application layer ensures that user requests are routed to the appropriate servers and services, enabling seamless interaction and high availability.</p>
 <p><img src="/images/posts/osinew.png" alt="osinew"></p>
 <hr>
 <h1 id="flow-control">Flow Control</h1>
