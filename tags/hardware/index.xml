@@ -6,7 +6,7 @@
     <description>Recent content in Hardware on Domicmeia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Oct 2024 09:14:45 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 15 Oct 2024 14:54:54 +0900</lastBuildDate>
     <atom:link href="https://domicmeia.github.io/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Networking]Datacenter Network</title>
@@ -14,13 +14,6 @@
       <pubDate>Sat, 12 Oct 2024 16:41:10 +0900</pubDate>
       <guid>https://domicmeia.github.io/post/datacenternetwork/</guid>
       <description>Network Topology of Datacenter</description>
-    </item>
-    <item>
-      <title>[OS]Storage</title>
-      <link>https://domicmeia.github.io/post/storage/</link>
-      <pubDate>Fri, 11 Oct 2024 12:55:27 +0900</pubDate>
-      <guid>https://domicmeia.github.io/post/storage/</guid>
-      <description>Datacenter Storage</description>
     </item>
     <item>
       <title>[Multicoreprogramming]DP</title>
