@@ -109,5 +109,22 @@ I stated that the Subnet Mask specifies the size of the directly connected LAN, 
 
 결론! 그럼에도 불구하고..! 서브넷 마스크 설정할 때, 크기에 맞춰서 잘~~설정하자
 
+**Interviewer:** *What are the implications of configuring a subnet larger than the size of the LAN?*
+
+When discussing the implications of configuring a subnet that exceeds the size of the local area network, we need to consider several factors, including address space utilization, network performance, management simplicity, and security risks. 
+
+1. **Address Space Utilization**:
+   - Configuring a subnet larger than necessary means that we have more available IP addresses than devices connected to the network. For example, if we use a /24 subnet, we have 256 IP addresses available, but if our LAN only connects 50 devices, this leads to a situation where we have 206 unused IP addresses. This may not be a critical issue in IPv4 due to its limited address space, but it can contribute to inefficient use of the address pool, which is particularly important in scenarios like IPv4 exhaustion.
+
+2. **Broadcast Domain Size**:
+   - A larger subnet creates a larger broadcast domain. In a scenario where broadcast traffic (such as ARP requests, DHCP broadcasts, or other network-wide announcements) is prevalent, a single broadcast is sent to all devices in that subnet. This can lead to increased network congestion. For instance, if a large broadcast packet is sent, all devices in that subnet will process that packet, which may lead to performance degradation, especially in networks with heavy broadcast traffic or high device counts.
+
+3. **Management and Scalability**:
+   - On the positive side, having a larger subnet simplifies network management. When we need to add new devices, there’s no need to reconfigure the IP addressing scheme, which saves time and effort. This flexibility is beneficial in environments with fluctuating device counts, such as temporary setups or organizations with seasonal demand.
+   - For example, if a company anticipates rapid growth, it might prefer to implement a larger subnet to accommodate future expansions without frequent readdressing.
+
+4. **Security Considerations**:
+   - One of the drawbacks of larger subnets is the potential increase in security risks. A larger broadcast domain exposes more devices to potential network threats. Broadcast packets can be intercepted, increasing the attack surface. Security practices often recommend limiting broadcast domains for this reason. For instance, by segmenting networks using VLANs, we can enhance security by isolating devices from each other.
+
 [link1]:https://domicmeia.github.io/post/nicwork/
 [link2]:https://domicmeia.github.io/post/lan1/
