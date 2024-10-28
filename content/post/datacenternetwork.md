@@ -26,6 +26,8 @@ summary = "Network Topology of Datacenter"
 
 The **Physical layer (Layer 1)** encompasses the actual hardware, including cables (like Ethernet and fiber optics), switches, routers, and other devices that facilitate the physical transfer of electrical or optical signals. This layer is crucial for ensuring high bandwidth and low latency connections between servers and network equipment.
 
+> Aside from the physical cable, Repeaters and Hubs also operate at this layer. A **Repeater** simply repeats a signal from one medium to the other, allowing a sereis of cables to be dasiy chained together and increase the range a signal can travel beyond the single cable limit. A **Hub** is simply a multi-port Repeater. If four devices are connected to a single Hub, anythins sent by one device gets repeated to the other three. 
+
 The **Data Link layer (Layer 2)** is responsible for node-to-node communication and error detection/correction. In data centers, Top-of-Rack (ToR) switches operate at this layer, managing data frames between servers and handling tasks like VLAN tagging and MAC address filtering to create logical network segments. This layer helps to optimize bandwidth utilization and improve security by isolating traffic between different virtual networks.
 
 Moving to the **Network layer (Layer 3)**, this layer manages logical addressing and routing of data packets. Routers and Layer 3 switches in a data center ensure that data is directed correctly between different subnets and external networks. They utilize IP addressing and routing protocols to facilitate communication across the data center and between other locations, playing a critical role in the overall network topology, including Clos architectures

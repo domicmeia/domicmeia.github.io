@@ -8,6 +8,7 @@ summary = "focus on TCP"
 
 ## 목차
 * [IP vs TCP/IP](#ip-vs-tcpip)
+* [Encapsulation](#encapsulation)
 * [Segmentation](#segementation)
 * [TCP and UDP](#tcp-and-udp)
 * [Why is there a UDP](#why-is-there-a-udp)
