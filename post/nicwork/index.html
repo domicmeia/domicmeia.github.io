@@ -286,9 +286,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 01 Apr 2024 15:53:19 &#43;0900"
+                  Modified <relative-time datetime="Mon, 28 Oct 2024 23:41:54 &#43;0900"
                     class="no-wrap">
-                    Mon, 01 Apr 2024 15:53:19 &#43;0900</relative-time>
+                    Mon, 28 Oct 2024 23:41:54 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -318,9 +318,9 @@
                         </div>
                       </div>
                     </details-menu>
-                      936 Words
+                      1710 Words
                     <span class="file-info-divider"></span>
-                                        4 min
+                                        8 min
 
                   </div>
                   <div class="file-actions flex-order-2 pt-0">
@@ -385,6 +385,168 @@
 </ol>
 <p>There is a Receive mode called <strong>Promiscuous Mode</strong> in the MAC controller. For Window PCs or Linux/Unix Servers, the NIC&rsquo;s Promiscuous Mode is usually <strong>disabled by default.</strong> When using tools like Wireshark or tcpdump to receive packet dumps, <strong>enabling</strong> the tool initiates Promiscuous Mode, allowing the NIC to accept <strong>all incoming frames without filtering</strong> based on MAC address. In L2 Switches, Promiscuous Mode is enabled on all ports. Therefore, the MAC controller accepts and forwards all Ethernet frames without filtering based on MAC addresses. This is why the MAC addresses of switching ports on L2 Switches are rarely used in actual communication, leading some people to occasionally wonder if L2 Switches lack MAC controllers.</p>
 <p>Although L2 Switches accept all frames in Promiscuous mode, filtering occurs at the MAC controller level when VLAN Tag filtering is applied. <strong>Untagged ports reject VLAN Tagged frames, and Tagged ports filter frames with unauthorized VLAN tags.</strong></p>
+<hr>
+<h1 id="host-to-host-through-a-switch">Host to Host through a Switch</h1>
+<hr>
+<p>A Switch primarily has four functions: Learning, Flooding, Forwarding, and Filtering:</p>
+<h3 id="1-learning">1. Learning</h3>
+<p>Being a Layer 2 device, a Switch will make all its decisions based upon information found in the L2 Header. Specifically, a Switch will use the Source MAC address and Destination MAC address to make its forwarding decisions.</p>
+<p>One of the goals of the Switch is to create a MAC Address Table, mapping each of its switchports to the MAC address of the connected devices.</p>
+<h4 id="technical-mechanisms">Technical Mechanisms</h4>
+<ul>
+<li>
+<p><strong>MAC Address Table Structure</strong>:</p>
+<ul>
+<li>The MAC address table (or Content Addressable Memory, CAM) typically contains:
+<ul>
+<li><strong>MAC Address</strong>: The unique identifier of the device.</li>
+<li><strong>Port Number</strong>: The physical port on the switch where the device is connected.</li>
+<li><strong>VLAN Identifier</strong>: If VLANs are used, the switch also associates MAC addresses with VLAN IDs to differentiate between devices in different broadcast domains.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Learning Process</strong>:</p>
+<ul>
+<li>Each time a switch receives a frame:
+<ol>
+<li>It examines the <strong>source MAC address</strong>.</li>
+<li>If the MAC address is not in the table, it adds a new entry with a timestamp.</li>
+<li>If the MAC address is already present but the associated port differs, the switch updates the port number.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Aging and Timers</strong>:</p>
+<ul>
+<li>Entries in the MAC address table have an <strong>aging timer</strong>. If a switch does not see a frame from a MAC address for a predefined period (often configurable, e.g., 300 seconds), the entry is removed to free up resources.</li>
+</ul>
+</li>
+</ul>
+<h4 id="protocols-and-standards">Protocols and Standards</h4>
+<ul>
+<li><strong>IEEE 802.3 (Ethernet)</strong>: This standard governs the transmission of frames in Ethernet networks, and the learning function is inherent to how Ethernet switches operate.</li>
+</ul>
+<h3 id="2-flooding">2. Flooding</h3>
+<h4 id="technical-mechanisms-1">Technical Mechanisms</h4>
+<ul>
+<li>
+<p><strong>Broadcast Transmission</strong>:</p>
+<ul>
+<li>When a switch floods a frame, it sends it out all ports except the incoming port. This uses the broadcast MAC address (<code>FF:FF:FF:FF:FF:FF</code>), which is recognized by all devices on the local segment.</li>
+</ul>
+</li>
+<li>
+<p><strong>Learning Through Flooding</strong>:</p>
+<ul>
+<li>When devices receive flooded frames, they typically respond (if applicable). For example, when a device receives a frame addressed to it for the first time, it will send a reply, allowing the switch to learn its location.</li>
+</ul>
+</li>
+</ul>
+<h4 id="protocols-and-standards-1">Protocols and Standards</h4>
+<ul>
+<li><strong>Ethernet Protocol</strong>: The flooding mechanism utilizes the Ethernet standard for broadcasting frames across the network.</li>
+</ul>
+<h3 id="3-forwarding">3. Forwarding</h3>
+<h4 id="technical-mechanisms-2">Technical Mechanisms</h4>
+<ul>
+<li>
+<p><strong>Frame Processing Logic</strong>:</p>
+<ul>
+<li>When a switch receives a frame:
+<ol>
+<li>It checks the <strong>destination MAC address</strong> against its MAC address table.</li>
+<li>If found, it forwards the frame out the corresponding port.</li>
+<li>If not found, it defaults to flooding.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Switching Techniques</strong>:</p>
+<ul>
+<li><strong>Store-and-Forward Switching</strong>:
+<ul>
+<li>The switch buffers the entire frame, checks for errors (using CRC), and then forwards the frame. This method minimizes the chance of forwarding corrupted frames but can introduce latency.</li>
+</ul>
+</li>
+<li><strong>Cut-Through Switching</strong>:
+<ul>
+<li>The switch begins forwarding the frame as soon as it reads the destination MAC address. This reduces latency but may forward bad frames.</li>
+</ul>
+</li>
+<li><strong>Fragment-Free Switching</strong>:
+<ul>
+<li>A hybrid approach where the switch reads the first 64 bytes of a frame (the collision zone) before forwarding, reducing the chances of forwarding collisions while still maintaining lower latency than store-and-forward.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="protocols-and-standards-2">Protocols and Standards</h4>
+<ul>
+<li><strong>IEEE 802.1D</strong>: This standard defines the operation of bridges and switches, specifying frame forwarding rules.</li>
+</ul>
+<h3 id="4-filtering">4. Filtering</h3>
+<h4 id="technical-mechanisms-3">Technical Mechanisms</h4>
+<ul>
+<li>
+<p><strong>Frame Evaluation</strong>:</p>
+<ul>
+<li>Switches evaluate incoming frames based on their destination MAC addresses, comparing them to the MAC address table. They also check for conditions that would require filtering:
+<ul>
+<li>If the source and destination MAC addresses are the same (loop prevention).</li>
+<li>If VLAN filtering rules are applied (ensuring traffic only flows within the same VLAN).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementing Security Measures</strong>:</p>
+<ul>
+<li>Port security features can restrict which MAC addresses are allowed to communicate through specific ports, providing an additional layer of filtering.</li>
+</ul>
+</li>
+</ul>
+<h4 id="protocols-and-standards-3">Protocols and Standards</h4>
+<ul>
+<li><strong>IEEE 802.1Q</strong>: This standard specifies VLAN tagging, enabling switches to filter traffic based on VLAN membership and ensuring that traffic does not cross VLAN boundaries.</li>
+</ul>
+<h3 id="how-these-functions-interact-in-a-network-scenario"><strong>How These Functions Interact in a Network Scenario</strong></h3>
+<ol>
+<li>
+<p><strong>Initial Communication</strong>:</p>
+<ul>
+<li>Host A sends data to Host B. Since Host B’s MAC is initially unknown to the switch, the switch floods the frame to all ports except the one Host A is connected to.</li>
+</ul>
+</li>
+<li>
+<p><strong>Learning and Flooding</strong>:</p>
+<ul>
+<li>When Host B responds, the switch learns its MAC address, associates it with a specific port, and updates its MAC table.</li>
+</ul>
+</li>
+<li>
+<p><strong>Subsequent Forwarding</strong>:</p>
+<ul>
+<li>The next time Host A communicates with Host B, the switch forwards frames directly to Host B’s port, reducing unnecessary traffic.</li>
+</ul>
+</li>
+<li>
+<p><strong>Filtering with VLANs</strong>:</p>
+<ul>
+<li>If Host A and Host B belong to separate VLANs, the switch filters frames to prevent cross-VLAN communication unless routing or inter-VLAN communication is specifically configured.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ongoing Management</strong>:</p>
+<ul>
+<li>As the network grows, the switch dynamically updates its MAC table, filters traffic within VLANs, floods broadcasts or unknown MACs when needed, and forwards known traffic efficiently.</li>
+</ul>
+</li>
+</ol>
 <hr>
 <h1 id="l2-switch-vs-l3-switch">L2 Switch vs L3 Switch</h1>
 <p>Reference: <a href="https://www.cables-solutions.com/layer-2-layer-3-layer-4-switch-whats-the-difference.html">Layer 2, Layer 3 &amp; Layer 4 Switch: What’s the Difference?</a></p>
