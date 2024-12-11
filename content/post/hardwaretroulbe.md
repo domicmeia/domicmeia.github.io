@@ -1,7 +1,7 @@
 +++
 title = "[OS]Boot Process and Linux"
 date = 2024-03-25T21:26:07+09:00
-tags = ["OS", "Linux"]
+tags = ["OS"]
 summary = "OS boot process and troubleshooting"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.

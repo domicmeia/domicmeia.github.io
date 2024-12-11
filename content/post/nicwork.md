@@ -1,7 +1,7 @@
 +++
 title = "[Networking]OSI layer 1&2: NIC"
 date = 2024-03-30T20:03:54+09:00
-tags = ["Networking", "Hardware"]
+tags = ["Networking"]
 summary = "How NICs work"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.

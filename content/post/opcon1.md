@@ -1,7 +1,7 @@
 +++
 title = "[OS]Chapter 11: Mass Storage EX 11-23"
 date = 2024-03-25T18:51:25+09:00
-tags = ["OS", "Hardware"]
+tags = ["OS"]
 summary = "RAID concepts"
 +++
 

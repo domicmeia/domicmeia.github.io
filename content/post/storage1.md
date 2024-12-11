@@ -1,7 +1,7 @@
 +++
 title = "[OS]System Hardware "
 date = 2024-03-30T14:51:33+09:00
-tags = ["OS", "Hardware"]
+tags = ["OS"]
 summary = "All about Data Storage and Server"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.

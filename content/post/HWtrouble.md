@@ -1,7 +1,7 @@
 +++
 title = "[OS]Server Troubleshooting"
 date = 2024-03-26T17:14:42+09:00
-tags = ["OS", "Troubleshooting"]
+tags = ["Troubleshooting"]
 summary = "OS troubleshooting for No Power, No POST,and No Video issues"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.

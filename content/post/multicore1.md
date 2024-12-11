@@ -1,7 +1,7 @@
 +++
 title = "[Multicoreprogramming]DP"
 date = 2024-04-17T17:19:27+09:00
-tags = ["Multicoreprogramming", "Hardware"]
+tags = ["Multicoreprogramming"]
 summary = "DP concepts"
 +++
 > `공부 목적`으로 작성한 포스팅입니다. 오타가 많고, 틀린 내용이 있을 수 있습니다.

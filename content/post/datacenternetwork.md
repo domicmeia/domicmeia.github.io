@@ -1,7 +1,7 @@
 +++
 title = "[Networking]Datacenter Network"
 date = 2024-10-12T16:41:10+09:00
-tags = ["Networking", "Hardware"]
+tags = ["Networking"]
 summary = "Network Topology of Datacenter"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.

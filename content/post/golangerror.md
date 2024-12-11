@@ -1,7 +1,7 @@
 +++
 title = "How to fix the warning: composite literal uses unkeyed fields"
 date = 2024-01-30T20:29:24+09:00
-tags = ["Go", "Warning"]
+tags = ["Warning"]
 summary = "warning: composite literal uses unkeyed fields"
 +++
 # ..struct literal uses unkeyed fields

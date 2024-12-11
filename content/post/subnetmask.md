@@ -1,7 +1,7 @@
 +++
 title = "[Networking]Subnetmask"
 date = 2024-04-05T18:32:26+09:00
-tags = ["Networking", ""]
+tags = ["Networking"]
 summary = "How to calculate the subnetmask"
 +++
 > This post was written for `studying`. There maybe a lot wrong going on.
