@@ -1,7 +1,7 @@
 +++
 title = "[러시아 문학] 도스토예프스키의 죄와 벌을 읽고"
 date = 2024-12-11T21:55:30+09:00
-tags = ["Reaction paper", ""]
+tags = ["ReactionPaper"]
 summary = "2024.12.09 독후감"
 +++
 
