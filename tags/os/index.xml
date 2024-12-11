@@ -6,7 +6,7 @@
     <description>Recent content in OS on Domicmeia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Oct 2024 16:28:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 11 Dec 2024 23:19:24 +0900</lastBuildDate>
     <atom:link href="https://domicmeia.github.io/tags/os/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[OS]System Hardware </title>
@@ -14,13 +14,6 @@
       <pubDate>Sat, 30 Mar 2024 14:51:33 +0900</pubDate>
       <guid>https://domicmeia.github.io/post/storage1/</guid>
       <description>All about Data Storage and Server</description>
-    </item>
-    <item>
-      <title>[OS]Server Troubleshooting</title>
-      <link>https://domicmeia.github.io/post/hwtrouble/</link>
-      <pubDate>Tue, 26 Mar 2024 17:14:42 +0900</pubDate>
-      <guid>https://domicmeia.github.io/post/hwtrouble/</guid>
-      <description>OS troubleshooting for No Power, No POST,and No Video issues</description>
     </item>
     <item>
       <title>[OS]Boot Process and Linux</title>
