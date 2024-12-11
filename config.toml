@@ -11,7 +11,7 @@ pygmentsUseClasses = true
   description = "Any description?"
   github = "domicmeia"
   enableGithubFollowers = true 
-  linkedin = ""
+  linkedin = "kimdomic"
   email = "dhdlqks55@gmail.com"
   lastmod = true
   userStatusEmoji = "😉"
@@ -36,9 +36,6 @@ pygmentsUseClasses = true
     createIssueManually = true 
     distractionFreeMode = false 
     proxy = "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token" 
-  [[params.links]]
-    title = "Link"
-    href = ""
 
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]
