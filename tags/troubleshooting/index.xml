@@ -16,13 +16,6 @@
       <description>Linux Troubleshooting Scenarios</description>
     </item>
     <item>
-      <title>Testing a simulated external server failure</title>
-      <link>https://domicmeia.github.io/post/serverfail/</link>
-      <pubDate>Wed, 01 May 2024 20:35:49 +0900</pubDate>
-      <guid>https://domicmeia.github.io/post/serverfail/</guid>
-      <description>to verify that the Directory Proxy Server redirects LDAP requests appropriately.</description>
-    </item>
-    <item>
       <title>[Networking]traceroute</title>
       <link>https://domicmeia.github.io/post/traceroute/</link>
       <pubDate>Fri, 29 Mar 2024 22:18:35 +0900</pubDate>

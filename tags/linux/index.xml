@@ -16,13 +16,6 @@
       <description>Linux Troubleshooting Scenarios</description>
     </item>
     <item>
-      <title>Testing a simulated external server failure</title>
-      <link>https://domicmeia.github.io/post/serverfail/</link>
-      <pubDate>Wed, 01 May 2024 20:35:49 +0900</pubDate>
-      <guid>https://domicmeia.github.io/post/serverfail/</guid>
-      <description>to verify that the Directory Proxy Server redirects LDAP requests appropriately.</description>
-    </item>
-    <item>
       <title>How to change the font-size of ubuntu with UTM?</title>
       <link>https://domicmeia.github.io/post/howtochangethefontsize/</link>
       <pubDate>Sun, 28 Jan 2024 01:25:44 +0900</pubDate>

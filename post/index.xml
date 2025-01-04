@@ -30,13 +30,6 @@
       <description>Network Topology of Datacenter</description>
     </item>
     <item>
-      <title>Testing a simulated external server failure</title>
-      <link>https://domicmeia.github.io/post/serverfail/</link>
-      <pubDate>Wed, 01 May 2024 20:35:49 +0900</pubDate>
-      <guid>https://domicmeia.github.io/post/serverfail/</guid>
-      <description>to verify that the Directory Proxy Server redirects LDAP requests appropriately.</description>
-    </item>
-    <item>
       <title>[Multicoreprogramming]DP</title>
       <link>https://domicmeia.github.io/post/multicore1/</link>
       <pubDate>Wed, 17 Apr 2024 17:19:27 +0900</pubDate>
